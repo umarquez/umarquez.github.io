@@ -21,7 +21,7 @@
 
 &lt;pre&gt;&lt;code class=&#34;language-go-html-template&#34;&gt;{{ $var := &amp;quot;Hugo Page&amp;quot; }}
 {{ if .IsHome }}
-    {{ $var = &amp;quot;Hugo Home&amp;quot; }}
+	{{ $var = &amp;quot;Hugo Home&amp;quot; }}
 {{ end }}
 Var is {{ $var }}
 &lt;/code&gt;&lt;/pre&gt;
@@ -621,7 +621,7 @@ notAlternative = true
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Netlify redirects. See https://www.netlify.com/docs/redirects/
 {{  range $p := .Site.Pages -}}
 {{ range .Aliases }}
-{{  . | printf &amp;quot;%-35s&amp;quot; }}   {{ $p.RelPermalink -}}
+{{  . | printf &amp;quot;%-35s&amp;quot; }}	{{ $p.RelPermalink -}}
 {{ end -}}
 {{- end -}}
 &lt;/code&gt;&lt;/pre&gt;
@@ -1536,7 +1536,7 @@ i&#39;m speechless
     &amp;lt;h1&amp;gt;&amp;lt;a href=&amp;quot;http://localhost:1313/post/first-post/&amp;quot;&amp;gt;first&amp;lt;/a&amp;gt;&amp;lt;/h1&amp;gt;
 &amp;lt;script&amp;gt;document.write(&#39;&amp;lt;script src=&amp;quot;http://&#39;
         + (location.host || &#39;localhost&#39;).split(&#39;:&#39;)[0]
-        + &#39;:1313/livereload.js?mindelay=10&amp;quot;&amp;gt;&amp;lt;/&#39;
+		+ &#39;:1313/livereload.js?mindelay=10&amp;quot;&amp;gt;&amp;lt;/&#39;
         + &#39;script&amp;gt;&#39;)&amp;lt;/script&amp;gt;&amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1581,8 +1581,8 @@ i&#39;m speechless
 
 &lt;pre&gt;&lt;code&gt;$ vi config.toml
 [permalinks]
-    page = &amp;quot;/:title/&amp;quot;
-    about = &amp;quot;/:filename/&amp;quot;
+	page = &amp;quot;/:title/&amp;quot;
+	about = &amp;quot;/:filename/&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Generate the web site and verify that this didn&amp;rsquo;t work. Hugo lets &amp;ldquo;slug&amp;rdquo; or &amp;ldquo;URL&amp;rdquo; override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.&lt;/p&gt;
@@ -1601,7 +1601,7 @@ i&#39;m speechless
 &amp;lt;!DOCTYPE html&amp;gt;
 &amp;lt;html&amp;gt;
 &amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;{{ .Title }}&amp;lt;/title&amp;gt;
+	&amp;lt;title&amp;gt;{{ .Title }}&amp;lt;/title&amp;gt;
 &amp;lt;/head&amp;gt;
 &amp;lt;body&amp;gt;
 :wq

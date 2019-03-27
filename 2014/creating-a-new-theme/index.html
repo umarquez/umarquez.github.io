@@ -66,6 +66,8 @@ We&rsquo;ll start with creating a new site with a very basic template.",
 </head>
 
   
+             
+  
 
 
   <body class="">
@@ -85,8 +87,6 @@ We&rsquo;ll start with creating a new site with a very basic template.",
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
                 <a class="menu-item" href="/about/" title="">About</a>
-                
-                <a class="menu-item" href="/about/" title="About Hugo">About Hugo</a>
                 
         </div>
     </div>
@@ -110,8 +110,6 @@ We&rsquo;ll start with creating a new site with a very basic template.",
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
                 <a class="menu-item" href="/about/" title="">About</a>
-                
-                <a class="menu-item" href="/about/" title="About Hugo">About Hugo</a>
                 
         </div>
     </div>
@@ -1051,7 +1049,7 @@ i'm speechless
     &lt;h1&gt;&lt;a href=&quot;http://localhost:1313/post/first-post/&quot;&gt;first&lt;/a&gt;&lt;/h1&gt;
 &lt;script&gt;document.write('&lt;script src=&quot;http://'
         + (location.host || 'localhost').split(':')[0]
-        + ':1313/livereload.js?mindelay=10&quot;&gt;&lt;/'
+		+ ':1313/livereload.js?mindelay=10&quot;&gt;&lt;/'
         + 'script&gt;')&lt;/script&gt;&lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -1096,8 +1094,8 @@ i'm speechless
 
 <pre><code>$ vi config.toml
 [permalinks]
-    page = &quot;/:title/&quot;
-    about = &quot;/:filename/&quot;
+	page = &quot;/:title/&quot;
+	about = &quot;/:filename/&quot;
 </code></pre>
 
 <p>Generate the web site and verify that this didn&rsquo;t work. Hugo lets &ldquo;slug&rdquo; or &ldquo;URL&rdquo; override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.</p>
@@ -1116,7 +1114,7 @@ i'm speechless
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;{{ .Title }}&lt;/title&gt;
+	&lt;title&gt;{{ .Title }}&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 :wq
@@ -1339,6 +1337,9 @@ $ vi themes/zafta/layouts/_default/single.html
   
 
 
+
+  
+  
 
      </div>
   </body>

@@ -66,6 +66,8 @@
 </head>
 
   
+             
+  
 
 
   <body class="">
@@ -85,8 +87,6 @@
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
                 <a class="menu-item" href="/about/" title="">About</a>
-                
-                <a class="menu-item" href="/about/" title="About Hugo">About Hugo</a>
                 
         </div>
     </div>
@@ -110,8 +110,6 @@
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
                 <a class="menu-item" href="/about/" title="">About</a>
-                
-                <a class="menu-item" href="/about/" title="About Hugo">About Hugo</a>
                 
         </div>
     </div>
@@ -209,7 +207,7 @@ notAlternative = true
 <pre><code class="language-bash"># Netlify redirects. See https://www.netlify.com/docs/redirects/
 {{  range $p := .Site.Pages -}}
 {{ range .Aliases }}
-{{  . | printf &quot;%-35s&quot; }}   {{ $p.RelPermalink -}}
+{{  . | printf &quot;%-35s&quot; }}	{{ $p.RelPermalink -}}
 {{ end -}}
 {{- end -}}
 </code></pre>
@@ -299,6 +297,9 @@ notAlternative = true
   
 
 
+
+  
+  
 
      </div>
   </body>
