@@ -103,26 +103,6 @@
     </url>
   
     <url>
-      <loc>https://umarquez.com/2014/creating-a-new-theme/</loc>
-      
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://umarquez.com/2014/goisforlovers/</loc>
-      
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://umarquez.com/2014/hugoisforlovers/</loc>
       
       <lastmod>2014-04-02T00:00:00+00:00</lastmod>
@@ -153,18 +133,6 @@
     </url>
   
     <url>
-      <loc>https://umarquez.com/tags/hugo/</loc>
-      
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://umarquez.com/posts/news/</loc>
       
       <lastmod>2018-08-29T00:00:00+00:00</lastmod>
@@ -177,7 +145,7 @@
     <url>
       <loc>https://umarquez.com/posts/</loc>
       
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
       
       
       
@@ -201,20 +169,6 @@
     <url>
       <loc>https://umarquez.com/tags/</loc>
       
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://umarquez.com/tags/theme/</loc>
-      
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-      
       
       
       <priority>0</priority>
@@ -225,7 +179,7 @@
     <url>
       <loc>https://umarquez.com/categories/uncategorized/</loc>
       
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
       
       
       
@@ -261,7 +215,7 @@
     <url>
       <loc>https://umarquez.com/tags/development/</loc>
       
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
+      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
       
       
       
@@ -273,7 +227,7 @@
     <url>
       <loc>https://umarquez.com/tags/go/</loc>
       
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
+      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
       
       
       
@@ -285,7 +239,7 @@
     <url>
       <loc>https://umarquez.com/tags/golang/</loc>
       
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
+      <lastmod>2014-04-02T00:00:00+00:00</lastmod>
       
       
       
@@ -298,30 +252,6 @@
       <loc>https://umarquez.com/tags/hugo/</loc>
       
       <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://umarquez.com/tags/templates/</loc>
-      
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://umarquez.com/tags/themes/</loc>
-      
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
       
       
