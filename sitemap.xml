@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>https://umarquez.com/2019/hola-mundo/</loc>
+      
+      <lastmod>2019-03-29T04:50:10+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
       <loc>https://umarquez.com/musica/</loc>
       
       <lastmod>2019-03-29T04:38:52+00:00</lastmod>
@@ -14,6 +24,18 @@
   
     <url>
       <loc>https://umarquez.com/categories/</loc>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.com/posts/</loc>
+      
+      <lastmod>2019-03-29T04:50:10+00:00</lastmod>
       
       
       
@@ -35,7 +57,7 @@
     <url>
       <loc>https://umarquez.com/</loc>
       
-      <lastmod>2019-03-29T04:38:52+00:00</lastmod>
+      <lastmod>2019-03-29T04:50:10+00:00</lastmod>
       
       
       
