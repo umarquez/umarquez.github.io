@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Uriel Márquez | @umarquez</title>
-    <link>https://umarquez.com/posts/</link>
-    <description>Recent content in Posts on Uriel Márquez | @umarquez</description>
+    <title>go on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.com/tags/go/</link>
+    <description>Recent content in go on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 29 Mar 2019 04:50:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jul 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://umarquez.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://umarquez.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title></title>
-      <link>https://umarquez.com/2019/hola-mundo/</link>
-      <pubDate>Fri, 29 Mar 2019 04:50:10 +0000</pubDate>
-      
-      <guid>https://umarquez.com/2019/hola-mundo/</guid>
-      <description>!Hola Mundo!</description>
-    </item>
     
     <item>
       <title>(Hu)go Template Primer</title>
