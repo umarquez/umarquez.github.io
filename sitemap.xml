@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
+      <loc>https://umarquez.com/2019/c%C3%B3mo-se-cre%C3%B3-este-sitio/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
       <loc>https://umarquez.com/2019/hola-mundo/</loc>
       
       <lastmod>2019-03-29T04:50:10+00:00</lastmod>
@@ -23,7 +33,67 @@
     </url>
   
     <url>
+      <loc>https://umarquez.com/tags/bitbucket/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
       <loc>https://umarquez.com/categories/</loc>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.com/tags/desarrollo-web/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.com/tags/forestry/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.com/tags/github/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.com/tags/hugo/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
       
       
       
@@ -35,7 +105,7 @@
     <url>
       <loc>https://umarquez.com/posts/</loc>
       
-      <lastmod>2019-03-29T04:50:10+00:00</lastmod>
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
       
       
       
@@ -47,6 +117,20 @@
     <url>
       <loc>https://umarquez.com/tags/</loc>
       
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.com/categories/tecnolog%C3%ADa-y-programaci%C3%B3n/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
+      
       
       
       <priority>0</priority>
@@ -57,7 +141,7 @@
     <url>
       <loc>https://umarquez.com/</loc>
       
-      <lastmod>2019-03-29T04:50:10+00:00</lastmod>
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
       
       
       
