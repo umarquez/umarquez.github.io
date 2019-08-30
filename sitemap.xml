@@ -127,18 +127,6 @@
     </url>
   
     <url>
-      <loc>https://umarquez.c0d3.mx/categories/tecnolog%C3%ADa-y-programaci%C3%B3n/</loc>
-      
-      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
       <loc>https://umarquez.c0d3.mx/</loc>
       
       <lastmod>2019-04-01T00:00:00-06:00</lastmod>
@@ -154,6 +142,18 @@
       <loc>https://umarquez.c0d3.mx/tags/hola-mundo/</loc>
       
       <lastmod>2019-03-29T04:50:10+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://umarquez.c0d3.mx/categories/tecnologia-y-programacion/</loc>
+      
+      <lastmod>2019-04-01T00:00:00-06:00</lastmod>
       
       
       
