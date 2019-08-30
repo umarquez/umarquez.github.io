@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Uriel Márquez | @umarquez</title>
-    <link>https://umarquez.com/tags/</link>
+    <link>https://umarquez.c0d3.mx/tags/</link>
     <description>Recent content in Tags on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
     <lastBuildDate>Mon, 01 Apr 2019 00:00:00 -0600</lastBuildDate>
     
-	<atom:link href="https://umarquez.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://umarquez.c0d3.mx/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>BitBucket</title>
-      <link>https://umarquez.com/tags/bitbucket/</link>
+      <link>https://umarquez.c0d3.mx/tags/bitbucket/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 -0600</pubDate>
       
-      <guid>https://umarquez.com/tags/bitbucket/</guid>
+      <guid>https://umarquez.c0d3.mx/tags/bitbucket/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Desarrollo Web</title>
-      <link>https://umarquez.com/tags/desarrollo-web/</link>
+      <link>https://umarquez.c0d3.mx/tags/desarrollo-web/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 -0600</pubDate>
       
-      <guid>https://umarquez.com/tags/desarrollo-web/</guid>
+      <guid>https://umarquez.c0d3.mx/tags/desarrollo-web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Forestry</title>
-      <link>https://umarquez.com/tags/forestry/</link>
+      <link>https://umarquez.c0d3.mx/tags/forestry/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 -0600</pubDate>
       
-      <guid>https://umarquez.com/tags/forestry/</guid>
+      <guid>https://umarquez.c0d3.mx/tags/forestry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHub</title>
-      <link>https://umarquez.com/tags/github/</link>
+      <link>https://umarquez.c0d3.mx/tags/github/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 -0600</pubDate>
       
-      <guid>https://umarquez.com/tags/github/</guid>
+      <guid>https://umarquez.c0d3.mx/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HUGO</title>
-      <link>https://umarquez.com/tags/hugo/</link>
+      <link>https://umarquez.c0d3.mx/tags/hugo/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 -0600</pubDate>
       
-      <guid>https://umarquez.com/tags/hugo/</guid>
+      <guid>https://umarquez.c0d3.mx/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hola mundo</title>
-      <link>https://umarquez.com/tags/hola-mundo/</link>
+      <link>https://umarquez.c0d3.mx/tags/hola-mundo/</link>
       <pubDate>Fri, 29 Mar 2019 04:50:10 +0000</pubDate>
       
-      <guid>https://umarquez.com/tags/hola-mundo/</guid>
+      <guid>https://umarquez.c0d3.mx/tags/hola-mundo/</guid>
       <description></description>
     </item>
     
