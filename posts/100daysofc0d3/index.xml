@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>100DaysOfC0D3 on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/posts/100daysofc0d3/</link>
+    <description>Recent content in 100DaysOfC0D3 on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/posts/100daysofc0d3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[0/100] #100DaysOfC0D3</title>
+      <link>https://umarquez.c0d3.mx/2019/july/01/0-100-100daysofc0d3-mi-versi%C3%B3n-de-100daysofcode/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/01/0-100-100daysofc0d3-mi-versi%C3%B3n-de-100daysofcode/</guid>
+      <description>Mi versión de #100DaysOfCode Repo GitHub: umarquez/100DaysOfC0D3
+¿Qué? Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando Go (Golang) como lenguaje.
+¿Cómo?  Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación. Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.</description>
+    </item>
+    
+  </channel>
+</rss>

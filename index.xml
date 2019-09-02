@@ -19,5 +19,127 @@
 </description>
     </item>
     
+    <item>
+      <title>[0/100] #100DaysOfC0D3</title>
+      <link>https://umarquez.c0d3.mx/2019/july/01/0-100-100daysofc0d3-mi-versi%C3%B3n-de-100daysofcode/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/01/0-100-100daysofc0d3-mi-versi%C3%B3n-de-100daysofcode/</guid>
+      <description>
+
+&lt;h1 id=&#34;mi-versión-de-100daysofcode&#34;&gt;Mi versión de #100DaysOfCode&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Repo GitHub:&lt;/strong&gt;
+&lt;a href=&#34;https://github.com/umarquez/100DaysOfC0D3&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;umarquez/100DaysOfC0D3&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;qué&#34;&gt;¿Qué?&lt;/h2&gt;
+
+&lt;p&gt;Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando &lt;a href=&#34;http://golang.org&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;Go&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;(Golang)&lt;/em&gt;&lt;/a&gt; como lenguaje.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo&#34;&gt;¿Cómo?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación.&lt;/li&gt;
+&lt;li&gt;Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.&lt;/li&gt;
+&lt;li&gt;Todos nos equivocamos en algún momento, así que espero recibir sus comentarios y observaciones siempre de manera respetuosa y con la intención de mejorar.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;por-qué&#34;&gt;¿Por Qué?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Generar más contenido en español relacionado con &lt;strong&gt;Go&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Explicar y repasar conceptos, además de mejorar nuestras habilidades.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;temas&#34;&gt;Temas&lt;/h2&gt;
+
+&lt;h3 id=&#34;algoritmos-de-ordenamiento&#34;&gt;Algoritmos de ordenamiento&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/1-100-100daysofc0d3-461329d7db3a&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento por inserción | Insert Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/3-100-100daysofc0d3-b92a6bc17364&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento por selección | Selection Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/5-100-100daysofc0d3-34a17514d23b&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento Burbuja | Bubble Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/9-100-100daysofc0d3-b4a47f089b1f&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento con Árbol Binario | Binary Tree Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/12-100-100daysofc0d3-9bf50aecde0d&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;12&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento rápido | Quicksort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/22-100-100daysofc0d3-26fbe1abaf13&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento Gnomo | Gnome Sort&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;algoritmos-de-búsqueda&#34;&gt;Algoritmos de búsqueda&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/4-100-100daysofc0d3-dcda8f1af6be&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;4&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Búsqueda Binaria | Binary Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;15&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — El vecino más cercano | Nearest neighbor search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/21-100-100daysofc0d3-1650f35510ef&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;21&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Búsqueda simple de texto | Simple text search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;algoritmos-de-codificación&#34;&gt;Algoritmos de codificación&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/2-100-100daysofc0d3-1403726d6e2d&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Codificando/Decodificando Base64&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/14-100-100daysofc0d3-ae616cce9499&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;14&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — UUEncode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;algoritmos-de-compresión&#34;&gt;Algoritmos de compresión&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/23-100-100daysofc0d3-50480b7112d4&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;23&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Compresión LZ77 | LZ77 Compression Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;estructuras-de-datos&#34;&gt;Estructuras de datos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/7-100-100daysofc0d3-6eed6b4ceded&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;7&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Tabla de Hash | Hash Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/8-100-100daysofc0d3-755dde240e60&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Listas enlazadas | Linked List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;golang&#34;&gt;Golang&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/6-100-100daysofc0d3-f7a661dd8e1a&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Interfaces Golang | Si parece un pato, nada como un pato…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/17-100-100daysofc0d3-9fd4ad3eba91&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;17&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Endianness | Big-endian &amp;amp; Little-endian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;patrones-de-diseño&#34;&gt;Patrones de diseño&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/11-100-100daysofc0d3-5d3d60c70390&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Partrón Singleton | Singleton Pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/27-100-100daysofc0d3-900fb24eea2d&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;27&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Partrónes de diseño: Builder | Builder design pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/30-100-100daysofc0d3-af4ae4c2946&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;30&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Herencia &amp;amp; Patrón Composite | Inheritance &amp;amp; Composite Pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;procesamiento-de-imágenes&#34;&gt;Procesamiento de imágenes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/16-100-100daysofc0d3-eef81cd44afb&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;16&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escalado de imágenes mediante interpolación de vecinos cercanos | Image scaling applying nearest neighbor interpolation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/24-100-100daysofc0d3-fc49dad71761&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/25-100-100daysofc0d3-ba73c5030a95&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;25&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Tramado | Dithering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;proyectos&#34;&gt;Proyectos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/10-100-100daysofc0d3-7187417844ad&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;10&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Cuenta colores&lt;/a&gt; (aplicación de tablas &lt;em&gt;hash&lt;/em&gt; y árboles binarios)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/20-100-100daysofc0d3-344d3b0cfc8f&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;20&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Segundo proyecto: Repintado&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;redes&#34;&gt;Redes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/19-100-100daysofc0d3-48b6b5d27b9c&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;19&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ping | ICMP Echo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;seguridad&#34;&gt;Seguridad&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/13-100-100daysofc0d3-9a06e28e257&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;13&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Esteganografía | Steganography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/18-100-100daysofc0d3-294aaacd2ac1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;18&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — TEA | Tiny Encryption Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/26-100-100daysofc0d3-459cdd5322b1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;26&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Shell a través de WebSocket | Shell through WebSocket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@umarquez_mx/28-100-100daysofc0d3-7746a167e50c&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;[&lt;sup&gt;28&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escaneo de puertos TCP | TCP port scanning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe src=&#34;https://carbon.now.sh/embed?bg=rgba(74%2C144%2C226%2C1)&amp;code=package%2520main%250A%250Aimport%2520(%250A%2509%2522fmt%2522%250A)%250A%250Afunc%2520main()%2520%257B%250A%2509fmt.Print(%2522%2520%2520(**_)%255Cn%2520%2520(o%2520_%2520o)%2520%255Cn%2520_**_(._.)%255Cn%257C%2520%2520%2520%2520%2520%2520%2520%2520%2520%257C%255Cn%257C%2520%2520Muuu!%2520%2520%257C%2520%255Cn%257C_________%257C%255Cn%2522)%250A%257D%250A&amp;ds=true&amp;dsblur=68px&amp;dsyoff=20px&amp;es=4x&amp;fm=Hack&amp;fs=14px&amp;l=text%2Fx-go&amp;lh=143%25&amp;ln=false&amp;ph=56px&amp;pv=56px&amp;referrer=https%3A%2F%2Fmedium.com%2F%40umarquez_mx%2F0-100-100daysofc0d3-c952a268e057&amp;si=false&amp;t=monokai&amp;wa=true&amp;wc=true&amp;wm=false&amp;wt=none&#34; frameborder=0 width=&#34;100%&#34; height=&#34;500px&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
