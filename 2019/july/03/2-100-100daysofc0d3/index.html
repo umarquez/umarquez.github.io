@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/july/02/1-100-100daysofc0d3/" />
+  
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/july/03/2-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [2/100] #100DaysOfC0D3 | Uriel Márquez | @umarquez
+       
+  </title>
+  <meta name="title" content="[2/100] #100DaysOfC0D3 | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[2/100] #100DaysOfC0D3",
+    "headline" : "[2/100] #100DaysOfC0D3",
+    "description" : "Codificando/Decodificando Base64 Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/2-base64
+Es un sistema de codificación binario→texto que utiliza 64 caracteres imprimibles como base para representar el contenido codificado, permitiendo que este sea manejado como cadena de texto y pueda ser enviado a través de la red o almacenado como texto plano.
+Lista de caracteres:  Codificar:  Para iniciar debemos dividir el contenido original en bloques de 3 octetos o bytes. 8 * 3 = 24 bits Cada bloque de 24 bits se dividen en grupos de 6 bits, obteniendo 4 grupos como resultado.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-03 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-03 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/july/03/2-100-100daysofc0d3/",
+    "wordCount" : "403",
+    "keywords" : [ "Algoritmos","Golang","100daysofc0d3","100daysofcode","Base64", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/100daysofc0d3/" title="100DaysOfC0D3">Blog</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/100daysofc0d3/" title="100DaysOfC0D3">Blog</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[2/100] #100DaysOfC0D3</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-03 itemprop="datePublished">July 3, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="codificando-decodificando-base64">Codificando/Decodificando Base64</h1>
+
+<p><strong>Repo:</strong>
+<a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/2-base64" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/2-base64</a></p>
+
+<p>Es un sistema de codificación <strong><em>binario→texto</em></strong> que utiliza 64 caracteres imprimibles como base para representar el contenido codificado, permitiendo que este sea manejado como cadena de texto y pueda ser enviado a través de la red o almacenado como texto plano.</p>
+
+<h2 id="lista-de-caracteres">Lista de caracteres:</h2>
+
+<script src="https://gist.github.com/umarquez/23840b9b3f49b0e9a243da8bea62a513.js"></script>
+
+<h2 id="codificar">Codificar:</h2>
+
+<ol>
+<li>Para iniciar debemos dividir el contenido original en bloques de 3 octetos o <em>bytes</em>. <code>8 * 3 = 24 bits</code></li>
+<li>Cada bloque de 24 bits se dividen en grupos de <em>6 bits</em>, obteniendo 4 grupos como resultado. <sup>24</sup>&frasl;<sub>6</sub> = 4</li>
+<li>Cada grupo será almacenado dentro de los 6 bits menos significativos de un nuevo octeto llenando los dos bits más significativos con cero 00.</li>
+<li>El número resultante representa una posición dentro de la lista de 64 caracteres, que van del 0 al 63 (<strong>0x00</strong> -&gt; <strong>0x3F</strong>), por lo que el octeto será sustituido por el caracter dentro de la posición dada por su valor.</li>
+<li>Cada caracter resultante será agregado al final de la cadena de texto hasta finalizar con el total de los datos.</li>
+<li>Debido a que se espera que la cantidad de octetos de entrada sea múltiplo de 3, se deberán agregar signos “=” hasta alcanzar el siguiente múltiplo de 3 (1, 2 o ninguno, según sea el caso).</li>
+</ol>
+
+<h3 id="ejemplo">Ejemplo:</h3>
+
+<p>Procesaremos los 3 primeros octetos de la cadena de texto: Hola Mundo! de manera manual.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2556/1*f2mo9sxf0tg1WKFgiD8VVw.png" alt="Base64(“Hol”) = “SG9s”" class="lazyload"><figcaption class="image-caption">Base64(“Hol”) = “SG9s”</figcaption></figure></p>
+
+<pre><code>Base64(&quot;Hol&quot;) = &quot;SG9s&quot;
+</code></pre>
+
+<blockquote>
+<p><strong>Nota:</strong> Como podemos observar la entrada han sido 3 octetos y la salida 4 octetos, esto quiere decir que el tamaño de nuestra información incrementará al rededor del 33%, debemos considerar esta incremento al momento de calcular el espacio necesario para almacenar y transmitir datos bajo esta codificación.</p>
+</blockquote>
+
+<p>El siguiente diagrama explica a detalle el procesamiento de los 2 primeros bloques:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/7744/1*ZWlnd8pVDbraWxxIXEvseg.png" alt="Base64(“Hola M”) = “SG9sYSBN”" class="lazyload"><figcaption class="image-caption">Base64(“Hola M”) = “SG9sYSBN”</figcaption></figure></p>
+
+<pre><code>Base64(“Hola M”) = “SG9sYSBN”
+</code></pre>
+
+<p>Debido a que la cantidad de caracteres en Hola Mundo! no es múltiplo de 3 será necesario agregar un caracter “=”:| Hol | a_M | und | o!- | → =</p>
+
+<p>El resultado final será:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/7064/1*ymt7ZUDdOREjMFC9ExG3ZQ.png" alt="Base64(“Hola Mundo!”) = “SG9sYSBNdW5kbyE=”" class="lazyload"><figcaption class="image-caption">Base64(“Hola Mundo!”) = “SG9sYSBNdW5kbyE=”</figcaption></figure></p>
+
+<pre><code>Base64(“Hola Mundo!”) = “SG9sYSBNdW5kbyE=”
+</code></pre>
+
+<h2 id="decodificar">Decodificar</h2>
+
+<p>Para realizar el proceso de decodificación solo debemos recuperar la posición de cada caracter dentro de la lista, tomar los 6 bits menos significativos de cada grupo de 4 octetos 6 bits * 4 octetos = 24 bits / 8 = 3 bytes e ir rellenando las posiciones de 3 nuevos octetos con estos bits, estos octetos formarán parte de nuestro texto decodificado.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/4504/1*I6dzNMFXnu7mQidErK42xQ.png" alt="Decode(“SG9s”) = “Hol”" class="lazyload"><figcaption class="image-caption">Decode(“SG9s”) = “Hol”</figcaption></figure></p>
+
+<pre><code>Decode(“SG9s”) = “Hol”
+</code></pre>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p><script src="https://gist.github.com/umarquez/709542d9f149a3af636dc31f01379440.js"></script>
+<a href="https://play.golang.org/p/chz9riQ1e7u" rel="nofollow noreferrer" target="_blank">https://play.golang.org/p/chz9riQ1e7u</a></p>
+
+<p><figure><img src="/images/ring.svg" data-src="https://cdn-images-1.medium.com/max/8192/1*MuP2z9_viU_1OU-PiXQX-g.png" data-sizes="auto" alt="main.go.log" title="main.go.log" class="lazyload"><figcaption class="image-caption">main.go.log</figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/july/03/2-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/july/03/2-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/algoritmos/">
+                    #Algoritmos</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/base64/">
+                    #Base64</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/02/1-100-100daysofc0d3/" class="prev" rel="prev" title="[1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort"><i class="iconfont icon-left"></i>&nbsp;[1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+  
+
+     </div>
+  </body>
+</html>
