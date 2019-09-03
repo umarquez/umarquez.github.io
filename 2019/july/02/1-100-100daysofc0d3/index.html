@@ -25,11 +25,40 @@
            [1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort | Uriel Márquez | @umarquez
        
   </title>
+
+  
+<meta property="og:title" content="[1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/july/02/1-100-100daysofc0d3/" />
+<meta property="og:description" content="Ordenamiento por inserción | Insert Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/1-insertion_sort
+ El ordenamiento por inserción (insertion sort en inglés) es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. Requiere O(n²)operaciones para ordenar una lista de n elementos. https://es.wikipedia.org/wiki/Ordenamiento_por_inserci%C3%B3n
+ ¿Cómo funciona? Este algoritmo consiste en comparar cada elemento de la lista con el elemento anterior, intercambiándolos si el elemento actual fuera menor y hasta no encontrar más elementos con valores mayores hacia el inicio de la lista.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/1-Ordenamiento-por-insersion.png"/>
+<meta property="og:type" content="article" />
+
+
+<meta itemprop="name" content="[1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/july/02/1-100-100daysofc0d3/">
+<meta itemprop="description" content="Ordenamiento por inserción | Insert Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/1-insertion_sort
+ El ordenamiento por inserción (insertion sort en inglés) es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. Requiere O(n²)operaciones para ordenar una lista de n elementos. https://es.wikipedia.org/wiki/Ordenamiento_por_inserci%C3%B3n
+ ¿Cómo funciona? Este algoritmo consiste en comparar cada elemento de la lista con el elemento anterior, intercambiándolos si el elemento actual fuera menor y hasta no encontrar más elementos con valores mayores hacia el inicio de la lista.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/1-Ordenamiento-por-insersion.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Ordenamiento por inserción | Insert Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/1-insertion_sort
+ El ordenamiento por inserción (insertion sort en inglés) es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. Requiere O(n²)operaciones para ordenar una lista de n elementos. https://es.wikipedia.org/wiki/Ordenamiento_por_inserci%C3%B3n
+ ¿Cómo funciona? Este algoritmo consiste en comparar cada elemento de la lista con el elemento anterior, intercambiándolos si el elemento actual fuera menor y hasta no encontrar más elementos con valores mayores hacia el inicio de la lista.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/1-Ordenamiento-por-insersion.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/1-Ordenamiento-por-insersion.png"/>
+
   <meta name="title" content="[1/100] #100DaysOfC0D3 Ordenamiento por inserción | Insert Sort | Uriel Márquez | @umarquez">
     
   
-  <link rel="stylesheet" href="/font/iconfont.css">
-  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
 
 
 
@@ -167,7 +196,7 @@
 
 <p>Supongamos que debemos ordenar la siguiente lista:</p>
 
-<p><figure><img src="/images/ring.svg" data-src="https://cdn-images-1.medium.com/max/3152/1*Y9VEQecx193NZgn086YFQQ.png" data-sizes="auto" alt="[]int{5,4,3,2,1}" title="[]int{5,4,3,2,1}" class="lazyload"><figcaption class="image-caption">[]int{5,4,3,2,1}</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-src="uploads/1*Y9VEQecx193NZgn086YFQQ.png" data-sizes="auto" alt="[]int{5,4,3,2,1}" title="[]int{5,4,3,2,1}" class="lazyload"><figcaption class="image-caption">[]int{5,4,3,2,1}</figcaption></figure></p>
 
 <h3 id="paso-1">Paso 1:</h3>
 
@@ -181,7 +210,7 @@
 <li>Tomamos el siguiente elemento lista[2] y lo comparamos con el segundo lista[1], si es menor lo intercambiamos.</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-src="https://cdn-images-1.medium.com/max/2000/1*0N4eLNes32bJ_dZOsWt0TQ.png" data-sizes="auto" alt="lista\[2\] &lt; lista\[1\]" title="lista[2] &lt; lista[1]" class="lazyload"><figcaption class="image-caption">lista\[2\] &lt; lista\[1\]</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-src="uploads/1*0N4eLNes32bJ_dZOsWt0TQ.png" data-sizes="auto" alt="lista\[2\] &lt; lista\[1\]" title="lista[2] &lt; lista[1]" class="lazyload"><figcaption class="image-caption">lista\[2\] &lt; lista\[1\]</figcaption></figure></p>
 
 <h3 id="paso-3">Paso 3</h3>
 
@@ -189,7 +218,7 @@
 <li>Si intercambiamos, comparamos el elemento actual (ahora lista[1])con al anterior lista[0] e intercambiamos si este sigue siendo menor al comparado.</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-src="https://cdn-images-1.medium.com/max/2000/1*86hwYPYRRJRaWG6RwWjLJQ.png" data-sizes="auto" alt="lista\[1\] &lt; lista\[0\]" title="lista[1] &lt; lista[0]" class="lazyload"><figcaption class="image-caption">lista\[1\] &lt; lista\[0\]</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-src="uploads/1*86hwYPYRRJRaWG6RwWjLJQ.png" data-sizes="auto" alt="lista\[1\] &lt; lista\[0\]" title="lista[1] &lt; lista[0]" class="lazyload"><figcaption class="image-caption">lista\[1\] &lt; lista\[0\]</figcaption></figure></p>
 
 <h3 id="paso-4-6">Paso 4–6</h3>
 
@@ -197,7 +226,7 @@
 <li>Tomamos el siguiente elemento de la lista lista[3] y lo intercambiamos con el índice inferior lista[2] si este fuera mayor. Continuamos hasta no encontrar elementos mayores.</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*j1qkmbseeIWbOLXKtdaX7w.png" alt="lista\[3\] &lt; lista\[0\], lista\[1\], lista\[2\]" class="lazyload"><figcaption class="image-caption">lista\[3\] &lt; lista\[0\], lista\[1\], lista\[2\]</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="uploads/1*j1qkmbseeIWbOLXKtdaX7w.png" alt="lista\[3\] &lt; lista\[0\], lista\[1\], lista\[2\]" class="lazyload"><figcaption class="image-caption">lista\[3\] &lt; lista\[0\], lista\[1\], lista\[2\]</figcaption></figure></p>
 
 <h3 id="paso-7-10">Paso 7 — 10</h3>
 
@@ -205,11 +234,11 @@
 <li>Repetimos los mismos pasos con el elemento restante lista[4]</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-src="https://cdn-images-1.medium.com/max/2000/1*iSHC7scTgRgNSd7A8P5WQg.png" data-sizes="auto" alt="lista\[4\] &lt; lista\[0\], lista\[1\], lista\[2\], lista\[3\]" title="lista[4] &lt; lista[0], lista[1], lista[2], lista[3]" class="lazyload"><figcaption class="image-caption">lista\[4\] &lt; lista\[0\], lista\[1\], lista\[2\], lista\[3\]</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-src="uploads/1*iSHC7scTgRgNSd7A8P5WQg.png" data-sizes="auto" alt="lista\[4\] &lt; lista\[0\], lista\[1\], lista\[2\], lista\[3\]" title="lista[4] &lt; lista[0], lista[1], lista[2], lista[3]" class="lazyload"><figcaption class="image-caption">lista\[4\] &lt; lista\[0\], lista\[1\], lista\[2\], lista\[3\]</figcaption></figure></p>
 
 <h3 id="resultado-final">Resultado final</h3>
 
-<p><figure><img src="/images/ring.svg" data-src="https://cdn-images-1.medium.com/max/2000/1*BBI5J7-OQ-2sk3RJilvfSw.png" data-sizes="auto" alt="\[\]lista{1,2,3,4,5}" title="[]lista{1,2,3,4,5}" class="lazyload"><figcaption class="image-caption">\[\]lista{1,2,3,4,5}</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-src="uploads/1*BBI5J7-OQ-2sk3RJilvfSw.png" data-sizes="auto" alt="\[\]lista{1,2,3,4,5}" title="[]lista{1,2,3,4,5}" class="lazyload"><figcaption class="image-caption">\[\]lista{1,2,3,4,5}</figcaption></figure></p>
 
 <h2 id="implementación-en-go">Implementación en Go</h2>
 
@@ -217,7 +246,7 @@
 
 <p><a href="https://play.golang.org/p/B-GTDav5eTP" title="https://play.golang.org/p/B-GTDav5eTP" rel="nofollow noreferrer" target="_blank">https://play.golang.org/p/B-GTDav5eTP</a></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2084/1*qX7AQBlmkfFzwCt9iAUsZg.png" alt="main.go.log" class="lazyload"><figcaption class="image-caption">main.go.log</figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="uploads/1*qX7AQBlmkfFzwCt9iAUsZg.png" alt="main.go.log" class="lazyload"><figcaption class="image-caption">main.go.log</figcaption></figure></p>
 
     </div>
 
@@ -325,7 +354,60 @@
 
 
   
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
 
      </div>
   </body>
