@@ -189,7 +189,7 @@ Un desenfoque de caja (también conocido como caja de filtro lineal) es un filtr
 
 <p>El rango de píxeles que procesaremos cada vez se conoce como ventana, esta ventana contendrá en el centro la posición que estamos procesando; en el siguiente ejemplo podremos encontrar una venta de 3x3 misma que será utilizada más adelante en el ejemplo.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2152/1*16_3nWPDW-5xXmkOWiGfdw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/16_3nWPDW-5xXmkOWiGfdw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <pre><code>**(x,y) =** ((x-1,y-1)+(x,y-1)+(x+1,y-1)+(x-1,y)+(x,y)+(x+1,y)+(x-1,y+1)+(x,y+1)+(x+1,y+1))/9
 </code></pre>
@@ -200,17 +200,17 @@ Un desenfoque de caja (también conocido como caja de filtro lineal) es un filtr
 
 <p>Vamos a procesar los siguientes valores utilizando una venta de 3x3</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*zdkQxyQ2X983ohVrsP6nBg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/zdkQxyQ2X983ohVrsP6nBg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Comenzaremos con el primer píxel A1, este únicamente cuenta con 3 vecinos aparte de él, en este caso solo promediaremos los valores disponibles: A1, B1, A2 y B2, esto será: 7 + 7 + 7 + 7 = 28 / 4 = 7</p>
 
 <p>La tabla siguiente contiene las operaciones que deberemos realizar en cada caso:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2556/1*tcC8-Lw5rBaQZ3vRumuFTw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/tcC8-Lw5rBaQZ3vRumuFTw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Una vez calculado cada valor, deberemos redondearlo y almacenarlo en la imagen de salida, hecho esto, la imagen resultante se verá de la siguiente forma:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3704/1*mI-FH_yg9_apueKk2hyL-A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/mI-FH_yg9_apueKk2hyL-A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Como podemos observar, el cambio drástico en los valores entre la columna <strong>C</strong> y <strong>D</strong> ha sido matizada en la imagen resultante, este cambio de valores podría representar un borde vertical que ha sido suavizado.</p>
 
@@ -218,19 +218,19 @@ Un desenfoque de caja (también conocido como caja de filtro lineal) es un filtr
 
 <script src="https://gist.github.com/umarquez/5ab136858395a4e7b0b2dfda0e810c55.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3636/1*tCCEd_LxOPVsBnQK_FfIoQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/tCCEd_LxOPVsBnQK_FfIoQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*mq3tiZiJw6qPIC6t6g8BPQ.jpeg" alt="Original" class="lazyload"><figcaption class="image-caption">Original</figcaption></figure><em>Original</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/mq3tiZiJw6qPIC6t6g8BPQ.jpeg" alt="Original" class="lazyload"><figcaption class="image-caption">Original</figcaption></figure><em>Original</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*mjVNnFaKxJvQCYSZToo1kw.png" alt="ventana: 3x3" class="lazyload"><figcaption class="image-caption">ventana: 3x3</figcaption></figure><em>ventana: 3x3</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/mjVNnFaKxJvQCYSZToo1kw.png" alt="ventana: 3x3" class="lazyload"><figcaption class="image-caption">ventana: 3x3</figcaption></figure><em>ventana: 3x3</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*8bjVFiB7kHMuIpbXEBczEA.png" alt="ventana: 9x9" class="lazyload"><figcaption class="image-caption">ventana: 9x9</figcaption></figure><em>ventana: 9x9</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/8bjVFiB7kHMuIpbXEBczEA.png" alt="ventana: 9x9" class="lazyload"><figcaption class="image-caption">ventana: 9x9</figcaption></figure><em>ventana: 9x9</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*t1k2gw4FNhFNOeGhsEVpXg.png" alt="ventana: 27x27" class="lazyload"><figcaption class="image-caption">ventana: 27x27</figcaption></figure><em>ventana: 27x27</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/t1k2gw4FNhFNOeGhsEVpXg.png" alt="ventana: 27x27" class="lazyload"><figcaption class="image-caption">ventana: 27x27</figcaption></figure><em>ventana: 27x27</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*2UxHY4vuImA_Xtmp_BnqGA.png" alt="ventana: 50x50" class="lazyload"><figcaption class="image-caption">ventana: 50x50</figcaption></figure><em>ventana: 50x50</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/2UxHY4vuImA_Xtmp_BnqGA.png" alt="ventana: 50x50" class="lazyload"><figcaption class="image-caption">ventana: 50x50</figcaption></figure><em>ventana: 50x50</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*xbiw1B05dlkELihIBOmQ0A.png" alt="ventana: 100x100" class="lazyload"><figcaption class="image-caption">ventana: 100x100</figcaption></figure><em>ventana: 100x100</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/xbiw1B05dlkELihIBOmQ0A.png" alt="ventana: 100x100" class="lazyload"><figcaption class="image-caption">ventana: 100x100</figcaption></figure><em>ventana: 100x100</em></p>
 
 <h2 id="palabras-finales">Palabras finales</h2>
 

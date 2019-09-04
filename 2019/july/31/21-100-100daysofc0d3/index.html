@@ -197,13 +197,13 @@ En el caso de Go, podemos aprovechar el hecho de que una cadena de texto es un [
 
 <p>Recorremos la cadena hasta encontrar una coincidencia con el primer caracter de la cadena a buscar.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/6392/1*qrcoDEmxCPo0kYWuNpxRGA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/qrcoDEmxCPo0kYWuNpxRGA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-2">Paso 2</h3>
 
 <p>Comparamos cada caracter del resto de la cadena dentro del texto; si primero llegamos al final de la cadena a buscar, hemos encontrado una coincidencia completa; de lo contrario, si en algún momento los caracteres de ambas cadenas dejaran de coincidir, se tratará de una coincidencia parcial, por lo que deberemos buscar una coincidencia con el primer carater de la cadena a buscar a partir de la siguiente posición en el texto completo.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/6392/1*Mi-WjhxNuUX9M_nTRwD8DQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Mi-WjhxNuUX9M_nTRwD8DQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h2 id="implementación-en-go">Implementación en Go</h2>
 
@@ -220,7 +220,7 @@ En el caso de Go, podemos aprovechar el hecho de que una cadena de texto es un [
 
 <script src="https://gist.github.com/umarquez/c4331c14c5d97cf05bc179611c426520.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/8192/1*FtsGiQC4wCTR9tDKNkFG-g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/FtsGiQC4wCTR9tDKNkFG-g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Podemos observar que esta búsqueda no es muy precisa y que debemos realizar algunas validaciones adicionales para evitar reemplazar falsos positivos como glass o massage pero en general funciona.</p>
 

@@ -187,7 +187,7 @@ En computación, <strong>endianness</strong> hace referencia al orden de los byt
 
 <p>Vamos a hablar de <strong>bits</strong>, <strong>bytes</strong> y como se organizan dentro de los registros y la memoria. Actualmente estamos habituados a escuchar y leer acerca de procesadores de <strong>64 bits</strong> y de que hace no mucho lo más común eran los de <strong>32 bits</strong>, también sabemos que hay música de <strong>8 bits</strong> que suena a videojuegos “clásicos”; pues todo esto está relacionado con el espacio en bits disponibles para almacenar/transmitir un valor, en el caso de <strong><em>Golang</em></strong> podemos saber el espacio que ocupa una variable basándonos en su tipo:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*fSqrwsfQhOtQ3mK6dqDW9A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fSqrwsfQhOtQ3mK6dqDW9A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Veamos la siguiente tabla de equivalencias, comienza con un <strong>nibble que es igual a 4 bits</strong> y es equivalente a un dígito hexadecimal (<strong>0</strong> →F). <strong>Un byte</strong> está formado por <strong>2 nibbles</strong>:</p>
 
@@ -206,13 +206,13 @@ En computación, <strong>endianness</strong> hace referencia al orden de los byt
 
 <p>Este formato colocará el primer <strong>byte</strong> en los <strong>8 bits</strong> más significativos de la <strong><em>QWORD</em></strong>, avanzando <strong>8</strong> posiciones y colocando el siguiente cada vez hasta completar los <strong>8 bytes</strong>, es entonces cuando comenzará con una nueva <strong><em>QWORD</em></strong>:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2288/1*2TE8b7bDIpy0dhn3dIRDLQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/2TE8b7bDIpy0dhn3dIRDLQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h2 id="little-endian">Little-endian</h2>
 
 <p>Este, en cambio, colocará el primer <strong>byte</strong> en los <strong>8 bits</strong> menos significativos de la <strong><em>QWORD</em></strong>, desplazándose <strong>8 bits</strong> a la izquierda cada vez hasta completarlo para cambiar de <strong><em>QWORD.</em></strong></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2288/1*RtlDvUg7lIGSCQvMFq_97w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/RtlDvUg7lIGSCQvMFq_97w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Algunos algoritmos (de encripción, por ejemplo) requieren que los datos a procesar se encuentren en uno de los dos formatos necesariamente, en caso de que nuestros datos estén en el formato opuesto, siempre podremos recurrir a la librería estándar de <strong><em>Golang</em></strong> para realizar estas operaciones o las transformaciones necesarias.</p>
 
@@ -222,7 +222,7 @@ En computación, <strong>endianness</strong> hace referencia al orden de los byt
 
 <script src="https://gist.github.com/umarquez/57f9569105251d71fc2872411146dfec.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*D2fcxJO7byK4iPDwRzcIgw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/D2fcxJO7byK4iPDwRzcIgw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
     </div>
 
@@ -275,7 +275,7 @@ En computación, <strong>endianness</strong> hace referencia al orden de los byt
 
     <div class="post-nav">
         
-        <a href="https://umarquez.c0d3.mx/2019/july/23/16-100-100daysofc0d3/" class="prev" rel="prev" title="[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos | Image scaling applying nearest neighbor interpolation"><i class="iconfont icon-left"></i>&nbsp;[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos | Image scaling applying nearest neighbor interpolation</a>
+        <a href="https://umarquez.c0d3.mx/2019/july/23/16-100-100daysofc0d3/" class="prev" rel="prev" title="[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos "><i class="iconfont icon-left"></i>&nbsp;[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos </a>
          
         
         <a href="https://umarquez.c0d3.mx/2019/july/25/18-100-100daysofc0d3/" class="next" rel="next" title="[18/100] #100DaysOfC0D3 - TEA | Tiny Encryption Algorithm">[18/100] #100DaysOfC0D3 - TEA | Tiny Encryption Algorithm&nbsp;<i class="iconfont icon-right"></i></a>

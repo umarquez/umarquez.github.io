@@ -200,23 +200,23 @@
 
 <p>Vamos a escalar <strong>3:1</strong> los siguientes píxeles utilizando interpolación bilineal.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*Liy-475ZHzFB8-muYLEONg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Liy-475ZHzFB8-muYLEONg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-1">Paso 1</h3>
 
 <p>Generamos la nueva matriz y colocamos los valores originales en la nueva ubicación</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2488/1*lxOkJq4aMefTX4uF4ABOXg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/lxOkJq4aMefTX4uF4ABOXg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-2">Paso 2</h3>
 
 <p>A continuación deberemos conectar cada columna, interpolando entre los valores disponibles:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2488/1*KYIUz6NLEPPlI1Q4wuvU3A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/KYIUz6NLEPPlI1Q4wuvU3A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>A continuación se muestra el procedimiento a detalle para cada par de valores</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2456/1*KecTYmu1-OGHTCyFcDq2uA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/KecTYmu1-OGHTCyFcDq2uA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Hemos decidido rellenar las últimas filas duplicando el último valor disponible debido a la falta de información.</p>
 
@@ -224,7 +224,7 @@
 
 <p>Una vez que contamos con las primeras columnas, procedemos a generar los valores para cada fila:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2488/1*MMdCXK_MBAoLbfoEE0UKNw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/MMdCXK_MBAoLbfoEE0UKNw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>La fórmula será la misma que en el paso anterior: <code>**_valor _**</code><code>= (((</code><code>**_origen_**</code><code>-</code><code>**_destino_**</code><code>)/</code><code>**_escala___</code><code>)*</code><code>**_posición_**</code><code>)+</code><code>**_origen_**</code></p>
 
@@ -232,7 +232,7 @@
 
 <p>Una vez que realicemos todos los cálculos terminaremos con los siguientes valores aproximados:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2520/1*cyYJZqxom6AYDwrFoEXbIA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/cyYJZqxom6AYDwrFoEXbIA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="notas">Notas</h3>
 
@@ -248,29 +248,29 @@
 
 <script src="https://gist.github.com/umarquez/17d41c028b459b70765ace3f88156691.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*ix36a8UZPV5e7IvpmGwNew.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ix36a8UZPV5e7IvpmGwNew.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*bOWszUcHHZsdFPv9RMW0cw.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/bOWszUcHHZsdFPv9RMW0cw.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*sVzQDfmlgUQOgeU78fDuaw.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/sVzQDfmlgUQOgeU78fDuaw.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*01qpJEdG3Ar1EDtzmuti3g.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/01qpJEdG3Ar1EDtzmuti3g.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*O-ZOCbXSCx93XfTIRc3pUg.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/O-ZOCbXSCx93XfTIRc3pUg.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*c9kc3-bmLuOFytIfc-w47w.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/c9kc3-bmLuOFytIfc-w47w.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*sKUtmbDe_EggfcEesK74-g.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/sKUtmbDe_EggfcEesK74-g.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*fofJ-nImOMdy98Xh2BbAbg.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fofJ-nImOMdy98Xh2BbAbg.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*aao5AbwzpYJNP96mOG7hsg.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/aao5AbwzpYJNP96mOG7hsg.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*qZLibqOTcylwRsFRJD8urQ.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/qZLibqOTcylwRsFRJD8urQ.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*Vmoz-MrV1IafrlM57yXiDw.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Vmoz-MrV1IafrlM57yXiDw.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*i6p9VBaKJnbs4BzcPYZG5A.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/i6p9VBaKJnbs4BzcPYZG5A.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
 
     </div>
 

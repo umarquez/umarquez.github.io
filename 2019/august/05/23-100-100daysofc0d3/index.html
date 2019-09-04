@@ -213,37 +213,37 @@ En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario r
 
 <p>Vamos a comprimir el siguiente texto utilizando LZ77, nuestro caracter para marcar el inicio de cada bloque será: | y cada bloque almacenará dos valores de 00 a FF, uno para definir el tamaño del desplazamiento y otro para definir el tamaño de la coincidencia por lo que cada bloque ocupará 5 caracteres de espacio; es importante remarcar que este no es el método más óptimo pues ocuparemos 2 caracteres para representar cada valor pudiendo utilizar solo un byte para cada valor, otra punto en contra es que el indicador de inicio de bloque debería ser un bit a modo de bandera para identificar si los bits siguientes son parte de un bloque o si es información sin comprimir.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3196/1*A0ZnqxInIVwGcM1au3P26w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/A0ZnqxInIVwGcM1au3P26w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-1">Paso 1</h3>
 
 <p>llenamos el buffer de salida con los caracteres originales hasta encontrar una coincidencia de tamaño suficiente para ser comprimido que se encuentre dentro de la ventana, que en este caso será de 20 posiciones a modo de ejemplo, aunque podríamos contar con valores del 0x00 al 0xFF una vez encontrada la coincidencia, agregamos el caracter | seguido del valor exadecimal del desplazamiento y el valor exadecimal del tamaño de la coincidencia, esta información le indicará al descompresor desde donde deberá comenzar a copiar caracteres del buffer de salida y la cantidad o longitud de la cadena a copiar.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3196/1*rCmcqnAL0jFcOthr4XfpPQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/rCmcqnAL0jFcOthr4XfpPQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-dos">Paso dos</h3>
 
 <p>Si encontramos una coincidencia pequeña dentro de los primeros caracteres que no supera el tamaño mínimo, deberemos seguir buscando hacia atrás dentro de la ventana hasta encontrar una coincidencia lo suficientemente grande o bien hasta llegar al límite de la ventana o al inicio de la cadena, en cuyo caso escribiremos los caracteres planos.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3196/1*WgD68jEpvT5nXAQKBdP4aw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/WgD68jEpvT5nXAQKBdP4aw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-3">Paso 3</h3>
 
 <p>Repetimos el ciclo con el resto de los caracteres.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3196/1*ikqcCQrCmMD64xHpTyad7Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ikqcCQrCmMD64xHpTyad7Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="paso-4">Paso 4</h3>
 
 <p>En este caso, el último bloque coincide con uno previamente escrito, por lo que podríamos comprimirlo, el problema es que tiene el mismo tamaño que ocupa el bloque por lo que ahorraremos tiempo de procesamiento almacenándolo sin comprimir debido a que no nos aporta ninguna ventaja.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3196/1*0MKb-PJsEXKOH-HrnEsRgg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/0MKb-PJsEXKOH-HrnEsRgg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="resultado-final">Resultado final</h3>
 
 <p>Terminaremos con la siguiente cadena como resultado del proceso de compresión, esta información será suficiente para reconstruir el texto original.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3196/1*OpSLW9L5RVPX7kWx2wdCew.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/OpSLW9L5RVPX7kWx2wdCew.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <pre><code>Decena, ala**|0906**cent**|0808**eno**|1309**rio, millonario
 </code></pre>
@@ -254,7 +254,7 @@ En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario r
 
 <script src="https://gist.github.com/umarquez/05600cc1d9a7a961417c4cd5a7be2ab2.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2048/1*s36F5-fSAXbqx7y9Zc-FQQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/s36F5-fSAXbqx7y9Zc-FQQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
     </div>
 

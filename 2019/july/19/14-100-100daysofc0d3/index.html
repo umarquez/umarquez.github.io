@@ -202,7 +202,7 @@ Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en 
 <li>Al número resultante sumamos <code>+32</code></li>
 </ol>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2488/1*S7gijd3BtRTL2ZRaHmal5A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/S7gijd3BtRTL2ZRaHmal5A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Una vez realizada la codificación de cada <em>byte</em>, procedemos a separar el total <em>bytes</em> resultantes en grupos de 60, cada grupo será una línea dentro del archivo final a la que deberemos agragar la cantidad de bytes (decodificados) que contiene:</p>
 
@@ -214,7 +214,7 @@ Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en 
 
 <p>Finalmente, algunas aplicaciones reemplazan los espacios con acentos ` de tal forma que siempre exista un caracter imprimible, aunque esto es opcional, algunos programas no reconocen los archivos <strong>UUE</strong> con espacio, por lo que es recomendable reemplazarlos con fines de compatibilidad.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2592/1*waqlp6MRnIMWr68r9w4lwg.png" alt="Línea codificada, con los espacios reemplazados por acentos." class="lazyload"><figcaption class="image-caption">Línea codificada, con los espacios reemplazados por acentos.</figcaption></figure><em>Línea codificada, con los espacios reemplazados por acentos.</em></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/waqlp6MRnIMWr68r9w4lwg.png" alt="Línea codificada, con los espacios reemplazados por acentos." class="lazyload"><figcaption class="image-caption">Línea codificada, con los espacios reemplazados por acentos.</figcaption></figure><em>Línea codificada, con los espacios reemplazados por acentos.</em></p>
 
 <p>Este conjunto de lineas debe ser precedido por la cabecera del archivo que contiene el nombre del archivo decodificado y los permisos de este (en caso de que se trate de un sistema unix):</p>
 
@@ -233,15 +233,15 @@ end\n
 
 <p>Este <em>slice</em> resultante lo concatenamos al final del <em>slice</em> que contiene el resultado de las líneas anteriores hasta llegar a la penúltima línea que deberá ser un acento indicando el final.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2252/1*3aVggbpS4k8FYXIMsfOD8A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/3aVggbpS4k8FYXIMsfOD8A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h2 id="implementación-en-go">Implementación en Go</h2>
 
 <script src="https://gist.github.com/umarquez/96843820427edb891824e641bb5104e3.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3432/1*otsPpUpkEtjOvtgBCva-sg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/otsPpUpkEtjOvtgBCva-sg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*vv67ZuAw3wAxWP4NndwE3g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/vv67ZuAw3wAxWP4NndwE3g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
     </div>
 

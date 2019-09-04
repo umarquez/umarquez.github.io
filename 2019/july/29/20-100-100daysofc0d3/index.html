@@ -179,7 +179,7 @@ Hemos llegado a la quinta semana y al número 20 de esta serie, en esta ocasión
 
 <p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint</a></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/4848/1*Vq56kqVHN-27WZAsbtidlQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Vq56kqVHN-27WZAsbtidlQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Hemos llegado a la quinta semana y al número 20 de esta serie, en esta ocasión vamos a aprovechar algunas de las funciones del <a href="https://medium.com/@umarquez_mx/10-100-100daysofc0d3-7187417844ad" rel="nofollow noreferrer" target="_blank">primer proyecto</a> y uno que otro tema tratados hasta el momento, el objetivo será realizar una aplicación que nos ayude a modificar la paleta de colores de una imagen, es decir, vamos a sustituir cada píxel de la imagen con el color de la paleta que más cercano o parecido sea.</p>
 
@@ -189,7 +189,7 @@ Hemos llegado a la quinta semana y al número 20 de esta serie, en esta ocasión
 <li>Vamos a obtener una serie de paletas de colores desde el sitio: <a href="https://lospec.com/palette-list" rel="nofollow noreferrer" target="_blank">https://lospec.com/palette-list</a> en formato .hex, que no es otra cosa que un archivo de texto con un color <strong>RGB</strong> en formato <em>hexadecimal</em> en cada línea, o bien, podremos definir nuestra propia paleta utilizando el mismo formato:</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*2PmJ4SQqtWil7Tok7yAlYg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/2PmJ4SQqtWil7Tok7yAlYg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p><strong>cp_rust-5.hex:</strong></p>
 
@@ -205,7 +205,7 @@ ffe2c6
 <li>Colocaremos los archivos .hex en un mismo directorio con la finalidad de que nuestro programa obtenga todas las paletas disponibles para generar una imagen de salida por cada paleta.</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*VaG7py96GyYF1cdPSYkSUg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/VaG7py96GyYF1cdPSYkSUg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <ul>
 <li>A continuación deberemos obtener una imagen <strong>JPEG .jpg</strong> aleatoria u obtener una local, esta imagen será la que procesaremos.</li>
@@ -213,7 +213,7 @@ ffe2c6
 <li>Buscaremos el color obtenido en la tabla de colores ya procesados, esta es una <a href="https://medium.com/@umarquez_mx/7-100-100daysofc0d3-6eed6b4ceded" rel="nofollow noreferrer" target="_blank"><strong><em>tabla hash</em></strong></a> que utilizaremos para almacenar el resultado de cada color procesado, esto con el objetivo de solo calcular una vez el sustituto de cada variante y así evitar, por ejemplo, que en una foto con el cielo azul, el mismo tono de azul sea calculado varias veces, en vez de esto, se busca el color original en la tabla y si este ya se encuentra en la tabla, solo se recupera el valor del color sustituto y se evita calcularlo cada vez que se encuentre.</li>
 </ul>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2752/1*8tOFV44q4gBWT5UB3yPEKw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/8tOFV44q4gBWT5UB3yPEKw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <ul>
 <li>Si el color aún no se encontrara en la tabla, deberemos compararlo con cada color disponible en la paleta actual hasta encontrar el sustituto correcto; esto lo haremos encontrando al <a href="https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7" rel="nofollow noreferrer" target="_blank"><strong><em>vecino más próximo</em></strong></a> utilizando el teorema de Pitágoras pero aplicado a un espacio en 3 dimensiones. Esto es:</li>
@@ -225,35 +225,35 @@ ffe2c6
 
 <p>De esta forma podremos obtener resultados como los siguientes:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*J6Q17kXU1FHhtOGpSAuOVQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/J6Q17kXU1FHhtOGpSAuOVQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*w39FCfGmrDuq8gl9z3gNwg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/w39FCfGmrDuq8gl9z3gNwg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*Ew7wkHcRDDjE0cwCehIdhA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Ew7wkHcRDDjE0cwCehIdhA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*j9oP2mmULIxUBrjB1mHnGw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/j9oP2mmULIxUBrjB1mHnGw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*zpyJnoVK7Dy1slGyhiyJFQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/zpyJnoVK7Dy1slGyhiyJFQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*_yazMU8cQBCqMUIHfZWocw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/_yazMU8cQBCqMUIHfZWocw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*E9HLaKEBX14baMr4Lm3lDw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/E9HLaKEBX14baMr4Lm3lDw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*mYMlplvMAQy6Jt2IjtxuGA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/mYMlplvMAQy6Jt2IjtxuGA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*KcTEGALXOXV42SYw3Lnmsg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/KcTEGALXOXV42SYw3Lnmsg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*gAx1ONq4xF3ALY51Ns3xRw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/gAx1ONq4xF3ALY51Ns3xRw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*rirQsu8CihyYxIk4lPwY1A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/rirQsu8CihyYxIk4lPwY1A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*nJZrf_vcjC8BfYN1YXMsKg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/nJZrf_vcjC8BfYN1YXMsKg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*m4YGV3p1bgEtmdXDD4GMSQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/m4YGV3p1bgEtmdXDD4GMSQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*p2r979aYL8m7IxL3auPk3g.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/p2r979aYL8m7IxL3auPk3g.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*usnPGA9mt6Uo0cXFmTr-uQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/usnPGA9mt6Uo0cXFmTr-uQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <h3 id="datos-de-entrada">Datos de entrada</h3>
 
@@ -272,131 +272,131 @@ ffe2c6
 
 <script src="https://gist.github.com/umarquez/92c3d310adc73842bc2c6bed6315eca2.js"></script>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/7472/1*umwRYjxWdn37IZGJ0c6ioQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/umwRYjxWdn37IZGJ0c6ioQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Como dato adicional es importante remarcar que en muchos casos los detalles de la imagen se pierden o se refuerzan, dependiendo de la distribución de los colores de la paleta y de la imagen, es decir, si la imagen cuenta con detalles en tonos similares y la paleta no cuenta con la suficiente cantidad de colores dentro del área en que se encuentran los detalles, estos serán sustituidos por un color sólido, el más cercano al área de los tonos originales; en un caso contrario, podríamos contar con una imagen con un degradado o sombras muy matizadas y con una paleta que cuenta con varias opciones de color cercanos a esos tonos, en este caso la imagen remarcará las sombras lo cual hará que parezcan más contrastadas.</p>
 
 <p>A continuación algunos ejemplos más en donde podemos observarlo.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*wvf16EMUu-_i5gnccYcsWA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/wvf16EMUu-_i5gnccYcsWA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*AueyM-wTKBfZu_Sf9x7TcA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/AueyM-wTKBfZu_Sf9x7TcA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*JBvD3yoGkiX4lCYsiuLSVw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/JBvD3yoGkiX4lCYsiuLSVw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*_AEBH4LacNQn29mr9qT6qA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/_AEBH4LacNQn29mr9qT6qA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*v4FmpwGo8gP3hVJpX6FMSQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/v4FmpwGo8gP3hVJpX6FMSQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*QxfU6XOJEbC_fdukE60tOA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/QxfU6XOJEbC_fdukE60tOA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*TSY2-2KeZJqt0Axtl_W3Vg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/TSY2-2KeZJqt0Axtl_W3Vg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*dVisGO1LGv4cFq9-Z6xVfw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/dVisGO1LGv4cFq9-Z6xVfw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*4NIEoM97KFGIvBFL4XNzjg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/4NIEoM97KFGIvBFL4XNzjg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*IlwI9N_N1fvyIng3BBo7aQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/IlwI9N_N1fvyIng3BBo7aQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*-yrVEtWkRbB3xWR41Y2nZg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/-yrVEtWkRbB3xWR41Y2nZg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*Vkpt-JML83V0ltKXfKxDow.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Vkpt-JML83V0ltKXfKxDow.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*BiuM_6vVqszUJ6qgvjkY1Q.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/BiuM_6vVqszUJ6qgvjkY1Q.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*vwwFuFReernfDRSYnCNL0w.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/vwwFuFReernfDRSYnCNL0w.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*a_3KjNLXUiip0SZmzYGrDA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/a_3KjNLXUiip0SZmzYGrDA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*kd_DAdyZKfT0uTyy7zGBGA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/kd_DAdyZKfT0uTyy7zGBGA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*fiUGMb08cyEsWDvG6yLKfA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fiUGMb08cyEsWDvG6yLKfA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*vjaKPp2C7aZ8lJZImBdEeg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/vjaKPp2C7aZ8lJZImBdEeg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*u0ghWnqCOCPtCYbYwq4ezQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/u0ghWnqCOCPtCYbYwq4ezQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*QzTdh3R9m5wGZbvfXhjvHw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/QzTdh3R9m5wGZbvfXhjvHw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*gbqI4h2784wVpq9m6ThiBw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/gbqI4h2784wVpq9m6ThiBw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*6OkrL3vBfTmYivk4bRr9WQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/6OkrL3vBfTmYivk4bRr9WQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*6KhhCIbR7WsMbLRuEPJ9eQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/6KhhCIbR7WsMbLRuEPJ9eQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*ZcBx3TPpaYK92uNojmyn9Q.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ZcBx3TPpaYK92uNojmyn9Q.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*UbgqWAyp3ja3bFje0YvjfA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/UbgqWAyp3ja3bFje0YvjfA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*hOmWq3mcvJxvWEAA1wKg5A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/hOmWq3mcvJxvWEAA1wKg5A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*lUNSGlnI0VQsraovGI8BQA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/lUNSGlnI0VQsraovGI8BQA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*TNmhO3m-0l_AVdxor89nYQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/TNmhO3m-0l_AVdxor89nYQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*9_OirvxzCVJPfj9dCoAnAw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/9_OirvxzCVJPfj9dCoAnAw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*90CpOPKReI0pWZxG6Elkrw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/90CpOPKReI0pWZxG6Elkrw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*t2YbPL4Vy61r_6RWQ4prrg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/t2YbPL4Vy61r_6RWQ4prrg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*0iqnj7Mvp9K2dJd6KVf4eQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/0iqnj7Mvp9K2dJd6KVf4eQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*e2YvkMAgwUss8AZRsds-bA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/e2YvkMAgwUss8AZRsds-bA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*C3aSsHHXFEkuW4d-ifXhhg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/C3aSsHHXFEkuW4d-ifXhhg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*tO1N2HmUahhFJ3APWl3Paw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/tO1N2HmUahhFJ3APWl3Paw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*3rF1ikBW_wMErH2HdTfb5A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/3rF1ikBW_wMErH2HdTfb5A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*1GAavFuORZjILp-YBQ438w.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/1GAavFuORZjILp-YBQ438w.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*tgageDG3grEY-gG1aTG_jg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/tgageDG3grEY-gG1aTG_jg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*9YcSKLGeOjmcZS9w4IZ_xw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/9YcSKLGeOjmcZS9w4IZ_xw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*PECnZxBqpW4jPrrDTA_pbw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/PECnZxBqpW4jPrrDTA_pbw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*fKI0LBOzGqOgfMr7VT2w6Q.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fKI0LBOzGqOgfMr7VT2w6Q.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*0tNFy8oY4MDNlSqYBluqdw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/0tNFy8oY4MDNlSqYBluqdw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*2jNd4nk9--9pJX6m1FVRXQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/2jNd4nk9--9pJX6m1FVRXQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*Q9ke8bsJtZqSmnWVqShf2w.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Q9ke8bsJtZqSmnWVqShf2w.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*Ixx9v3-NCwCeUXISPBxhLA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Ixx9v3-NCwCeUXISPBxhLA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*RRXlLYhLzzRQpWRSN3KUXw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/RRXlLYhLzzRQpWRSN3KUXw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*UjsRBE8B8r-1bdYwe0LDCw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/UjsRBE8B8r-1bdYwe0LDCw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*52H781cNOi343tHHkIG5bg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/52H781cNOi343tHHkIG5bg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*nbRMKGWx0g6VgzROS60wAQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/nbRMKGWx0g6VgzROS60wAQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*lrNRTNHLmFzoaoDK_tDKCQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/lrNRTNHLmFzoaoDK_tDKCQ.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*6ukwD_odTjHXoSGCYekHVw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/6ukwD_odTjHXoSGCYekHVw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*0pRHsqDK4gat_eRjtCyFjA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/0pRHsqDK4gat_eRjtCyFjA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*A0rtXJuc4hZneqPBxIeVHw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/A0rtXJuc4hZneqPBxIeVHw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*e6AyuqCPOLr7tBFFMaUFug.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/e6AyuqCPOLr7tBFFMaUFug.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*U04dVb4F9aQbGqbNG40ldg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/U04dVb4F9aQbGqbNG40ldg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*ZfeHYVjuFjuFIQFIJGsaUw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ZfeHYVjuFjuFIQFIJGsaUw.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*GWZw3kuYR7ojXcCV6WBIXg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/GWZw3kuYR7ojXcCV6WBIXg.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*KCN6LdNmGOK39FSUd9XmSA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/KCN6LdNmGOK39FSUd9XmSA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*BvrssTE696IN76_JvZ8T_A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/BvrssTE696IN76_JvZ8T_A.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*b964934iVFV9kIFWaPb44g.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/b964934iVFV9kIFWaPb44g.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
     </div>
 

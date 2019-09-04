@@ -195,7 +195,7 @@ No está sujeto a ningún tipo de patente.
 
 <p>Este algoritmo requiere dos bloques a cifrar de <strong>32 bits</strong> y una clave de <strong>128 bits</strong> dividida en <strong>4 sub-claves</strong> de <strong>32 bits</strong>, con estos elementos deberemos ejecutar <strong>64 rondas</strong> en grupos de dos bloques simétricos que se encargarán de cifrar la información. El flujo se detalla en el siguiente diagrama:</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2184/1*TbdVyxDutLPE7GgcqpG3BQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/TbdVyxDutLPE7GgcqpG3BQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Esencialmente se realiza un proceso con uno de los bloques y dos claves cuyo resultado es sumado al flujo opuesto, enseguida se invierte los bloques y se realiza el mismo proceso, esto representa dos rondas, por lo que deberemos repetir este proceso 31 veces más para completar 64 rondas totales.</p>
 

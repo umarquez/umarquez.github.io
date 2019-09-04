@@ -207,7 +207,7 @@ Se compone de dos elementos principales
 
 <p>Estos pasos pueden ser personalizados para cada receta y ser tan complejos internamente como sea necesario pero eso no alteraría la interfaz común, es decir, que siempre serán estos pasos en ese orden <strong>CookieBuilder</strong>.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3264/1*kAIW43CW_0OKvQBBdb8Qmg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/kAIW43CW_0OKvQBBdb8Qmg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Como podemos observar, cada método de la interfaz retorna el mismo <strong><em>builder</em></strong> con el fin de poder llamar a todos los métodos de creación de manera secuencial, excepto el último que retorna el producto final. De esta forma podríamos implementar algunas recetas agrupando los pasos necesarios dentro de cada método de la interfaz para que la máquina sea capaz de ejecutarlas, esos pasos retornarán un objeto que satisface a la interfaz <strong>AnyCookie</strong>.</p>
 
@@ -215,13 +215,13 @@ Se compone de dos elementos principales
 <p>Es importante mencionar que en este ejemplo no implementamos un único tipo <strong>Cookie</strong> que construiremos con cada builder, sino que definiremos cada tipo de galleta de manera independiente con el fin de demostrar que podemos construir diferentes tipos de objetos utilizando los métodos de la interfaz.</p>
 </blockquote>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3636/1*Y6fBOThgz-mZei1S3tZiEg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Y6fBOThgz-mZei1S3tZiEg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/4004/1*aQ7fqKnWB2geSKOcvEqduw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/aQ7fqKnWB2geSKOcvEqduw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>En el caso de la máquina de galletas (que funcionará como <em>DIRECTOR</em>), implementaremos el patrón <strong><em>singleton</em></strong> con el fin de asegurar una sola instancia de esta.</p>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3264/1*ML3NPDaxaMairpIOCyuY4A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ML3NPDaxaMairpIOCyuY4A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
 <p>Siguiendo este método podríamos implementar recetas con diferentes niveles de complejidad y seguirlas construyendo a partir del DIRECTOR, simplemente implementando la interfaz común.</p>
 
@@ -230,7 +230,7 @@ Se compone de dos elementos principales
 
 <h3 id="salida">Salida</h3>
 
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3804/1*Ryi8CREPYX3obVYetBpoHA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Ryi8CREPYX3obVYetBpoHA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
     </div>
 
