@@ -222,7 +222,7 @@
 
 <h2 id="ejemplo">Ejemplo</h2>
 
-<p>Vamos a convertir los siguientes píxeles de una imagen en escala de grises, cada componente (R, G y B) de cada color comparten el mismo valor (0xAAAAAA), por lo que solo vamos a utilizar dos dígitos exadecimales para representar cada tono (0xAA); también contaremos con una paleta de tres colores para realizar la sustitución, los colores de esta paleta serán: 0x00, 0x80 y 0xFF</p>
+<p>Vamos a convertir los siguientes píxeles de una imagen en escala de grises, cada componente (R, G y B) de cada color comparten el mismo valor (<code>0xAAAAAA</code>), por lo que solo vamos a utilizar dos dígitos exadecimales para representar cada tono (<code>0xAA</code>); también contaremos con una paleta de tres colores para realizar la sustitución, los colores de esta paleta serán: <code>0x00</code>, <code>0x80</code> y <code>0xFF</code></p>
 
 <p>La matriz de pixeles a procesar será la siguiente:</p>
 
@@ -230,7 +230,7 @@
 
 <h3 id="paso-1">Paso 1</h3>
 
-<p>Comenzamos con el pixel 00-A, calculamos cuál es el color más cercano de la paleta y la diferencia de estos dos la dividimos entre 16.</p>
+<p>Comenzamos con el pixel <code>00-A</code>, calculamos cuál es el color más cercano de la paleta y la diferencia de estos dos la dividimos entre 16.</p>
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2216/1*mw_DH4Rt2ehMgR6yJ3AsIA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
@@ -246,7 +246,7 @@
 
 <h3 id="paso-3">Paso 3</h3>
 
-<p>Repetimos el mismo procedimiento con el píxel de la derecha 00-B.</p>
+<p>Repetimos el mismo procedimiento con el píxel de la derecha <code>00-B</code></p>
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2760/1*pi7wCPNMYhPkspD1N2qy-w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
