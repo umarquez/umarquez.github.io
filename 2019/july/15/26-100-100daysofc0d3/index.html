@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/july/15/28-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/" />
+<meta property="og:description" content="[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
+Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/">
+<meta itemprop="description" content="[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
+Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
+Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png"/>
+
+  <meta name="title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[10/100] #100DaysOfC0D3 - Cuenta colores",
+    "headline" : "[10/100] #100DaysOfC0D3 - Cuenta colores",
+    "description" : "[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
+Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-15 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-15 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/",
+    "wordCount" : "866",
+    "keywords" : [ "Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/100daysofc0d3/" title="100DaysOfC0D3">Blog</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/100daysofc0d3/" title="100DaysOfC0D3">Blog</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[10/100] #100DaysOfC0D3 - Cuenta colores</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-15 itemprop="datePublished">July 15, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="26-100-100daysofc0d3">[<sup>26</sup>&frasl;<sub>100</sub>] #100DaysOfC0D3</h1>
+
+<p>[<sup>26</sup>&frasl;<sub>100</sub>] 100DaysOfC0D3</p>
+
+<h3 id="shell-a-través-de-websocket-shell-through-websocket">Shell a través de WebSocket | Shell through WebSocket</h3>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell</a></p>
+
+<p>Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una <a href="https://es.wikipedia.org/wiki/Shell_(inform%C3%A1tica)" rel="nofollow noreferrer" target="_blank"><em>shell</em> </a>y conectarla a un <a href="https://es.wikipedia.org/wiki/WebSocket" rel="nofollow noreferrer" target="_blank">WebSocket</a> con el fin de poder administrar un servidor tratando de evadir cualquier <a href="https://es.wikipedia.org/wiki/Cortafuegos_(inform%C3%A1tica)" rel="nofollow noreferrer" target="_blank">firewall </a>que nos impida conectarnos de forma directa al puerto <a href="https://es.wikipedia.org/wiki/Secure_Shell" rel="nofollow noreferrer" target="_blank">ssh</a>, o como forma alternativa de contar con una consola para realizar tareas automatizadas.</p>
+
+<p>Por supuesto deberemos proteger el acceso a la consola, pues no queremos que cualquiera que descubra el <em>end-point</em> tenga acceso a ella; para esto vamos a utilizar una técnica llamada <strong>web knocking</strong> que es una variante del <a href="https://es.wikipedia.org/wiki/Golpeo_de_puertos" rel="nofollow noreferrer" target="_blank">port knocking</a>, la cual consiste en realizar ciertas peticiones que servirán para validar el acceso antes de hacer disponible el servicio al cliente.</p>
+
+<p>Es importante aclarar que la forma en que manejaremos los datos no es seguro en lo más mínimo pues el objetivo no es desarrollar un servicio de administración, sino demostrar que es posible obtener una shell a través de WebSockets de manera sencilla por lo que deberemos considerar varios puntos si nuestro objetivo fuera desarrollar algo más formal basado en esto.</p>
+
+<h2 id="motivación">Motivación</h2>
+
+<p>La naturaleza del <strong><em>WebSocket</em></strong> es el evitar los problema que existían en las aplicaciones web que requerían conectarse a servicios en puertos diferentes al <strong>http</strong>(<em>80</em>)/<strong>https</strong>(<em>443</em>); de alguna forma es una especie de socket dentro de un socket.</p>
+
+<p>Una herramienta muy utilizada en seguridad es <strong>Netcat</strong>:
+&gt; <strong>Netcat</strong> es una <a href="https://es.wikipedia.org/w/index.php?title=Herramienta_de_red&amp;action=edit&amp;redlink=1" rel="nofollow noreferrer" target="_blank">herramienta de red</a> que permite a través de intérprete de comandos y con una sintaxis sencilla abrir puertos TCP/UDP en un HOST (quedando netcat a la escucha), asociar una shell a un puerto en concreto (para conectarse por ejemplo a MS-DOS o al intérprete bash de Linux remotamente) y forzar conexiones UDP/TCP (útil por ejemplo para realizar rastreos de puertos o realizar transferencias de archivos bit a bit entre dos equipos).
+&gt; <a href="https://es.wikipedia.org/wiki/Netcat" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Netcat</a></p>
+
+<p>Una parte de muchos <a href="https://es.wikipedia.org/wiki/Exploit" rel="nofollow noreferrer" target="_blank">*exploits </a>*son <a href="https://es.wikipedia.org/wiki/Shellcode" rel="nofollow noreferrer" target="_blank">*shellcodes</a> *que dirigen la <strong>entrada/salida</strong> de la *shell *a un puerto tcp en espera de conexiones o bien, realizan una conexión a un <strong>hots/puerto</strong> específico y una vez establecida redirige la <strong>entrada/salida</strong> a la <em>shell</em>.</p>
+
+<p>***Golang ***nos permite ejecutar comandos en el sistema operativo, redirigiendo la entrada/salida de este, además cuenta con distintas ***interfaces ***que permiten manejar distintos flujos de datos como los mismo puertos tcp, buffers o archivos como <strong>readers/writers</strong>, esto facilita el reenvío de datos entre ellos.</p>
+
+<h2 id="primera-prueba">Primera prueba</h2>
+
+<p>Deberemos poder ejecutar una consola local desde un programa en go a la que redirigiremos su entrada/salida para poder interactuar con ella y comprobar que es posible ejecutar comandos, por ejemplo.</p>
+
+<iframe src="https://medium.com/media/2db31401f3cee7eca5c87e99b8d01214" frameborder=0></iframe>
+
+<pre><code>**go run main.go**
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*oA2GAlz8gm3Ns6Mc3gMexQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Como lo muestra la imagen, hemos logrado lanzar una consola y controlarla mediante nuestra aplicación.</p>
+
+<h2 id="siguiente-paso-el-websocket">Siguiente paso: El WebSocket</h2>
+
+<p>Ahora, deberemos crear una instancia de la <strong><em>shell</em></strong> y redirigirla a un <strong><em>WS</em></strong> cada vez que se realice una petición, para ello necesitaremos crear un servidor web que escuche las peticiones, inicialice el <em>socket</em>, ejecute la ***shell ***y redirija la entrada/salida de esta al <em>socket</em>; además de esto necesitaremos crear un cliente que establezca la conexión al servidor y nos permita interactuar con la consola.</p>
+
+<iframe src="https://medium.com/media/f2f426ab433c01dded57e8b7b4f43a00" frameborder=0></iframe>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*QO3UTyi7cSQUYFJCscMe_A.png" alt="server.go" class="lazyload"><figcaption class="image-caption">server.go</figcaption></figure><em>server.go</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2896/1*LuKsKhswpnFj6lZtoU0gtQ.png" alt="client.go" class="lazyload"><figcaption class="image-caption">client.go</figcaption></figure><em>client.go</em></p>
+
+<p>¡Parece que funciona correctamente! pero, no podríamos dejar que cualquiera obtenga una consola de nuestro sistema operativo así que vamos a asegurar de alguna forma para evitar que cualquiera se conecte o siquiera detecte que este servicio existe.</p>
+
+<h2 id="web-knocking">Web Knocking</h2>
+
+<p>Compliquemos un poco las cosas, ya que contamos con un servidor web podremos recibir información mediante una ruta específica y simular que la página no está disponible; vamos a aprovecharnos de esto para autenticar al usuario de la siguiente manera:</p>
+
+<ul>
+<li><p>Obtendremos un token enviando una petición **POST **a la ruta /login, este lo utilizaremos como ruta de la siguiente petición.</p></li>
+
+<li><p>A continuación, enviaremos la contraseña utilizando <strong>POST</strong> a la ruta /<token> y sabremos si esta es correcta enviando una petición <strong>GET</strong> a la misma ruta, esta deberá retornar la cadena OK como resultado además del estatus 200 cualquier otro resultado indicará que esta es incorrecta. Podremos restablecer el valor almacenado enviando una petición <strong>DELETE.</strong></p></li>
+
+<li><p>Ya que hayamos enviado y validado la contraseña podremos conectarnos a la ruta definida /shell por <strong><em>WS</em></strong> para obtener la consola, en caso de contar con una contraseña incorrecta simplemente no generaremos el socket y terminaremos de procesar la petición.</p></li>
+</ul>
+
+<iframe src="https://medium.com/media/298603854262a8ced6896a558f5a0699" frameborder=0></iframe>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*TG_apizpCf1gF6ChdjzeZg.png" alt="server.go" class="lazyload"><figcaption class="image-caption">server.go</figcaption></figure><em>server.go</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/4096/1*DkUMyXw0n4FMdPShzKosWQ.png" alt="client.go" class="lazyload"><figcaption class="image-caption">client.go</figcaption></figure><em>client.go</em></p>
+
+<p>Probemos conectándonos a un equipo remoto,</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3120/1*mZiJ6CiJqiHK9uh5i2-TdA.png" alt="Linux remoto" class="lazyload"><figcaption class="image-caption">Linux remoto</figcaption></figure><em>Linux remoto</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3122/1*8W3MtrPznwiEtlwtNRqCPQ.png" alt="Mac dentro de la LAN" class="lazyload"><figcaption class="image-caption">Mac dentro de la LAN</figcaption></figure><em>Mac dentro de la LAN</em></p>
+
+<h2 id="notas-finales">Notas finales</h2>
+
+<ul>
+<li><p>Podríamos utilizar algún tipo de caché para almacenar las sesiones por cierto periodo de tiempo, si estas no se convierten en una conexión durante un tiempo determinado, podríamos deshacernos de ellas.</p></li>
+
+<li><p>Deberíamos eliminar la sesión una vez que realicemos la conexión a la consola pues esta no debería poder ser reutilizada.</p></li>
+
+<li><p>Una buena práctica sería utilizar **HTTPS **para proteger las comunicaciones, además podríamos implementar algún tipo de encripción sobre el **WS **para agregar una capa adicional de seguridad.</p></li>
+
+<li><p>Tanto los lokens como la manera de manejarlos podría mejorar haciendo uso de JWT y enviando el ID como parte de este, por ejemplo.</p></li>
+
+<li><p><strong>NUNCA</strong> deberemos colocar las contraseñas en texto plano o incluirlas como parte del código, esto solo es un ejemplo por lo que no debería implementarse en producción de esta forma.</p></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/15/28-100-100daysofc0d3/" class="prev" rel="prev" title="[10/100] #100DaysOfC0D3 - Cuenta colores"><i class="iconfont icon-left"></i>&nbsp;[10/100] #100DaysOfC0D3 - Cuenta colores</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/" class="next" rel="next" title="[10/100] #100DaysOfC0D3 - Cuenta colores">[10/100] #100DaysOfC0D3 - Cuenta colores&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

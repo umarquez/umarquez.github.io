@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/2019/july/15/24-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/" />
+<meta property="og:description" content="[25&amp;amp;frasl;100] #100DaysOfC0D3 [25&amp;amp;frasl;100] 100DaysOfC0D3
+Tramado | Dithering Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering &amp;amp;gt; El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles. &amp;amp;gt; https://es.wikipedia.org/wiki/Tramado
+Si, este es un capítulo más de “Jugando con píxeles”; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado *[20&amp;amp;frasl;100] **Segundo proyecto: Repintado*, pero antes, vamos a tratar de explicar en qué consiste el tramado.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/">
+<meta itemprop="description" content="[25&amp;amp;frasl;100] #100DaysOfC0D3 [25&amp;amp;frasl;100] 100DaysOfC0D3
+Tramado | Dithering Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering &amp;amp;gt; El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles. &amp;amp;gt; https://es.wikipedia.org/wiki/Tramado
+Si, este es un capítulo más de “Jugando con píxeles”; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado *[20&amp;amp;frasl;100] **Segundo proyecto: Repintado*, pero antes, vamos a tratar de explicar en qué consiste el tramado.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="[25&amp;amp;frasl;100] #100DaysOfC0D3 [25&amp;amp;frasl;100] 100DaysOfC0D3
+Tramado | Dithering Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering &amp;amp;gt; El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles. &amp;amp;gt; https://es.wikipedia.org/wiki/Tramado
+Si, este es un capítulo más de “Jugando con píxeles”; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado *[20&amp;amp;frasl;100] **Segundo proyecto: Repintado*, pero antes, vamos a tratar de explicar en qué consiste el tramado.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png"/>
+
+  <meta name="title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[10/100] #100DaysOfC0D3 - Cuenta colores",
+    "headline" : "[10/100] #100DaysOfC0D3 - Cuenta colores",
+    "description" : "[25&amp;amp;frasl;100] #100DaysOfC0D3 [25&amp;amp;frasl;100] 100DaysOfC0D3
+Tramado | Dithering Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering &amp;amp;gt; El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles. &amp;amp;gt; https://es.wikipedia.org/wiki/Tramado
+Si, este es un capítulo más de “Jugando con píxeles”; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado *[20&amp;amp;frasl;100] **Segundo proyecto: Repintado*, pero antes, vamos a tratar de explicar en qué consiste el tramado.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-15 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-15 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/",
+    "wordCount" : "595",
+    "keywords" : [ "Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/100daysofc0d3/" title="100DaysOfC0D3">Blog</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/100daysofc0d3/" title="100DaysOfC0D3">Blog</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[10/100] #100DaysOfC0D3 - Cuenta colores</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-15 itemprop="datePublished">July 15, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="25-100-100daysofc0d3">[<sup>25</sup>&frasl;<sub>100</sub>] #100DaysOfC0D3</h1>
+
+<p>[<sup>25</sup>&frasl;<sub>100</sub>] 100DaysOfC0D3</p>
+
+<h3 id="tramado-dithering">Tramado | Dithering</h3>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering</a>
+&gt; El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles.
+&gt; <a href="https://es.wikipedia.org/wiki/Tramado" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Tramado</a></p>
+
+<p>Si, este es un capítulo más de <strong>“Jugando con píxeles”</strong>; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado <a href="https://medium.com/@umarquez_mx/20-100-100daysofc0d3-344d3b0cfc8f" rel="nofollow noreferrer" target="_blank">*<em>[<sup>20</sup>&frasl;<sub>100</sub>]</em> **Segundo proyecto: Repintado</a>*, pero antes, vamos a tratar de explicar en qué consiste el tramado.</p>
+
+<p>Como ya explicamos en capítulos pasados, hacemos uso del <strong><em>Teorema de Pitágoras</em></strong> para calcular el <a href="https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7" rel="nofollow noreferrer" target="_blank">vecino más cercano</a> a un punto dentro de un <a href="https://es.wikipedia.org/wiki/Espacio_eucl%C3%ADdeo" rel="nofollow noreferrer" target="_blank">espacio euclideano</a> definido, la hipotenusa resultante representa la distancia entre el punto inicial y el punto a evaluar; en el caso de la sustitución de colores, esta distancia representa además el error existente entre ambos colores; es decir, que tanto dista uno de otro.</p>
+
+<p>El tramado aprovecha este error para propagarlo a los píxeles cercanos no procesados, de tal forma que conforme se avanza sobre la imagen los píxeles vecinos van acumulando parte del error de los píxeles pasados, y cuando este es procesado, se calcula el sustituto basado en el color original más el error acumulado, pudiendo compensar de cierta manera la falta de colores, para representar un degradado, por ejemplo.</p>
+
+<p>Uno de los métodos más comunes es el <a href="https://es.wikipedia.org/wiki/Algoritmo_de_Floyd-Steinberg" rel="nofollow noreferrer" target="_blank">algoritmo **Floyd-Steinberg</a>**, que divide el error en 16 partes iguales, mismas que reparte de la siguiente manera (asumiendo que recorremos la imagen de izquierda a derecha y de arriba a abajo):</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*NCeCz-IkhLQP4iRbqXz9BA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Con este método, una paleta blanco y negro por ejemplo, será capaz de representar de una mejor manera los tonos degradados de una imagen.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*KJefR3KxjOOOOflzNcP4CA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*vABSat0iFVWFQ-B-Iue8dw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*00U54Z53qR4FigdpIH--hA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*t2bnGjI13euYwZGY8AdVSw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*MhD7AtbNULFlekDPh7PxfQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*ztJPmxSYWq1biQvL8WfrHQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*iXdjz5vvPz1JsTYF4-yMSA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*V1m3bjiPJOLvET4wFpOs3w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3840/1*257uga406mSNmfJ3kbdhsA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Vamos a describir este método más a detalle con un ejemplo, como de costumbre.</p>
+
+<h2 id="ejemplo">Ejemplo</h2>
+
+<p>Vamos a convertir los siguientes píxeles de una imagen en escala de grises, cada componente (R, G y B) de cada color comparten el mismo valor (0xAAAAAA), por lo que solo vamos a utilizar dos dígitos exadecimales para representar cada tono (0xAA); también contaremos con una paleta de tres colores para realizar la sustitución, los colores de esta paleta serán: 0x00, 0x80 y 0xFF</p>
+
+<p>La matriz de pixeles a procesar será la siguiente:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*9JeDbvK-IiJo3WenXR8DUw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-1">Paso 1</h3>
+
+<p>Comenzamos con el pixel 00-A, calculamos cuál es el color más cercano de la paleta y la diferencia de estos dos la dividimos entre 16.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2216/1*mw_DH4Rt2ehMgR6yJ3AsIA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-2">Paso 2</h3>
+
+<p>Distribuimos el error sumando las partes correspondientes a los píxeles cercanos, si estos no estuvieran dentro de la imagen, se deberán omitir.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2488/1*5qE3GoDxhT8y1Yep_Jnxfw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Obtendremos el siguiente resultado:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*KN9l9wYPTS5RMOfmrKXq1Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-3">Paso 3</h3>
+
+<p>Repetimos el mismo procedimiento con el píxel de la derecha 00-B.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2760/1*pi7wCPNMYhPkspD1N2qy-w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Y de la misma forma con cada píxel de la fila</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3028/1*uZ1mRJzIf-zSBqae7fKBJw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="pasos-siguientes">Pasos siguientes</h3>
+
+<p>Deberemos repetir el mismo procedimiento en cada píxel de la imagen, como alternativa podría alternarse la dirección de las filas, invirtiendo el sentido del filtro para distribuir el error y conseguir de una distribución más uniforme.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3164/1*VIeJCbVQ0942ESdlR3qCCA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="resultado-final">Resultado final</h3>
+
+<p>Una vez concluido el proceso obtendremos los siguientes valores.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*HGHZxfxev6gMdKRf0y8BiA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="otros-filtros">Otros filtros</h2>
+
+<p>Además de esta forma de distribuir el error existen otro filtros que son capaces de producir resultados similares, algunos de ellos son:</p>
+
+<ul>
+<li><p>Jarvis, Judice, &amp; Ninke</p></li>
+
+<li><p>Stucki</p></li>
+
+<li><p>Atkinson</p></li>
+
+<li><p>Burkes</p></li>
+
+<li><p>Sierra</p></li>
+</ul>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p>En esta ocasión, revisamos el artículo <a href="http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/" rel="nofollow noreferrer" target="_blank">Image Dithering: Eleven Algorithms and Source Code</a> de <a href="http://www.tannerhelland.com/" rel="nofollow noreferrer" target="_blank">***Tanner Helland</a>*** para implementar algunos filtros y comparar los resultados utilizando diferentes paletas de color.</p>
+
+<iframe src="https://medium.com/media/dbed80b0118241132db7fd09d2a43490" frameborder=0></iframe>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/3972/1*6qrirtuBRWv3VENCDSljgw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*N7gWNWVim1TSfv6kT0oPqA.jpeg" alt="Original" class="lazyload"><figcaption class="image-caption">Original</figcaption></figure><em>Original</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*w-83F8RyiF9kUkW4M6bPAw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*azeUrP4kiMJgzJR_2_PS7Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*K1ToxON61-a_VQDoCSb-tA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*ZgVkYbX1flAKMmAFd8WLHA.png" alt="Sin tramado" class="lazyload"><figcaption class="image-caption">Sin tramado</figcaption></figure><em>Sin tramado</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*zxKWGaT3v1Ub3VL3_q_0lQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*FljcQ2m-MCcWqMVi9eAVIQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*wxdT2HcEDG6c5hl9nQ9NdQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*V2O4XbJLN3rydLf5IZ8FIw.png" alt="Floyd-Steinberg" class="lazyload"><figcaption class="image-caption">Floyd-Steinberg</figcaption></figure><em>Floyd-Steinberg</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*RCwSys_O0sf6_YTAESjliw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*nD47rVRWcjl87QZLakQ6Og.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*OAaxwyD02XdfUKdQVLig0Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*e3zaCcsqUQH8f_MF9PQTqA.png" alt="Jarvis, Judice &amp; Ninke" class="lazyload"><figcaption class="image-caption">Jarvis, Judice &amp; Ninke</figcaption></figure><em>Jarvis, Judice &amp; Ninke</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*eBmixlmJZN33c9joUpcr0A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*tWHK1T1Ga2zQ-s_N8bMufw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*rM8AexH0qkXmb_MyHwXmeQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*kRlOwCtpm4Zsj8K8jPduaw.png" alt="Stucki" class="lazyload"><figcaption class="image-caption">Stucki</figcaption></figure><em>Stucki</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*ATn-teMCG4evSQPR5D9Izg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*0BawZ8uyRqGSQp7-W-JyHw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*pyMVuJjzX5jaUXdNgp3C7A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*CJl4ogNMtn1tz7FRSfxGLQ.png" alt="Atkinson" class="lazyload"><figcaption class="image-caption">Atkinson</figcaption></figure><em>Atkinson</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*T1dOt3C-SsufYamfpN-hJg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*ImTCDlC0-2Q0pcdfyKMMxQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*CcpETNZBLYCpxb9mXCXxlA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*53j2hWnUePevn7RFy-dXEw.png" alt="Burkes" class="lazyload"><figcaption class="image-caption">Burkes</figcaption></figure><em>Burkes</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*O2AqccB4ltHCUFE2E-ZdhA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*Q3icP0gXGijwQCnUuPEgsA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*0iM0HWCxXWmXTfCzOZyhtw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*L_vLKm02TlvI4ftcd-2atg.png" alt="Sierra" class="lazyload"><figcaption class="image-caption">Sierra</figcaption></figure><em>Sierra</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*l4iG9I8kiCDE8z8ewz_rHA.jpeg" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*-33X9BSmTzQVUFT4e1u6jg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*fu5KpA8wYetPi-BkF4Pc2g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*8wi0GkmZ4ChO0mRn3aDR5Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*XPLNTPZeHvS7RLlfBzPu5A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*bSsgC9SJS2fNw5ugODB6UQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*qydL1pN6Hq0JsQpNqHy3wg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*sEtorxLZ0K0a3Wp0IMTaNQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*BQUsgiUuTCWaUeS4V7Vm-g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*idFKd4V2PkofJRQ_oLl-9A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*Z4RrYx73lKCOSUxju8--2w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*dV8DwlRWSVGFU6vbXk1hww.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*py4AQ264sd-mFPgk-NALrg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*tNZnkkCi0RuAlT79R6oeCA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*WiOlRjtlPqaFvWvP9LxHSQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*ndQVKAitbH1nMWaLEMQdQw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*zx423Nmbiy5Bnike03fzIg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*5rgkFQ7NiueI1-p3hVd55g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*PN888FwRHmlM__-UFU1KPg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*0x0pnORvXDj4CJkU-XlyMA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*ZQxIeouDeVLcBvREq9HfnQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*q9U9MgqamfL-j83iTZLpUQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*yhWGr8SAqAqHP5CO8M7z6w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*uPMhefMLyIT0DdvjV0DkYw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*W4uCmGsGsw0LXM90MvnuMQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*oGjIXqr9DuiJyac1DGw9Cg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*dUSUcVnGfh_MCSy2j5L_5Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*WLgkK0cPSVDA0TzFztA3QQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*YUBXukXx35cJ1REqBGB3Vg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/july/15/25-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/" class="prev" rel="prev" title="[10/100] #100DaysOfC0D3 - Cuenta colores"><i class="iconfont icon-left"></i>&nbsp;[10/100] #100DaysOfC0D3 - Cuenta colores</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/15/24-100-100daysofc0d3/" class="next" rel="next" title="[10/100] #100DaysOfC0D3 - Cuenta colores">[10/100] #100DaysOfC0D3 - Cuenta colores&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>
