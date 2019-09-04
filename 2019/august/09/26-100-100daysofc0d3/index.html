@@ -9,9 +9,9 @@
   <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
   
   
-  <link rel="prev" href="https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/" />
-  <link rel="next" href="https://umarquez.c0d3.mx/2019/july/15/10-100-100daysofc0d3/" />
-  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/" />
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/2019/august/12/27-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,40 +22,40 @@
   <title>
        
        
-           [10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez
+           [26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket | Uriel Márquez | @umarquez
        
   </title>
 
   
-<meta property="og:title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez" />
-<meta property="og:url" content="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/" />
-<meta property="og:description" content="[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
-Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
-Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.">
-<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png"/>
+<meta property="og:title" content="[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/" />
+<meta property="og:description" content="Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.
+Por supuesto deberemos proteger el acceso a la consola, pues no queremos que cualquiera que descubra el end-point tenga acceso a ella; para esto vamos a utilizar una técnica llamada web knocking que es una variante del port knocking, la cual consiste en realizar ciertas peticiones que servirán para validar el acceso antes de hacer disponible el servicio al cliente.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/26-ws-shell.png"/>
 <meta property="og:type" content="article" />
 <meta property="fb:app_id" content="799432727195684" />
 
 
-<meta itemprop="name" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
-<html itemscope itemtype="https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/">
-<meta itemprop="description" content="[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
-Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
-Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.">
-<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png">
+<meta itemprop="name" content="[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/">
+<meta itemprop="description" content="Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.
+Por supuesto deberemos proteger el acceso a la consola, pues no queremos que cualquiera que descubra el end-point tenga acceso a ella; para esto vamos a utilizar una técnica llamada web knocking que es una variante del port knocking, la cual consiste en realizar ciertas peticiones que servirán para validar el acceso antes de hacer disponible el servicio al cliente.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/26-ws-shell.png">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
-<meta name="twitter:description" content="[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
-Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
-Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.">
-<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png">
+<meta name="twitter:title" content="[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.
+Por supuesto deberemos proteger el acceso a la consola, pues no queremos que cualquiera que descubra el end-point tenga acceso a ella; para esto vamos a utilizar una técnica llamada web knocking que es una variante del port knocking, la cual consiste en realizar ciertas peticiones que servirán para validar el acceso antes de hacer disponible el servicio al cliente.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/26-ws-shell.png">
 <meta name="twitter:site" content="@C0D3MX">
 <meta name="twitter:creator" content="@umarquez">
-<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png"/>
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/26-ws-shell.png"/>
 
-  <meta name="title" content="[10/100] #100DaysOfC0D3 - Cuenta colores | Uriel Márquez | @umarquez">
+  <meta name="title" content="[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket | Uriel Márquez | @umarquez">
     
   
   <link rel="stylesheet" href="/font/iconfont.min.css">
@@ -77,11 +77,11 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
          "@id": "https://umarquez.c0d3.mx"
     },
     "articleSection" : "posts",
-    "name" : "[10/100] #100DaysOfC0D3 - Cuenta colores",
-    "headline" : "[10/100] #100DaysOfC0D3 - Cuenta colores",
-    "description" : "[26&amp;amp;frasl;100] #100DaysOfC0D3 [26&amp;amp;frasl;100] 100DaysOfC0D3
-Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
-Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.",
+    "name" : "[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket",
+    "headline" : "[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket",
+    "description" : "Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.
+Por supuesto deberemos proteger el acceso a la consola, pues no queremos que cualquiera que descubra el end-point tenga acceso a ella; para esto vamos a utilizar una técnica llamada web knocking que es una variante del port knocking, la cual consiste en realizar ciertas peticiones que servirán para validar el acceso antes de hacer disponible el servicio al cliente.",
     "inLanguage" : "es-mx",
     "author" : "@umarquez",
     "creator" : "@umarquez",
@@ -89,11 +89,11 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
     "accountablePerson" : "@umarquez",
     "copyrightHolder" : "@umarquez",
     "copyrightYear" : "2019",
-    "datePublished": "2019-07-15 00:00:00 -0500 -0500",
-    "dateModified" : "2019-07-15 00:00:00 -0500 -0500",
-    "url" : "https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/",
-    "wordCount" : "866",
-    "keywords" : [ "Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+    "datePublished": "2019-08-09 00:00:00 -0500 -0500",
+    "dateModified" : "2019-08-09 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/",
+    "wordCount" : "860",
+    "keywords" : [ "Shellcode","Hacking ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
 }
 </script>
 
@@ -145,11 +145,11 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">[10/100] #100DaysOfC0D3 - Cuenta colores</h1>
+        <h1 class="post-title" itemprop="name headline">[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
                 <span class="post-time">
-                on <time datetime=2019-07-15 itemprop="datePublished">July 15, 2019</time>
+                on <time datetime=2019-08-09 itemprop="datePublished">August 9, 2019</time>
                 </span>
                 in
                 <i class="iconfont icon-folder"></i>
@@ -165,7 +165,7 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
             
         
 
-        <img src="https://umarquez.c0d3.mx/uploads/10-Color-Counter.png" class="featured_image">
+        <img src="https://umarquez.c0d3.mx/uploads/26-ws-shell.png" class="featured_image">
         
         
      
@@ -178,10 +178,6 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
           
 
           
-
-<h1 id="26-100-100daysofc0d3">[<sup>26</sup>&frasl;<sub>100</sub>] #100DaysOfC0D3</h1>
-
-<p>[<sup>26</sup>&frasl;<sub>100</sub>] 100DaysOfC0D3</p>
 
 <h3 id="shell-a-través-de-websocket-shell-through-websocket">Shell a través de WebSocket | Shell through WebSocket</h3>
 
@@ -197,9 +193,12 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
 
 <p>La naturaleza del <strong><em>WebSocket</em></strong> es el evitar los problema que existían en las aplicaciones web que requerían conectarse a servicios en puertos diferentes al <strong>http</strong>(<em>80</em>)/<strong>https</strong>(<em>443</em>); de alguna forma es una especie de socket dentro de un socket.</p>
 
-<p>Una herramienta muy utilizada en seguridad es <strong>Netcat</strong>:
-&gt; <strong>Netcat</strong> es una <a href="https://es.wikipedia.org/w/index.php?title=Herramienta_de_red&amp;action=edit&amp;redlink=1" rel="nofollow noreferrer" target="_blank">herramienta de red</a> que permite a través de intérprete de comandos y con una sintaxis sencilla abrir puertos TCP/UDP en un HOST (quedando netcat a la escucha), asociar una shell a un puerto en concreto (para conectarse por ejemplo a MS-DOS o al intérprete bash de Linux remotamente) y forzar conexiones UDP/TCP (útil por ejemplo para realizar rastreos de puertos o realizar transferencias de archivos bit a bit entre dos equipos).
-&gt; <a href="https://es.wikipedia.org/wiki/Netcat" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Netcat</a></p>
+<p>Una herramienta muy utilizada en seguridad es <strong>Netcat</strong>:</p>
+
+<blockquote>
+<p><strong>Netcat</strong> es una <a href="https://es.wikipedia.org/w/index.php?title=Herramienta_de_red&amp;action=edit&amp;redlink=1" rel="nofollow noreferrer" target="_blank">herramienta de red</a> que permite a través de intérprete de comandos y con una sintaxis sencilla abrir puertos TCP/UDP en un HOST (quedando netcat a la escucha), asociar una shell a un puerto en concreto (para conectarse por ejemplo a MS-DOS o al intérprete bash de Linux remotamente) y forzar conexiones UDP/TCP (útil por ejemplo para realizar rastreos de puertos o realizar transferencias de archivos bit a bit entre dos equipos).
+<a href="https://es.wikipedia.org/wiki/Netcat" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Netcat</a></p>
+</blockquote>
 
 <p>Una parte de muchos <a href="https://es.wikipedia.org/wiki/Exploit" rel="nofollow noreferrer" target="_blank">*exploits </a>*son <a href="https://es.wikipedia.org/wiki/Shellcode" rel="nofollow noreferrer" target="_blank">*shellcodes</a> *que dirigen la <strong>entrada/salida</strong> de la *shell *a un puerto tcp en espera de conexiones o bien, realizan una conexión a un <strong>hots/puerto</strong> específico y una vez establecida redirige la <strong>entrada/salida</strong> a la <em>shell</em>.</p>
 
@@ -209,7 +208,7 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
 
 <p>Deberemos poder ejecutar una consola local desde un programa en go a la que redirigiremos su entrada/salida para poder interactuar con ella y comprobar que es posible ejecutar comandos, por ejemplo.</p>
 
-<iframe src="https://medium.com/media/2db31401f3cee7eca5c87e99b8d01214" frameborder=0></iframe>
+<script src="https://gist.github.com/umarquez/66859231d8cc14d05844493a9603a864.js"></script>
 
 <pre><code>**go run main.go**
 </code></pre>
@@ -222,7 +221,7 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
 
 <p>Ahora, deberemos crear una instancia de la <strong><em>shell</em></strong> y redirigirla a un <strong><em>WS</em></strong> cada vez que se realice una petición, para ello necesitaremos crear un servidor web que escuche las peticiones, inicialice el <em>socket</em>, ejecute la ***shell ***y redirija la entrada/salida de esta al <em>socket</em>; además de esto necesitaremos crear un cliente que establezca la conexión al servidor y nos permita interactuar con la consola.</p>
 
-<iframe src="https://medium.com/media/f2f426ab433c01dded57e8b7b4f43a00" frameborder=0></iframe>
+<script src="https://gist.github.com/umarquez/64c6cbd189db4d07a8da5b8b9b83a7bb.js"></script>
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*QO3UTyi7cSQUYFJCscMe_A.png" alt="server.go" class="lazyload"><figcaption class="image-caption">server.go</figcaption></figure><em>server.go</em></p>
 
@@ -235,14 +234,12 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
 <p>Compliquemos un poco las cosas, ya que contamos con un servidor web podremos recibir información mediante una ruta específica y simular que la página no está disponible; vamos a aprovecharnos de esto para autenticar al usuario de la siguiente manera:</p>
 
 <ul>
-<li><p>Obtendremos un token enviando una petición **POST **a la ruta /login, este lo utilizaremos como ruta de la siguiente petición.</p></li>
-
-<li><p>A continuación, enviaremos la contraseña utilizando <strong>POST</strong> a la ruta /<token> y sabremos si esta es correcta enviando una petición <strong>GET</strong> a la misma ruta, esta deberá retornar la cadena OK como resultado además del estatus 200 cualquier otro resultado indicará que esta es incorrecta. Podremos restablecer el valor almacenado enviando una petición <strong>DELETE.</strong></p></li>
-
-<li><p>Ya que hayamos enviado y validado la contraseña podremos conectarnos a la ruta definida /shell por <strong><em>WS</em></strong> para obtener la consola, en caso de contar con una contraseña incorrecta simplemente no generaremos el socket y terminaremos de procesar la petición.</p></li>
+<li>Obtendremos un token enviando una petición **POST **a la ruta /login, este lo utilizaremos como ruta de la siguiente petición.</li>
+<li>A continuación, enviaremos la contraseña utilizando <strong>POST</strong> a la ruta /<token> y sabremos si esta es correcta enviando una petición <strong>GET</strong> a la misma ruta, esta deberá retornar la cadena OK como resultado además del estatus 200 cualquier otro resultado indicará que esta es incorrecta. Podremos restablecer el valor almacenado enviando una petición <strong>DELETE.</strong></li>
+<li>Ya que hayamos enviado y validado la contraseña podremos conectarnos a la ruta definida /shell por <strong><em>WS</em></strong> para obtener la consola, en caso de contar con una contraseña incorrecta simplemente no generaremos el socket y terminaremos de procesar la petición.</li>
 </ul>
 
-<iframe src="https://medium.com/media/298603854262a8ced6896a558f5a0699" frameborder=0></iframe>
+<script src="https://gist.github.com/umarquez/f6c47b7e44a6d77339d8794911aee137.js"></script>
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2000/1*TG_apizpCf1gF6ChdjzeZg.png" alt="server.go" class="lazyload"><figcaption class="image-caption">server.go</figcaption></figure><em>server.go</em></p>
 
@@ -257,15 +254,11 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
 <h2 id="notas-finales">Notas finales</h2>
 
 <ul>
-<li><p>Podríamos utilizar algún tipo de caché para almacenar las sesiones por cierto periodo de tiempo, si estas no se convierten en una conexión durante un tiempo determinado, podríamos deshacernos de ellas.</p></li>
-
-<li><p>Deberíamos eliminar la sesión una vez que realicemos la conexión a la consola pues esta no debería poder ser reutilizada.</p></li>
-
-<li><p>Una buena práctica sería utilizar **HTTPS **para proteger las comunicaciones, además podríamos implementar algún tipo de encripción sobre el **WS **para agregar una capa adicional de seguridad.</p></li>
-
-<li><p>Tanto los lokens como la manera de manejarlos podría mejorar haciendo uso de JWT y enviando el ID como parte de este, por ejemplo.</p></li>
-
-<li><p><strong>NUNCA</strong> deberemos colocar las contraseñas en texto plano o incluirlas como parte del código, esto solo es un ejemplo por lo que no debería implementarse en producción de esta forma.</p></li>
+<li>Podríamos utilizar algún tipo de caché para almacenar las sesiones por cierto periodo de tiempo, si estas no se convierten en una conexión durante un tiempo determinado, podríamos deshacernos de ellas.</li>
+<li>Deberíamos eliminar la sesión una vez que realicemos la conexión a la consola pues esta no debería poder ser reutilizada.</li>
+<li>Una buena práctica sería utilizar **HTTPS **para proteger las comunicaciones, además podríamos implementar algún tipo de encripción sobre el **WS **para agregar una capa adicional de seguridad.</li>
+<li>Tanto los lokens como la manera de manejarlos podría mejorar haciendo uso de JWT y enviando el ID como parte de este, por ejemplo.</li>
+<li><strong>NUNCA</strong> deberemos colocar las contraseñas en texto plano o incluirlas como parte del código, esto solo es un ejemplo por lo que no debería implementarse en producción de esta forma.</li>
 </ul>
 
     </div>
@@ -281,7 +274,7 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/july/15/26-100-100daysofc0d3/</span>
+                    <a href=https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/</span>
             </p>
             
              
@@ -296,6 +289,12 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
         
             <section>
             <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/shellcode/">
+                    #Shellcode</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/hacking/">
+                    #Hacking </a></span>
             
             <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
                     #Golang</a></span>
@@ -316,10 +315,10 @@ Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar u
 
     <div class="post-nav">
         
-        <a href="https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/" class="prev" rel="prev" title="[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort"><i class="iconfont icon-left"></i>&nbsp;[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort</a>
+        <a href="https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/" class="prev" rel="prev" title="[25/100] #100DaysOfC0D3 - Tramado | Dithering"><i class="iconfont icon-left"></i>&nbsp;[25/100] #100DaysOfC0D3 - Tramado | Dithering</a>
          
         
-        <a href="https://umarquez.c0d3.mx/2019/july/15/10-100-100daysofc0d3/" class="next" rel="next" title="[10/100] #100DaysOfC0D3 - Cuenta colores">[10/100] #100DaysOfC0D3 - Cuenta colores&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://umarquez.c0d3.mx/2019/august/12/27-100-100daysofc0d3/" class="next" rel="next" title="[27/100] #100DaysOfC0D3 - Partrónes de diseño: Builder | Builder design pattern">[27/100] #100DaysOfC0D3 - Partrónes de diseño: Builder | Builder design pattern&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
