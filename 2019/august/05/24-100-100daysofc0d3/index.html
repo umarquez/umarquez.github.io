@@ -92,7 +92,7 @@
     "datePublished": "2019-08-05 00:00:00 -0500 -0500",
     "dateModified" : "2019-08-05 00:00:00 -0500 -0500",
     "url" : "https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/",
-    "wordCount" : "443",
+    "wordCount" : "444",
     "keywords" : [ "Escalado"," Interpolacion ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
 }
 </script>
@@ -184,13 +184,13 @@
 <p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling</a></p>
 
 <blockquote>
-<p>La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, <em>x</em> <strong>e</strong> <em>y</em>) en una malla regular de dos dimensiones.
+<p>La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, <strong><em>x</em></strong> e <strong><em>y</em></strong>) en una malla regular de dos dimensiones.
 <a href="https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal</a></p>
 </blockquote>
 
 <p>En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo <a href="https://medium.com/@umarquez_mx/16-100-100daysofc0d3-eef81cd44afb" rel="nofollow noreferrer" target="_blank"><strong>[<sup>16</sup>&frasl;<sub>100</sub>]</strong></a> antes de continuar.</p>
 
-<p>Nuevamente tomaremos como referencia los píxeles originales que colocaremos en el píxel superior izquierdo de cada bloque de píxeles nuevos, esto hará que contemos con una matriz de n x n en la que habremos distribuido la información original de manera uniforme.</p>
+<p>Nuevamente tomaremos como referencia los píxeles originales que colocaremos en el píxel superior izquierdo de cada bloque de píxeles nuevos, esto hará que contemos con una matriz de <code>n x n</code> en la que habremos distribuido la información original de manera uniforme.</p>
 
 <p>Lo primero que deberemos hacer será interpolar linealmente de manera vertical cada píxel de la imagen hasta el siguiente píxel disponible dentro de la misma columna, con esto generaremos columnas que recorren toda la imagen nueva, a continuación solo bastará con interpolar de manera horizontal cada fila de píxeles vacíos, a modo de conectar una columna con otra.</p>
 
@@ -226,7 +226,7 @@
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="https://cdn-images-1.medium.com/max/2488/1*MMdCXK_MBAoLbfoEE0UKNw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
 
-<p>La fórmula será la misma que en el paso anterior: <strong>valor</strong>= (((<strong>origen</strong>-<strong>destino</strong>)/<strong>escala__)</strong>*posición<strong>)+</strong>origen**</p>
+<p>La fórmula será la misma que en el paso anterior: <code>**_valor _**</code><code>= (((</code><code>**_origen_**</code><code>-</code><code>**_destino_**</code><code>)/</code><code>**_escala___</code><code>)*</code><code>**_posición_**</code><code>)+</code><code>**_origen_**</code></p>
 
 <h3 id="resultado">Resultado</h3>
 
