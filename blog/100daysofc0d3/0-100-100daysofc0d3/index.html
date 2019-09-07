@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/1-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/0-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/0-100-100daysofc0d3/" />
+<meta property="og:description" content="Repo GitHub: umarquez/100DaysOfC0D3
+¿Qué? Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando Go (Golang) como lenguaje.
+¿Cómo?  Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación. Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/100DaysOfC0D3.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/0-100-100daysofc0d3/">
+<meta itemprop="description" content="Repo GitHub: umarquez/100DaysOfC0D3
+¿Qué? Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando Go (Golang) como lenguaje.
+¿Cómo?  Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación. Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/100DaysOfC0D3.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Repo GitHub: umarquez/100DaysOfC0D3
+¿Qué? Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando Go (Golang) como lenguaje.
+¿Cómo?  Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación. Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/100DaysOfC0D3.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/100DaysOfC0D3.png"/>
+
+  <meta name="title" content="[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode",
+    "headline" : "[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode",
+    "description" : "Repo GitHub: umarquez/100DaysOfC0D3
+¿Qué? Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando Go (Golang) como lenguaje.
+¿Cómo?  Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación. Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-01 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-01 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/0-100-100daysofc0d3/",
+    "wordCount" : "380",
+    "keywords" : [ "Golang","100DaysOfC0D3","100DaysOfCode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-01 itemprop="datePublished">July 1, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/100DaysOfC0D3.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p><strong>Repo GitHub:</strong>
+<a href="https://github.com/umarquez/100DaysOfC0D3" rel="nofollow noreferrer" target="_blank">umarquez/100DaysOfC0D3</a></p>
+
+<h2 id="qué">¿Qué?</h2>
+
+<p>Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando <a href="http://golang.org" rel="nofollow noreferrer" target="_blank"><strong><em>Go</em></strong> <em>(Golang)</em></a> como lenguaje.</p>
+
+<h2 id="cómo">¿Cómo?</h2>
+
+<ul>
+<li>Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación.</li>
+<li>Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.</li>
+<li>Todos nos equivocamos en algún momento, así que espero recibir sus comentarios y observaciones siempre de manera respetuosa y con la intención de mejorar.</li>
+</ul>
+
+<h2 id="por-qué">¿Por Qué?</h2>
+
+<ul>
+<li>Generar más contenido en español relacionado con <strong>Go</strong>.</li>
+<li>Explicar y repasar conceptos, además de mejorar nuestras habilidades.</li>
+</ul>
+
+<h2 id="temas">Temas</h2>
+
+<h3 id="algoritmos-de-ordenamiento">Algoritmos de ordenamiento</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/1-100-100daysofc0d3-461329d7db3a" rel="nofollow noreferrer" target="_blank">[<sup>1</sup>&frasl;<sub>100</sub>] — Ordenamiento por inserción | Insert Sort</a></li>
+<li><a href="https://medium.com/@umarquez_mx/3-100-100daysofc0d3-b92a6bc17364" rel="nofollow noreferrer" target="_blank">[<sup>3</sup>&frasl;<sub>100</sub>] — Ordenamiento por selección | Selection Sort</a></li>
+<li><a href="https://medium.com/@umarquez_mx/5-100-100daysofc0d3-34a17514d23b" rel="nofollow noreferrer" target="_blank">[<sup>5</sup>&frasl;<sub>100</sub>] — Ordenamiento Burbuja | Bubble Sort</a></li>
+<li><a href="https://medium.com/@umarquez_mx/9-100-100daysofc0d3-b4a47f089b1f" rel="nofollow noreferrer" target="_blank">[<sup>9</sup>&frasl;<sub>100</sub>] — Ordenamiento con Árbol Binario | Binary Tree Sort</a></li>
+<li><a href="https://medium.com/@umarquez_mx/12-100-100daysofc0d3-9bf50aecde0d" rel="nofollow noreferrer" target="_blank">[<sup>12</sup>&frasl;<sub>100</sub>] — Ordenamiento rápido | Quicksort</a></li>
+<li><a href="https://medium.com/@umarquez_mx/22-100-100daysofc0d3-26fbe1abaf13" rel="nofollow noreferrer" target="_blank">[<sup>22</sup>&frasl;<sub>100</sub>] — Ordenamiento Gnomo | Gnome Sort</a></li>
+</ul>
+
+<h3 id="algoritmos-de-búsqueda">Algoritmos de búsqueda</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/4-100-100daysofc0d3-dcda8f1af6be" rel="nofollow noreferrer" target="_blank">[<sup>4</sup>&frasl;<sub>100</sub>] — Búsqueda Binaria | Binary Search</a></li>
+<li><a href="https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7" rel="nofollow noreferrer" target="_blank">[<sup>15</sup>&frasl;<sub>100</sub>] — El vecino más cercano | Nearest neighbor search</a></li>
+<li><a href="https://medium.com/@umarquez_mx/21-100-100daysofc0d3-1650f35510ef" rel="nofollow noreferrer" target="_blank">[<sup>21</sup>&frasl;<sub>100</sub>] — Búsqueda simple de texto | Simple text search</a></li>
+</ul>
+
+<h3 id="algoritmos-de-codificación">Algoritmos de codificación</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/2-100-100daysofc0d3-1403726d6e2d" rel="nofollow noreferrer" target="_blank">[<sup>2</sup>&frasl;<sub>100</sub>] — Codificando/Decodificando Base64</a></li>
+<li><a href="https://medium.com/@umarquez_mx/14-100-100daysofc0d3-ae616cce9499" rel="nofollow noreferrer" target="_blank">[<sup>14</sup>&frasl;<sub>100</sub>] — UUEncode</a></li>
+</ul>
+
+<h3 id="algoritmos-de-compresión">Algoritmos de compresión</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/23-100-100daysofc0d3-50480b7112d4" rel="nofollow noreferrer" target="_blank">[<sup>23</sup>&frasl;<sub>100</sub>] — Compresión LZ77 | LZ77 Compression Algorithm</a></li>
+</ul>
+
+<h3 id="estructuras-de-datos">Estructuras de datos</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/7-100-100daysofc0d3-6eed6b4ceded" rel="nofollow noreferrer" target="_blank">[<sup>7</sup>&frasl;<sub>100</sub>] — Tabla de Hash | Hash Table</a></li>
+<li><a href="https://medium.com/@umarquez_mx/8-100-100daysofc0d3-755dde240e60" rel="nofollow noreferrer" target="_blank">[<sup>8</sup>&frasl;<sub>100</sub>] — Listas enlazadas | Linked List</a></li>
+</ul>
+
+<h3 id="golang">Golang</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/6-100-100daysofc0d3-f7a661dd8e1a" rel="nofollow noreferrer" target="_blank">[<sup>6</sup>&frasl;<sub>100</sub>] — Interfaces Golang | Si parece un pato, nada como un pato…</a></li>
+<li><a href="https://medium.com/@umarquez_mx/17-100-100daysofc0d3-9fd4ad3eba91" rel="nofollow noreferrer" target="_blank">[<sup>17</sup>&frasl;<sub>100</sub>] — Endianness | Big-endian &amp; Little-endian</a></li>
+</ul>
+
+<h3 id="patrones-de-diseño">Patrones de diseño</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/11-100-100daysofc0d3-5d3d60c70390" rel="nofollow noreferrer" target="_blank">[<sup>11</sup>&frasl;<sub>100</sub>] — Partrón Singleton | Singleton Pattern</a></li>
+<li><a href="https://medium.com/@umarquez_mx/27-100-100daysofc0d3-900fb24eea2d" rel="nofollow noreferrer" target="_blank">[<sup>27</sup>&frasl;<sub>100</sub>] — Partrónes de diseño: Builder | Builder design pattern</a></li>
+<li><a href="https://medium.com/@umarquez_mx/30-100-100daysofc0d3-af4ae4c2946" rel="nofollow noreferrer" target="_blank">[<sup>30</sup>&frasl;<sub>100</sub>] — Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern</a></li>
+</ul>
+
+<h3 id="procesamiento-de-imágenes">Procesamiento de imágenes</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/16-100-100daysofc0d3-eef81cd44afb" rel="nofollow noreferrer" target="_blank">[<sup>16</sup>&frasl;<sub>100</sub>] — Escalado de imágenes mediante interpolación de vecinos cercanos | Image scaling applying nearest neighbor interpolation</a></li>
+<li><a href="https://medium.com/@umarquez_mx/24-100-100daysofc0d3-fc49dad71761" rel="nofollow noreferrer" target="_blank">[<sup>24</sup>&frasl;<sub>100</sub>] — Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation</a></li>
+<li><a href="https://medium.com/@umarquez_mx/25-100-100daysofc0d3-ba73c5030a95" rel="nofollow noreferrer" target="_blank">[<sup>25</sup>&frasl;<sub>100</sub>] — Tramado | Dithering</a></li>
+</ul>
+
+<h3 id="proyectos">Proyectos</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/10-100-100daysofc0d3-7187417844ad" rel="nofollow noreferrer" target="_blank">[<sup>10</sup>&frasl;<sub>100</sub>] — Cuenta colores</a> (aplicación de tablas <em>hash</em> y árboles binarios)</li>
+<li><a href="https://medium.com/@umarquez_mx/20-100-100daysofc0d3-344d3b0cfc8f" rel="nofollow noreferrer" target="_blank">[<sup>20</sup>&frasl;<sub>100</sub>] — Segundo proyecto: Repintado</a></li>
+</ul>
+
+<h3 id="redes">Redes</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/19-100-100daysofc0d3-48b6b5d27b9c" rel="nofollow noreferrer" target="_blank">[<sup>19</sup>&frasl;<sub>100</sub>] — Ping | ICMP Echo</a></li>
+</ul>
+
+<h3 id="seguridad">Seguridad</h3>
+
+<ul>
+<li><a href="https://medium.com/@umarquez_mx/13-100-100daysofc0d3-9a06e28e257" rel="nofollow noreferrer" target="_blank">[<sup>13</sup>&frasl;<sub>100</sub>] — Esteganografía | Steganography</a></li>
+<li><a href="https://medium.com/@umarquez_mx/18-100-100daysofc0d3-294aaacd2ac1" rel="nofollow noreferrer" target="_blank">[<sup>18</sup>&frasl;<sub>100</sub>] — TEA | Tiny Encryption Algorithm</a></li>
+<li><a href="https://medium.com/@umarquez_mx/26-100-100daysofc0d3-459cdd5322b1" rel="nofollow noreferrer" target="_blank">[<sup>26</sup>&frasl;<sub>100</sub>] — Shell a través de WebSocket | Shell through WebSocket</a></li>
+<li><a href="https://medium.com/@umarquez_mx/28-100-100daysofc0d3-7746a167e50c" rel="nofollow noreferrer" target="_blank">[<sup>28</sup>&frasl;<sub>100</sub>] — Escaneo de puertos TCP | TCP port scanning</a></li>
+</ul>
+
+<p><br>
+<br></p>
+
+<hr />
+
+<p><br>
+<br>
+<iframe src="https://carbon.now.sh/embed?bg=rgba(74%2C144%2C226%2C1)&code=package%2520main%250A%250Aimport%2520(%250A%2509%2522fmt%2522%250A)%250A%250Afunc%2520main()%2520%257B%250A%2509fmt.Print(%2522%2520%2520(**_)%255Cn%2520%2520(o%2520_%2520o)%2520%255Cn%2520_**_(._.)%255Cn%257C%2520%2520%2520%2520%2520%2520%2520%2520%2520%257C%255Cn%257C%2520%2520Muuu!%2520%2520%257C%2520%255Cn%257C_________%257C%255Cn%2522)%250A%257D%250A&ds=true&dsblur=68px&dsyoff=20px&es=4x&fm=Hack&fs=14px&l=text%2Fx-go&lh=143%25&ln=false&ph=56px&pv=56px&referrer=https%3A%2F%2Fmedium.com%2F%40umarquez_mx%2F0-100-100daysofc0d3-c952a268e057&si=false&t=monokai&wa=true&wc=true&wm=false&wt=none" frameborder=0 width="100%" height="500px"></iframe></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/0-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/0-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100DaysOfC0D3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100DaysOfCode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/1-100-100daysofc0d3/" class="next" rel="next" title="[1/100] #100DaysOfC0D3 - Ordenamiento por inserción | Insert Sort">[1/100] #100DaysOfC0D3 - Ordenamiento por inserción | Insert Sort&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

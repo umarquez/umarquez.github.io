@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/23-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/" />
+<meta property="og:description" content="Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling
+ La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal
+ En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo [16&amp;amp;frasl;100] antes de continuar.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/24-Bilineal.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/">
+<meta itemprop="description" content="Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling
+ La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal
+ En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo [16&amp;amp;frasl;100] antes de continuar.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/24-Bilineal.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling
+ La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal
+ En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo [16&amp;amp;frasl;100] antes de continuar.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/24-Bilineal.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/24-Bilineal.png"/>
+
+  <meta name="title" content="[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal",
+    "headline" : "[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal",
+    "description" : "Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling
+ La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal
+ En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo [16&amp;amp;frasl;100] antes de continuar.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-05 00:00:00 -0500 -0500",
+    "dateModified" : "2019-08-05 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/",
+    "wordCount" : "444",
+    "keywords" : [ "Escalado"," Interpolacion ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-05 itemprop="datePublished">August 5, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/24-Bilineal.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="escalado-de-imágenes-mediante-interpolación-bilineal-image-scaling-applying-bilinear-interpolation">Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation</h2>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling</a></p>
+
+<blockquote>
+<p>La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, <strong><em>x</em></strong> e <strong><em>y</em></strong>) en una malla regular de dos dimensiones.
+<a href="https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal</a></p>
+</blockquote>
+
+<p>En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo <a href="https://medium.com/@umarquez_mx/16-100-100daysofc0d3-eef81cd44afb" rel="nofollow noreferrer" target="_blank"><strong>[<sup>16</sup>&frasl;<sub>100</sub>]</strong></a> antes de continuar.</p>
+
+<p>Nuevamente tomaremos como referencia los píxeles originales que colocaremos en el píxel superior izquierdo de cada bloque de píxeles nuevos, esto hará que contemos con una matriz de <code>n x n</code> en la que habremos distribuido la información original de manera uniforme.</p>
+
+<p>Lo primero que deberemos hacer será interpolar linealmente de manera vertical cada píxel de la imagen hasta el siguiente píxel disponible dentro de la misma columna, con esto generaremos columnas que recorren toda la imagen nueva, a continuación solo bastará con interpolar de manera horizontal cada fila de píxeles vacíos, a modo de conectar una columna con otra.</p>
+
+<p>Vamos a aplicar estos pasos en un ejemplo.</p>
+
+<h2 id="ejemplo">Ejemplo</h2>
+
+<p>Vamos a escalar <strong>3:1</strong> los siguientes píxeles utilizando interpolación bilineal.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Liy-475ZHzFB8-muYLEONg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-1">Paso 1</h3>
+
+<p>Generamos la nueva matriz y colocamos los valores originales en la nueva ubicación</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/lxOkJq4aMefTX4uF4ABOXg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-2">Paso 2</h3>
+
+<p>A continuación deberemos conectar cada columna, interpolando entre los valores disponibles:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/KYIUz6NLEPPlI1Q4wuvU3A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>A continuación se muestra el procedimiento a detalle para cada par de valores</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/KecTYmu1-OGHTCyFcDq2uA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Hemos decidido rellenar las últimas filas duplicando el último valor disponible debido a la falta de información.</p>
+
+<h3 id="paso-3">Paso 3</h3>
+
+<p>Una vez que contamos con las primeras columnas, procedemos a generar los valores para cada fila:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/MMdCXK_MBAoLbfoEE0UKNw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>La fórmula será la misma que en el paso anterior: <code>**_valor _**</code><code>= (((</code><code>**_origen_**</code><code>-</code><code>**_destino_**</code><code>)/</code><code>**_escala___</code><code>)*</code><code>**_posición_**</code><code>)+</code><code>**_origen_**</code></p>
+
+<h3 id="resultado">Resultado</h3>
+
+<p>Una vez que realicemos todos los cálculos terminaremos con los siguientes valores aproximados:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/cyYJZqxom6AYDwrFoEXbIA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="notas">Notas</h3>
+
+<ul>
+<li>Debemos mencionar que todos los valores son redondeados debido a que los colores de cada píxel solo aceptan colores con valores enteros positivos.</li>
+<li>Deberemos definir un método para rellenar las orillas, en este caso se decidió duplicar los últimos valores.</li>
+<li>Este método generará una especie de desenfoque que se intensifica entre mayor sea la proporción y es producto de la distorsión que genera la interpolación lineal.</li>
+</ul>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p>Utilizaremos la interpolación por vecinos cercanos y la interpolación lineal para generar dos imágenes escaladas a partir de una imagen aleatoria de menor tamaño, de esta forma podremos comparar los resultados de que genera cada método.</p>
+
+<script src="https://gist.github.com/umarquez/17d41c028b459b70765ace3f88156691.js"></script>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ix36a8UZPV5e7IvpmGwNew.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/bOWszUcHHZsdFPv9RMW0cw.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/sVzQDfmlgUQOgeU78fDuaw.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/01qpJEdG3Ar1EDtzmuti3g.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/O-ZOCbXSCx93XfTIRc3pUg.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/c9kc3-bmLuOFytIfc-w47w.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/sKUtmbDe_EggfcEesK74-g.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fofJ-nImOMdy98Xh2BbAbg.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/aao5AbwzpYJNP96mOG7hsg.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/qZLibqOTcylwRsFRJD8urQ.jpeg" alt="original" class="lazyload"><figcaption class="image-caption">original</figcaption></figure><em>original</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/Vmoz-MrV1IafrlM57yXiDw.png" alt="bilineal" class="lazyload"><figcaption class="image-caption">bilineal</figcaption></figure><em>bilineal</em></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/i6p9VBaKJnbs4BzcPYZG5A.png" alt="vecino cercano" class="lazyload"><figcaption class="image-caption">vecino cercano</figcaption></figure><em>vecino cercano</em></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/escalado/">
+                    #Escalado</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/interpolacion/">
+                    # Interpolacion </a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/" class="prev" rel="prev" title="[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort"><i class="iconfont icon-left"></i>&nbsp;[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/23-100-100daysofc0d3/" class="next" rel="next" title="[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm">[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

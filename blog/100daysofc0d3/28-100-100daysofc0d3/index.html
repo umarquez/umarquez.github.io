@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/27-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/29-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/28-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/28-100-100daysofc0d3/" />
+<meta property="og:description" content="Escaneo de puertos TCP | TCP port scanning Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning
+ A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities. Un escáner de puertos es una aplicación diseñada para detectar puertos abiertos en un servidor o equipo conectado a la red.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/28-tcp-port-scanning.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/28-100-100daysofc0d3/">
+<meta itemprop="description" content="Escaneo de puertos TCP | TCP port scanning Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning
+ A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities. Un escáner de puertos es una aplicación diseñada para detectar puertos abiertos en un servidor o equipo conectado a la red.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/28-tcp-port-scanning.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Escaneo de puertos TCP | TCP port scanning Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning
+ A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities. Un escáner de puertos es una aplicación diseñada para detectar puertos abiertos en un servidor o equipo conectado a la red.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/28-tcp-port-scanning.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/28-tcp-port-scanning.png"/>
+
+  <meta name="title" content="[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning",
+    "headline" : "[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning",
+    "description" : "Escaneo de puertos TCP | TCP port scanning Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning
+ A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities. Un escáner de puertos es una aplicación diseñada para detectar puertos abiertos en un servidor o equipo conectado a la red.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-13 00:00:00 -0500 -0500",
+    "dateModified" : "2019-08-13 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/28-100-100daysofc0d3/",
+    "wordCount" : "451",
+    "keywords" : [ "Hacking","Port Scanning ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-13 itemprop="datePublished">August 13, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/28-tcp-port-scanning.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="escaneo-de-puertos-tcp-tcp-port-scanning">Escaneo de puertos TCP | TCP port scanning</h2>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning</a></p>
+
+<blockquote>
+<p><strong>A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities.</strong>
+Un escáner de puertos es una aplicación diseñada para detectar puertos abiertos en un servidor o equipo conectado a la red. Como aplicación es utilizada por administradores para verificar las políticas de seguridad de la red, y por atacantes para identificar los servicios que se encuentra en ejecución y poder explotar posibles vulnerabilidades.
+<a href="https://en.wikipedia.org/wiki/Port_scanner" rel="nofollow noreferrer" target="_blank">https://en.wikipedia.org/wiki/Port_scanner</a></p>
+</blockquote>
+
+<p>De acuerdo a la misma referencia, existen diferente tipos de escaneo de puertos, en esta ocasión crearemos la aplicación más simple posible utilizando escaneo <strong>TCP</strong>, este tipo de escaneo utiliza las funciones de red estándar del sistema operativo para intentar conectarse a cada puerto dentro del rango a analizar, si la conexión es exitosa sabremos que el puerto se encuentra disponible.</p>
+
+<p>Como se menciona en Wikipedia, este tipo de escaneo es <strong>MUY ruidoso</strong> por lo que es fácilmente reconocible por las herramientas de detección de intrusos que podrían tomar medidas para mitigarlo, por esta razón debemos ser muy cuidadosos de no apuntar una herramienta de este tipo a direcciones de red que no sean de nuestra propiedad o a de las que no tengamos premiso explícito pues podría causarnos problemas.</p>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<ul>
+<li>Crearemos una aplicación sencilla que simulará ser un servicio en la red a la espera de conexiones que pondremos a la escucha en un puerto, en este caso será el <strong>31337</strong> por default <strong>-testing-server-port</strong>, esta aplicación tomará los datos enviados y los retornará como respuesta para a continuación terminar la conexión</li>
+<li>Enseguida comenzaremos un escaneo de puertos al host <strong>-host</strong> seleccionado, intentando conectarnos a cada puesto dentro del rango delimitado por el puerto inicial <strong>-start</strong> y final <strong>-end</strong>.</li>
+<li>En cada puerto intentaremos realizar una conexión y mostraremos un mensaje si la conexión ha sido exitosa.</li>
+<li>Adicionalmente mostraremos un mensaje de progreso cada 10% y cada vez que se presione la tecla <strong>ENTER</strong>.</li>
+</ul>
+
+<h3 id="servidor-de-prueba">Servidor de prueba</h3>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/zO2YUjbyZAEI6mGceVtj4g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="función-para-probar-cada-puerto">Función para probar cada puerto</h3>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/JBb3mCZ5YnPoGy9LVJkDag.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="código-fuente">Código fuente</h3>
+
+<script src="https://gist.github.com/umarquez/38bba0d4c884ae6d88e53329acc90b23.js"></script>
+
+<h3 id="salida">Salida</h3>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/-ypxYENGByis9zaEjG4F6w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="palabras-finales">Palabras finales</h2>
+
+<p>Este código puede ser optimizado de muchas maneras, una de ellas podría ser lanzar varias goroutines que tomen los puertos a probar de un channel y devuelvan los resultados a otro común que podríamos ir leyendo de manera secuencial para mostar los resultados; con esto reduciríamos el tiempo que nos tomaría recorrer cada rango.</p>
+
+<p>Finalmente, me gustaría saber sus comentarios y sugerencias, especialmente que otros temas les gustaría leer por acá o si tienen alguna idea loca que les gustaría que probáramos.</p>
+
+<p><a href="undefined" rel="nofollow noreferrer" target="_blank">-Uriel Márquez</a>.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/28-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/28-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/hacking/">
+                    #Hacking</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/port-scanning/">
+                    #Port Scanning </a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/27-100-100daysofc0d3/" class="prev" rel="prev" title="[27/100] #100DaysOfC0D3 - Patrones de diseño: Builder | Builder design pattern"><i class="iconfont icon-left"></i>&nbsp;[27/100] #100DaysOfC0D3 - Patrones de diseño: Builder | Builder design pattern</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/29-100-100daysofc0d3/" class="next" rel="next" title="[29/100] #100DaysOfC0D3 - Desenfoque de caja | Box blur">[29/100] #100DaysOfC0D3 - Desenfoque de caja | Box blur&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

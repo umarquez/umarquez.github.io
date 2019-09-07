@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/16-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/18-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/17-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/17-100-100daysofc0d3/" />
+<meta property="og:description" content="Endianness | Big-endian &amp;amp;amp; Little-endian Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/17-endianness
+ In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number. It can also be used more generally to refer to the internal ordering of any representation, such as the digits in a numeral system or the sections of a date. En computación, endianness hace referencia al orden de los bytes (o en algunos casos bits) dentro de la representación binaria de un número.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/17-endianness.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/17-100-100daysofc0d3/">
+<meta itemprop="description" content="Endianness | Big-endian &amp;amp;amp; Little-endian Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/17-endianness
+ In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number. It can also be used more generally to refer to the internal ordering of any representation, such as the digits in a numeral system or the sections of a date. En computación, endianness hace referencia al orden de los bytes (o en algunos casos bits) dentro de la representación binaria de un número.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/17-endianness.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Endianness | Big-endian &amp;amp;amp; Little-endian Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/17-endianness
+ In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number. It can also be used more generally to refer to the internal ordering of any representation, such as the digits in a numeral system or the sections of a date. En computación, endianness hace referencia al orden de los bytes (o en algunos casos bits) dentro de la representación binaria de un número.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/17-endianness.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/17-endianness.png"/>
+
+  <meta name="title" content="[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian",
+    "headline" : "[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian",
+    "description" : "Endianness | Big-endian &amp;amp;amp; Little-endian Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/17-endianness
+ In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number. It can also be used more generally to refer to the internal ordering of any representation, such as the digits in a numeral system or the sections of a date. En computación, endianness hace referencia al orden de los bytes (o en algunos casos bits) dentro de la representación binaria de un número.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-24 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-24 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/17-100-100daysofc0d3/",
+    "wordCount" : "543",
+    "keywords" : [ "Endianness","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[17/100] #100DaysOfC0D3 - Endianness | Big-endian &amp; Little-endian</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-24 itemprop="datePublished">July 24, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/17-endianness.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="endianness-big-endian-little-endian">Endianness | Big-endian &amp; Little-endian</h2>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/17-endianness" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/17-endianness</a></p>
+
+<blockquote>
+<p><strong>In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number. It can also be used more generally to refer to the internal ordering of any representation, such as the digits in a numeral system or the sections of a date.</strong>
+En computación, <strong>endianness</strong> hace referencia al orden de los bytes (o en algunos casos bits) dentro de la representación binaria de un número. este termino también puede ser utilizado de manera general para referirse al orden interno de cualquier representación, como los dígitos de un sistema numérico o las diferentes partes de una fecha.
+<a href="https://en.wikipedia.org/wiki/Endianness" rel="nofollow noreferrer" target="_blank">https://en.wikipedia.org/wiki/Endianness</a></p>
+</blockquote>
+
+<p>Vamos a hablar de <strong>bits</strong>, <strong>bytes</strong> y como se organizan dentro de los registros y la memoria. Actualmente estamos habituados a escuchar y leer acerca de procesadores de <strong>64 bits</strong> y de que hace no mucho lo más común eran los de <strong>32 bits</strong>, también sabemos que hay música de <strong>8 bits</strong> que suena a videojuegos “clásicos”; pues todo esto está relacionado con el espacio en bits disponibles para almacenar/transmitir un valor, en el caso de <strong><em>Golang</em></strong> podemos saber el espacio que ocupa una variable basándonos en su tipo:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fSqrwsfQhOtQ3mK6dqDW9A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Veamos la siguiente tabla de equivalencias, comienza con un <strong>nibble que es igual a 4 bits</strong> y es equivalente a un dígito hexadecimal (<strong>0</strong> →F). <strong>Un byte</strong> está formado por <strong>2 nibbles</strong>:</p>
+
+<pre><code>4  BITS    = NIBBLE =      1010 =                A
+2  NIBBLES = BYTE   = 1001 1010 =               9A
+16 BITS    = WORD   =  2 BYTES  =             FD9A
+32 BITS    = DWORD  =  4 BYTES  =         CD01FD9A
+64 BITS    = QWORD  =  8 BYTES  = 5D9C00F3CD01FD9A
+</code></pre>
+
+<p>Ahora, volviendo a la arquitecturas de los procesadores y la memoria, sería poco práctico contar con un espacio de <strong>64 bits</strong> y solo almacenar <strong>un byte</strong> en él, desperdiciando los <strong>24 bits</strong> sobrantes; para evitar esta situación, los valores son almacenados de manera secuencial cuando el espacio que ocupa es menor al bloque disponible; existen dos formas de almacenar estos valores y varían en el orden en que cada bloque es colocado en el espacio disponible. Estos dos formatos son conocidos como <strong>big-endian</strong> y <strong>little-endian</strong>.</p>
+
+<p>Supongamos que tenemos una secuencia de <strong>8 bytes</strong> que son parte de un archivo que estamos procesando, estos <strong>bytes</strong> los debemos almacenar en una <strong><em>QWORD</em></strong> dentro de la memoria, veamos como serían colocados en cada formato, la secuencia de <strong>bytes</strong> será: 12 34 56 78 9A BC DE F0</p>
+
+<h2 id="big-endian">Big-endian</h2>
+
+<p>Este formato colocará el primer <strong>byte</strong> en los <strong>8 bits</strong> más significativos de la <strong><em>QWORD</em></strong>, avanzando <strong>8</strong> posiciones y colocando el siguiente cada vez hasta completar los <strong>8 bytes</strong>, es entonces cuando comenzará con una nueva <strong><em>QWORD</em></strong>:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/2TE8b7bDIpy0dhn3dIRDLQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="little-endian">Little-endian</h2>
+
+<p>Este, en cambio, colocará el primer <strong>byte</strong> en los <strong>8 bits</strong> menos significativos de la <strong><em>QWORD</em></strong>, desplazándose <strong>8 bits</strong> a la izquierda cada vez hasta completarlo para cambiar de <strong><em>QWORD.</em></strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/RtlDvUg7lIGSCQvMFq_97w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Algunos algoritmos (de encripción, por ejemplo) requieren que los datos a procesar se encuentren en uno de los dos formatos necesariamente, en caso de que nuestros datos estén en el formato opuesto, siempre podremos recurrir a la librería estándar de <strong><em>Golang</em></strong> para realizar estas operaciones o las transformaciones necesarias.</p>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p>Almacenaremos una cadena de texto dentro de un <strong><em>QWORD</em></strong> utilizando ambos formatos.</p>
+
+<script src="https://gist.github.com/umarquez/57f9569105251d71fc2872411146dfec.js"></script>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/D2fcxJO7byK4iPDwRzcIgw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/17-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/17-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/endianness/">
+                    #Endianness</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/16-100-100daysofc0d3/" class="prev" rel="prev" title="[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos "><i class="iconfont icon-left"></i>&nbsp;[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos </a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/18-100-100daysofc0d3/" class="next" rel="next" title="[18/100] #100DaysOfC0D3 - TEA | Tiny Encryption Algorithm">[18/100] #100DaysOfC0D3 - TEA | Tiny Encryption Algorithm&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

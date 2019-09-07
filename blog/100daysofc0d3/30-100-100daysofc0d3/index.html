@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/29-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/estrenando-umarquez-c0d3-mx/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/30-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/30-100-100daysofc0d3/" />
+<meta property="og:description" content="Herencia &amp;amp;amp; Patrón Composite | Inheritance &amp;amp;amp; Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
+Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la Herencia, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “hija” de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/30-composite.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/30-100-100daysofc0d3/">
+<meta itemprop="description" content="Herencia &amp;amp;amp; Patrón Composite | Inheritance &amp;amp;amp; Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
+Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la Herencia, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “hija” de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/30-composite.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Herencia &amp;amp;amp; Patrón Composite | Inheritance &amp;amp;amp; Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
+Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la Herencia, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “hija” de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/30-composite.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/30-composite.png"/>
+
+  <meta name="title" content="[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern",
+    "headline" : "[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern",
+    "description" : "Herencia &amp;amp;amp; Patrón Composite | Inheritance &amp;amp;amp; Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
+Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la Herencia, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “hija” de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-16 00:00:00 -0500 -0500",
+    "dateModified" : "2019-08-16 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/30-100-100daysofc0d3/",
+    "wordCount" : "461",
+    "keywords" : [ "Composición","Herencia ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-16 itemprop="datePublished">August 16, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/30-composite.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="herencia-patrón-composite-inheritance-composite-pattern">Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern</h2>
+
+<p>Si <strong>GO</strong> <em>(Golang</em>) es un lenguaje <strong><em>Orientado a Objetos</em></strong>, ¿por qué no existe la herencia como la conocemos en otros lenguajes?</p>
+
+<p>Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la <strong>Herencia</strong>, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “<em>hija”</em> de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.</p>
+
+<p>En el patrón estructural <strong><em>Composite</em></strong>, una nueva estructura puede contener otras estructuras y tipos de dato, haciendo que los métodos y datos de estas sub-estructuras estén disponibles en la que estamos componiendo, es importante señalar que en este caso la nueva estructura no es considerada del mismo tipo que las estructuras que la componen, es decir que, si un automóvil está compuesto de: motor, ruedas y luces, el mismo automóvil no es de ninguno de estos tipos; para solventar las necesidades que esto provoca es que utilizamos las <strong>Interfaces</strong> para describir el comportamiento de estas estructuras, que en este caso podría decir si el automóvil se mueve, que tanto lo hace y si ilumina el interior y/o exterior. De esta manera podemos definir una estructura encapsulada y autónoma que podría formar parte de otras estructuras sin preocuparnos más que por exportar los datos y métodos necesarios incluso utilizando las interfaces como una especie de validación.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/tHBmGZRHe_91k8lMFBe52A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/FxcCDKCztPme6ALwRuZgaw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p>Vamos a ensamblar máquinas con diferentes componentes, supongamos que estamos desarrollando un motor que deberá generar personajes aleatorios tomando diferentes elementos que lo dotarán de ciertas características.</p>
+
+<p><strong>Proyecto completo:</strong>
+<a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/30-composite-pattern" title="https://github.com/umarquez/100DaysOfC0D3/tree/master/30-composite-pattern" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/30-composite-pattern</a></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/cVFBTSYZg3uRpkBO46z4vw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Estas son las interfaces que definen cada componente:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/DhEJhsMZbcrEa-m7Iru4rA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Finalmente nuestra función main():</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ksHIh9mtZ5fTDDvh9HdZaA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><strong>Salida del programa:</strong></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/_CGM4TlbQaRF-y0I1AyJfw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="palabras-finales">Palabras finales</h2>
+
+<p>Es importante entender la filosofía sobre la que se diseñaron las herramientas que utilizamos, esto nos ayuda a aprovechar cada característica de una mejor manera pues entenderemos mejor la visión general y la manera en que fue abordada cada situación.</p>
+
+<p>Ahora que conocemos un poco más la diferencia entre herencia y composición podremos entender mejor el código que alguien más escribió, además de mejorar la manera en que organizamos nuestras estructuras, especialmente si venimos de lenguajes que no funcionan exactamente de la misma forma; no solo se trata de traducir código pues muchas veces esto nos puede acarrear más problemas de los que solucionaríamos.</p>
+
+<p>Me gustaría conocer tu opinión acerca de los temas que vamos tratando en esta serie o si tienes alguna sugerencia o idea que te gustaría que exploremos; puedes dejar tus comentarios en este mismo artículo o en cualquiera de las redes sociales.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/30-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/30-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/composici%C3%B3n/">
+                    #Composición</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/herencia/">
+                    #Herencia </a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/29-100-100daysofc0d3/" class="prev" rel="prev" title="[29/100] #100DaysOfC0D3 - Desenfoque de caja | Box blur"><i class="iconfont icon-left"></i>&nbsp;[29/100] #100DaysOfC0D3 - Desenfoque de caja | Box blur</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/estrenando-umarquez-c0d3-mx/" class="next" rel="next" title="Estrenando umarquez.c0d3.mx">Estrenando umarquez.c0d3.mx&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

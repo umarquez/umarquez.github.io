@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/13-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/15-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/14-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [14/100] #100DaysOfC0D3 - UUEncode | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[14/100] #100DaysOfC0D3 - UUEncode | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/14-100-100daysofc0d3/" />
+<meta property="og:description" content="UUEncode Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode
+Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en su lugar solo suma &#43;32 a cada octeto resultante de la separación en sextetos.
+ UUEncode proviene de UNIX to Unix Encoding. Se trata de un algoritmo de codificación que transforma código binario en texto. Concretamente, la entrada es un bloque de bytes de 8 bits (generalmente un archivo binario), y la salida un bloque texto de varias líneas con saltos de línea LF o CR-LF y caracteres de texto estándar pertenecientes al alfabeto UUEncode.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/14-UUEncode.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[14/100] #100DaysOfC0D3 - UUEncode | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/14-100-100daysofc0d3/">
+<meta itemprop="description" content="UUEncode Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode
+Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en su lugar solo suma &#43;32 a cada octeto resultante de la separación en sextetos.
+ UUEncode proviene de UNIX to Unix Encoding. Se trata de un algoritmo de codificación que transforma código binario en texto. Concretamente, la entrada es un bloque de bytes de 8 bits (generalmente un archivo binario), y la salida un bloque texto de varias líneas con saltos de línea LF o CR-LF y caracteres de texto estándar pertenecientes al alfabeto UUEncode.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/14-UUEncode.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[14/100] #100DaysOfC0D3 - UUEncode | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="UUEncode Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode
+Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en su lugar solo suma &#43;32 a cada octeto resultante de la separación en sextetos.
+ UUEncode proviene de UNIX to Unix Encoding. Se trata de un algoritmo de codificación que transforma código binario en texto. Concretamente, la entrada es un bloque de bytes de 8 bits (generalmente un archivo binario), y la salida un bloque texto de varias líneas con saltos de línea LF o CR-LF y caracteres de texto estándar pertenecientes al alfabeto UUEncode.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/14-UUEncode.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/14-UUEncode.png"/>
+
+  <meta name="title" content="[14/100] #100DaysOfC0D3 - UUEncode | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[14/100] #100DaysOfC0D3 - UUEncode",
+    "headline" : "[14/100] #100DaysOfC0D3 - UUEncode",
+    "description" : "UUEncode Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode
+Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en su lugar solo suma &#43;32 a cada octeto resultante de la separación en sextetos.
+ UUEncode proviene de UNIX to Unix Encoding. Se trata de un algoritmo de codificación que transforma código binario en texto. Concretamente, la entrada es un bloque de bytes de 8 bits (generalmente un archivo binario), y la salida un bloque texto de varias líneas con saltos de línea LF o CR-LF y caracteres de texto estándar pertenecientes al alfabeto UUEncode.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-19 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-19 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/14-100-100daysofc0d3/",
+    "wordCount" : "470",
+    "keywords" : [ "Codificación","Algoritmos ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[14/100] #100DaysOfC0D3 - UUEncode</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-19 itemprop="datePublished">July 19, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/14-UUEncode.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="uuencode">UUEncode</h2>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode</a></p>
+
+<p>Es un sistema similar al <strong>Base64</strong> solo que no utiliza una tabla de caracteres, en su lugar solo suma <code>+32</code> a cada octeto resultante de la separación en sextetos.</p>
+
+<blockquote>
+<p><strong>UUEncode</strong> proviene de <em>UNIX to Unix Encoding</em>. Se trata de un algoritmo de codificación que transforma código binario en texto. Concretamente, la entrada es un bloque de <em>bytes</em> de 8 bits (generalmente un archivo binario), y la salida un bloque texto de varias líneas con saltos de línea LF o CR-LF y caracteres de texto estándar pertenecientes al <em>alfabeto UUEncode</em>.
+<a href="https://es.wikipedia.org/wiki/UUEncode" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/UUEncode</a></p>
+</blockquote>
+
+<h2 id="procedimiento">Procedimiento</h2>
+
+<p>Los pasos para realizar la codificación son los siguientes:</p>
+
+<ol>
+<li>Convertimos el texto plano a binario</li>
+<li>Obtenemos los bits resultantes en grupos de 6</li>
+<li>Colocamos cada sexteto en los bits menos significativos de cada nuevo octeto.</li>
+<li>Rellenamos los 2 bits más significativos con 00</li>
+<li>Al número resultante sumamos <code>+32</code></li>
+</ol>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/S7gijd3BtRTL2ZRaHmal5A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Una vez realizada la codificación de cada <em>byte</em>, procedemos a separar el total <em>bytes</em> resultantes en grupos de 60, cada grupo será una línea dentro del archivo final a la que deberemos agragar la cantidad de bytes (decodificados) que contiene:</p>
+
+<p>_(<strong>60</strong> bytes codificados **/ 4__ octetos por bloque) * <strong>3</strong> bytes en cada bloque = <strong>45</strong> bytes del mensaje original_</p>
+
+<p>A esta cantidad sumamos <code>+32</code> y el resultado lo convertimos en el caracter equivalente, si el contenido fuera lo suficientemente grande la mayoría de las líneas tendrá <code>**60 Bytes**</code> codificados (<code>45</code> del mensaje original) excepto la última, que podría tener una cantidad menor.</p>
+
+<p>En caso de que la cantidad de <em>bytes</em> resultantes en la línea actual no fuera divisible entre <strong>4</strong>, se rellenan los <em>bytes</em> faltantes  con espacios.</p>
+
+<p>Finalmente, algunas aplicaciones reemplazan los espacios con acentos ` de tal forma que siempre exista un caracter imprimible, aunque esto es opcional, algunos programas no reconocen los archivos <strong>UUE</strong> con espacio, por lo que es recomendable reemplazarlos con fines de compatibilidad.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/waqlp6MRnIMWr68r9w4lwg.png" alt="Línea codificada, con los espacios reemplazados por acentos." class="lazyload"><figcaption class="image-caption">Línea codificada, con los espacios reemplazados por acentos.</figcaption></figure><em>Línea codificada, con los espacios reemplazados por acentos.</em></p>
+
+<p>Este conjunto de lineas debe ser precedido por la cabecera del archivo que contiene el nombre del archivo decodificado y los permisos de este (en caso de que se trate de un sistema unix):</p>
+
+<pre><code>begin &lt;permisos&gt; &lt;archivo&gt;\n
+</code></pre>
+
+<p>El archivo debe terminar con las siguientes lineas que indican <strong>EOF:</strong></p>
+
+<pre><code>`\n
+end\n
+</code></pre>
+
+<h3 id="reversa">Reversa</h3>
+
+<p>Para realizar el proceso de decodificación, simplemente deberemos tomar cada línea de contenido codificado, restar <code>32</code> al primer caracter para obtener la longitud de esta, a continuación vamos decodificando cada caracter restante de la línea, restando <code>32</code> para después colocar cada bit en su lugar correspondiente y almacenamos cada octeto resultante en un <em>slice</em> []byte hasta conseguir la longitud de caracteres indicada por el contador inicial.</p>
+
+<p>Este <em>slice</em> resultante lo concatenamos al final del <em>slice</em> que contiene el resultado de las líneas anteriores hasta llegar a la penúltima línea que deberá ser un acento indicando el final.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/3aVggbpS4k8FYXIMsfOD8A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<script src="https://gist.github.com/umarquez/96843820427edb891824e641bb5104e3.js"></script>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/otsPpUpkEtjOvtgBCva-sg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/vv67ZuAw3wAxWP4NndwE3g.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/14-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/14-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/codificaci%C3%B3n/">
+                    #Codificación</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/algoritmos/">
+                    #Algoritmos </a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/13-100-100daysofc0d3/" class="prev" rel="prev" title="[13/100] #100DaysOfC0D3 - Esteganografía | Steganography"><i class="iconfont icon-left"></i>&nbsp;[13/100] #100DaysOfC0D3 - Esteganografía | Steganography</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/15-100-100daysofc0d3/" class="next" rel="next" title="[15/100] #100DaysOfC0D3 - El vecino más cercano | Nearest neighbor search">[15/100] #100DaysOfC0D3 - El vecino más cercano | Nearest neighbor search&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/21-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/" />
+<meta property="og:description" content="Ordenamiento Gnomo | Gnome Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort
+Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.
+En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de zig-zag.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/22-gnomesort.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/">
+<meta itemprop="description" content="Ordenamiento Gnomo | Gnome Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort
+Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.
+En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de zig-zag.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/22-gnomesort.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Ordenamiento Gnomo | Gnome Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort
+Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.
+En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de zig-zag.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/22-gnomesort.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/22-gnomesort.png"/>
+
+  <meta name="title" content="[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "blog",
+    "name" : "[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort",
+    "headline" : "[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort",
+    "description" : "Ordenamiento Gnomo | Gnome Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort
+Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.
+En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de zig-zag.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-01 00:00:00 -0500 -0500",
+    "dateModified" : "2019-08-01 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/",
+    "wordCount" : "164",
+    "keywords" : [ "Gnome","Ordenamiento ","Golang","100daysofc0d3","100daysofcode", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/blog/" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-01 itemprop="datePublished">August 1, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/22-gnomesort.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="ordenamiento-gnomo-gnome-sort">Ordenamiento Gnomo | Gnome Sort</h2>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort</a></p>
+
+<p>Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.</p>
+
+<p>En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de <em>zig-zag</em>.</p>
+
+<h2 id="ejemplo">Ejemplo</h2>
+
+<p>Debemos ordenar los siguientes elemento:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/fgZD9J87xo7lFdmeM3IYxQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="primer-paso">Primer paso</h3>
+
+<p>Comparamos el primer par de valores y los intercambiamos si se encontraran en desorden.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/jQVIppkNsYipNp3YPKxIKA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-dos">Paso dos</h3>
+
+<p>Debido a que ha habido un intercambio debemos volver una posición, si esta no tuviera predecesor, avanzamos una; seguimos comparando hasta encontrar un nuevo valor fuera de lugar.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/SgGZBdzRrsI2AUOXXuVKlA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-3">Paso 3</h3>
+
+<p>Repetimos el ciclo por cada valor fuera de lugar encontrado.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/vQQOPxwnuRh_rM2hXUpXsA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Sabremos que la lista ha sido ordenada una vez que lleguemos el último elemento y este no requiera ser intercambiado.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/gM1YTsko9ptibFylN714zA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p>&lt;<script src="https://gist.github.com/umarquez/c0f8ae640df532d723d1f5d74b546a81.js"></script></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/aO_EchBRwb1ijqj1sPg7zA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/>https://umarquez.c0d3.mx/blog/100daysofc0d3/22-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/gnome/">
+                    #Gnome</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/ordenamiento/">
+                    #Ordenamiento </a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/21-100-100daysofc0d3/" class="prev" rel="prev" title="[21/100] #100DaysOfC0D3 - Búsqueda simple de texto | Simple text search"><i class="iconfont icon-left"></i>&nbsp;[21/100] #100DaysOfC0D3 - Búsqueda simple de texto | Simple text search</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/blog/100daysofc0d3/24-100-100daysofc0d3/" class="next" rel="next" title="[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal">[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>
