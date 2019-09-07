@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hash Table on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/hash-table/</link>
+    <description>Recent content in Hash Table on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Wed, 10 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/hash-table/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[7/100] #100DaysOfC0D3 - Tabla de Hash | Hash Table</title>
+      <link>https://umarquez.c0d3.mx/2019/july/10/7-100-100daysofc0d3/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/10/7-100-100daysofc0d3/</guid>
+      <description>Tabla de Hash | Hash Table Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/7-hash_table
+ Es una estructura de datos que asocia llaves o claves con valores. La operación principal que soporta de manera eficiente es la búsqueda: permite el acceso a los elementos (teléfono y dirección, por ejemplo) almacenados a partir de una clave generada. https://es.wikipedia.org/wiki/Tabla_hash
+ Una Tabla Hash funciona como los buzones de correo de un edificio de departamentos, cada uno pertenece a una familia y están identificados por el número de departamento, no puede haber departamento sin buzón, buzón sin departamento o departamento con más de un buzón; para que alguien pueda enviar una paquete a la familia Robles, primero debemos obtener el identificador del buzón de esta familia, esta sería la función hash pues traduce el nombre de la familia en un identificador único.</description>
+    </item>
+    
+  </channel>
+</rss>

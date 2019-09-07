@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blur Image  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/blur-image-/</link>
+    <description>Recent content in Blur Image  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 15 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/blur-image-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[29/100] #100DaysOfC0D3 - Desenfoque de caja | Box blur</title>
+      <link>https://umarquez.c0d3.mx/2019/august/15/29-100-100daysofc0d3/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/15/29-100-100daysofc0d3/</guid>
+      <description>Desenfoque de caja | Box blur Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/29-box-blur
+ A box blur (also known as a box linear filter) is a spatial domain linear filter in which each pixel in the resulting image has a value equal to the average value of its neighboring pixels in the input image. Un desenfoque de caja (también conocido como caja de filtro lineal) es un filtro lineal de dominio espacial en donde cada píxel de la imagen de salida es el promedio resultante de los píxeles vecinos (incluyendo el pixel que se procesa) de la imagen de entrada.</description>
+    </item>
+    
+  </channel>
+</rss>

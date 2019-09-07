@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compresion on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/compresion/</link>
+    <description>Recent content in compresion on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/compresion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm</title>
+      <link>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</guid>
+      <description>Compresión LZ77 | LZ77 Compression Algorithm Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…
+La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.
+En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.</description>
+    </item>
+    
+  </channel>
+</rss>

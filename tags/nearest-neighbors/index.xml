@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nearest Neighbors on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/nearest-neighbors/</link>
+    <description>Recent content in Nearest Neighbors on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 29 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/nearest-neighbors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[20/100] #100DaysOfC0D3 - Segundo proyecto: Repintado</title>
+      <link>https://umarquez.c0d3.mx/2019/july/29/20-100-100daysofc0d3/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/29/20-100-100daysofc0d3/</guid>
+      <description>Segundo proyecto: Repintado Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint
+Hemos llegado a la quinta semana y al número 20 de esta serie, en esta ocasión vamos a aprovechar algunas de las funciones del primer proyecto y uno que otro tema tratados hasta el momento, el objetivo será realizar una aplicación que nos ayude a modificar la paleta de colores de una imagen, es decir, vamos a sustituir cada píxel de la imagen con el color de la paleta que más cercano o parecido sea.</description>
+    </item>
+    
+  </channel>
+</rss>

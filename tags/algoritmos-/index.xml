@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algoritmos  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/algoritmos-/</link>
+    <description>Recent content in Algoritmos  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/algoritmos-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm</title>
+      <link>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</guid>
+      <description>Compresión LZ77 | LZ77 Compression Algorithm Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…
+La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.
+En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.</description>
+    </item>
+    
+    <item>
+      <title>[21/100] #100DaysOfC0D3 - Búsqueda simple de texto | Simple text search</title>
+      <link>https://umarquez.c0d3.mx/2019/july/31/21-100-100daysofc0d3/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/31/21-100-100daysofc0d3/</guid>
+      <description>Búsqueda simple de texto | Simple text search Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/21-textsearch
+Este algoritmo consiste en comparar cada caracter del texto hasta encontrar una coincidencia con el primer caracter de la cadena a buscar, para continuar comparando el resto de caracteres de ambas cadenas hasta finalizar la cadena a buscar o en el momento en que los caracteres dejen de coincidir.
+En el caso de Go, podemos aprovechar el hecho de que una cadena de texto es un []rune y podemos obtener solo una sección del slice.</description>
+    </item>
+    
+    <item>
+      <title>[18/100] #100DaysOfC0D3 - TEA | Tiny Encryption Algorithm</title>
+      <link>https://umarquez.c0d3.mx/2019/july/25/18-100-100daysofc0d3/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/25/18-100-100daysofc0d3/</guid>
+      <description>TEA | Tiny Encryption Algorithm  Is a block cipher notable for its simplicity of description and implementation, typically a few lines of code. It was designed by David Wheeler and Roger Needham of the Cambridge Computer Laboratory. The cipher is not subject to any patents. Es un algoritmo para el cifrado por bloques notable por su simplicidad de descripción e implementación, generalmente unas pocas líneas de código. Fue diseñado por David Wheeler y Roger Needham del Cambridge Computer Laboratory.</description>
+    </item>
+    
+    <item>
+      <title>[16/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación de vecinos cercanos </title>
+      <link>https://umarquez.c0d3.mx/2019/july/23/16-100-100daysofc0d3/</link>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/23/16-100-100daysofc0d3/</guid>
+      <description>Escalado de imágenes mediante interpolación de vecinos cercanos | Image scaling applying nearest neighbor interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/16-nearest-neighbor-interpolation
+¿Qué pasa si queremos hacer una imagen más grande? ¿cómo es que los programas de edición hacen para cambiar el tamaño o hacer zoom en una foto?
+ La interpolación es el problema de aproximar el valor de una función para un no-dado el punto en el espacio cuando se administra el valor de esa función en puntos alrededor (vecinos) de ese punto.</description>
+    </item>
+    
+    <item>
+      <title>[14/100] #100DaysOfC0D3 - UUEncode</title>
+      <link>https://umarquez.c0d3.mx/2019/july/19/14-100-100daysofc0d3/</link>
+      <pubDate>Fri, 19 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/19/14-100-100daysofc0d3/</guid>
+      <description>UUEncode Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/14-uuencode
+Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en su lugar solo suma +32 a cada octeto resultante de la separación en sextetos.
+ UUEncode proviene de UNIX to Unix Encoding. Se trata de un algoritmo de codificación que transforma código binario en texto. Concretamente, la entrada es un bloque de bytes de 8 bits (generalmente un archivo binario), y la salida un bloque texto de varias líneas con saltos de línea LF o CR-LF y caracteres de texto estándar pertenecientes al alfabeto UUEncode.</description>
+    </item>
+    
+    <item>
+      <title>[13/100] #100DaysOfC0D3 - Esteganografía | Steganography</title>
+      <link>https://umarquez.c0d3.mx/2019/july/18/13-100-100daysofc0d3/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/18/13-100-100daysofc0d3/</guid>
+      <description>Esteganografía | Steganography Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/13-steganography
+ Del griego στεγανος steganos, “cubierto” u “oculto”, y γραφος graphos, “escritura”, trata el estudio y aplicación de técnicas que permiten ocultar mensajes u objetos, dentro de otros, llamados portadores, de modo que no se perciba su existencia. https://es.wikipedia.org/wiki/Esteganograf%C3%ADa
+ Esta es una técnica de ocultamiento, que a diferencia de un cifrado, no realiza cambios al mensaje original sino que trata de hacerlo pasar desapercibido haciendo uso de un portador que pueda ser modificado, de tal forma que las diferencias entre el portador vacío y el portador con el mensaje incluido no puedan ser detectadas a simple vista.</description>
+    </item>
+    
+    <item>
+      <title>[12/100] #100DaysOfC0D3 - Ordenamiento rápido | Quicksort</title>
+      <link>https://umarquez.c0d3.mx/2019/july/17/12-100-100daysofc0d3/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/17/12-100-100daysofc0d3/</guid>
+      <description>Ordenamiento rápido | Quicksort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/12-quicksort
+Se trata de un algoritmo de ordenamiento que en promedio es del tipo O(nlog n ), pudiendo llegar a ser O(n²) en el peor de los casos; este funciona dividiendo la lista en dos a partir de un elemento pivote con el fin de colocar los elementos menores a este en el extremo izquierdo y los elementos mayores en el extremo derecho, ambos extremos se procesan de la misma manera de forma recursiva y se concatenan los resultados de la forma:</description>
+    </item>
+    
+  </channel>
+</rss>

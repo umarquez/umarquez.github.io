@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algoritmo  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/algoritmo-/</link>
+    <description>Recent content in Algoritmo  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Wed, 07 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/algoritmo-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[25/100] #100DaysOfC0D3 - Tramado | Dithering</title>
+      <link>https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/</guid>
+      <description>Tramado | Dithering Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering
+ El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles. https://es.wikipedia.org/wiki/Tramado
+ Si, este es un capítulo más de “Jugando con píxeles”; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado [20&amp;frasl;100] Segundo proyecto: Repintado, pero antes, vamos a tratar de explicar en qué consiste el tramado.</description>
+    </item>
+    
+  </channel>
+</rss>

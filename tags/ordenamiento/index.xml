@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ordenamiento on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/ordenamiento/</link>
+    <description>Recent content in Ordenamiento on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Wed, 17 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/ordenamiento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[12/100] #100DaysOfC0D3 - Ordenamiento rápido | Quicksort</title>
+      <link>https://umarquez.c0d3.mx/2019/july/17/12-100-100daysofc0d3/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/17/12-100-100daysofc0d3/</guid>
+      <description>Ordenamiento rápido | Quicksort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/12-quicksort
+Se trata de un algoritmo de ordenamiento que en promedio es del tipo O(nlog n ), pudiendo llegar a ser O(n²) en el peor de los casos; este funciona dividiendo la lista en dos a partir de un elemento pivote con el fin de colocar los elementos menores a este en el extremo izquierdo y los elementos mayores en el extremo derecho, ambos extremos se procesan de la misma manera de forma recursiva y se concatenan los resultados de la forma:</description>
+    </item>
+    
+    <item>
+      <title>[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort</title>
+      <link>https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/</guid>
+      <description>Ordenamiento con Árbol Binario | Binary Tree Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search
+Ahora que hemos avanzado un poco en la serie podemos hablar de este algoritmo que de alguna manera aprovecha el concepto de listas enlazadas para resolver el problema de ordenamiento.
+Árbol binario De igual forma que las listas enlazadas, se trata de una estructura de datos formada por nodos, pero a diferencias de las listas enlazadas simples, estos nodos pueden hacer referencia a dos nodos hijo o inferiores y ser referidos por uno superior o padre, formando una estructura de árbol con varias ramas.</description>
+    </item>
+    
+    <item>
+      <title>[5/100] #100DaysOfC0D3 - Ordenamiento Burbuja | Bubble Sort</title>
+      <link>https://umarquez.c0d3.mx/2019/july/08/5-100-100daysofc0d3/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/08/5-100-100daysofc0d3/</guid>
+      <description>Ordenamiento Burbuja | Bubble Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/5-buble_sort
+ La Ordenación de burbuja (Bubble Sort en inglés) es un sencillo algoritmo de ordenamiento. Funciona revisando cada elemento de la lista que va a ser ordenada con el siguiente, intercambiándolos de posición si están en el orden equivocado. Es necesario revisar varias veces toda la lista hasta que no se necesiten más intercambios, lo cual significa que la lista está ordenada. https://es.</description>
+    </item>
+    
+    <item>
+      <title>[4/100] #100DaysOfC0D3 - Búsqueda Binaria | Binary Search</title>
+      <link>https://umarquez.c0d3.mx/2019/july/05/4-100-100daysofc0d3/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/05/4-100-100daysofc0d3/</guid>
+      <description>Búsqueda Binaria | Binary Search Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/4-binary_search
+ La búsqueda binaria, también conocida como búsqueda de intervalo medio​ o búsqueda logarítmica, es un algoritmo de búsqueda que encuentra la posición de un valor en un array ordenado.​ Compara el valor con el elemento en el medio del array, si no son iguales, la mitad en la cual el valor no puede estar es eliminada y la búsqueda continúa en la mitad restante hasta que el valor se encuentre.</description>
+    </item>
+    
+    <item>
+      <title>[3/100] #100DaysOfC0D3 - Ordenamiento por selección | Selection Sort</title>
+      <link>https://umarquez.c0d3.mx/2019/july/04/3-100-100daysofc0d3/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/04/3-100-100daysofc0d3/</guid>
+      <description>Ordenamiento por selección | Selection Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/3-selection_sort
+¿Cómo funciona? Se trata de un algoritmo de ordenamiento del tipo O(n²)solo que en este caso no desplazaremos cada elemento una posición a la vez, como en el Ordenamiento por inserción, en su lugar nos enfocaremos en buscar el número menor del resto de la lista y una vez lo encontremos, lo intercambiaremos por el valor de la posición que estamos procesando.</description>
+    </item>
+    
+    <item>
+      <title>[1/100] #100DaysOfC0D3 - Ordenamiento por inserción | Insert Sort</title>
+      <link>https://umarquez.c0d3.mx/2019/july/02/1-100-100daysofc0d3/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/02/1-100-100daysofc0d3/</guid>
+      <description>Ordenamiento por inserción | Insert Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/1-insertion_sort
+ El ordenamiento por inserción (insertion sort en inglés) es una manera muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un mazo de cartas numeradas en forma arbitraria. Requiere O(n²)operaciones para ordenar una lista de n elementos. https://es.wikipedia.org/wiki/Ordenamiento_por_inserci%C3%B3n
+ ¿Cómo funciona? Este algoritmo consiste en comparar cada elemento de la lista con el elemento anterior, intercambiándolos si el elemento actual fuera menor y hasta no encontrar más elementos con valores mayores hacia el inicio de la lista.</description>
+    </item>
+    
+  </channel>
+</rss>

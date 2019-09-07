@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Singleton on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/singleton/</link>
+    <description>Recent content in Singleton on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Tue, 16 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/singleton/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[11/100] #100DaysOfC0D3 - Partrón Singleton | Singleton Pattern</title>
+      <link>https://umarquez.c0d3.mx/2019/july/16/11-100-100daysofc0d3/</link>
+      <pubDate>Tue, 16 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/16/11-100-100daysofc0d3/</guid>
+      <description>Partrón Singleton | Singleton Pattern Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/11-sigleton
+ Los patrones de diseño son unas técnicas para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces. https://es.wikipedia.org/wiki/Patr%C3%B3n_de_dise%C3%B1o
+ Una característica que nos diferencia de muchos animales es que podemos crear herramientas, aunque algunos animales también son capaces de hacerlo el nivel de sofisticación que hemos alcanzado ha sido, entre otras cosas, gracia a que somos capaces de documentar y reproducir procesos, además de poder adaptarlos a situaciones para las que no fueron originalmente pensados.</description>
+    </item>
+    
+  </channel>
+</rss>

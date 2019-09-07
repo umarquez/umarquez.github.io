@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ordenamiento  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/ordenamiento-/</link>
+    <description>Recent content in Ordenamiento  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/ordenamiento-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort</title>
+      <link>https://umarquez.c0d3.mx/2019/august/01/22-100-100daysofc0d3/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/01/22-100-100daysofc0d3/</guid>
+      <description>Ordenamiento Gnomo | Gnome Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort
+Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.
+En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de zig-zag.</description>
+    </item>
+    
+  </channel>
+</rss>

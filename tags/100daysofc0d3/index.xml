@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>100DaysOfC0D3 on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/100daysofc0d3/</link>
+    <description>Recent content in 100DaysOfC0D3 on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Fri, 06 Sep 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/100daysofc0d3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Estrenando umarquez.c0d3.mx</title>
+      <link>https://umarquez.c0d3.mx/2019/september/06/estrenando-umarquez-c0d3-mx/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/september/06/estrenando-umarquez-c0d3-mx/</guid>
+      <description>Hola, tú que estás leyendo.
+Han sucedido varias cosas en estás últimas semanas que me gustaría contarte, por lo general platicamos de asuntos técnicos, código y otros temas relacionados con computadoras y sus fierros pero esta vez será un poco diferente (y espero menos tedioso), vamos a platicar los siguientes temas:
+ ¿Que es este sitio? ¿Qué paso con #100DaysOfC0d3? Medium y porque no seguimos allá. Otras noticias.  Este sitio Mientras iba avanzando con los artículos de #100DaysOfC0D3 apareció la necesidad de contar con un espacio en donde pudiera colocar ciertos recursos y demos para que todos pudieran consultarlos sin necesariamente subirlos a un repositorio necesariamente; también tenía la idea de contar con un espacio personal/profesional donde colocar algunas otras cosas en las que he trabajado y que me gustaría compartir.</description>
+    </item>
+    
+    <item>
+      <title>[0/100] #100DaysOfC0D3 - Mi versión de #100DaysOfCode</title>
+      <link>https://umarquez.c0d3.mx/2019/july/01/0-100-100daysofc0d3/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/01/0-100-100daysofc0d3/</guid>
+      <description>Repo GitHub: umarquez/100DaysOfC0D3
+¿Qué? Una serie de 100 artículos cortos en los que intentaré explicar un concepto diferente relacionado con la programación utilizando Go (Golang) como lenguaje.
+¿Cómo?  Publicaré un artículo diario, por lo menos de L → V, esto no significa que necesariamente escribiré uno por día, pero intentaré mantener este ritmo de publicación. Posiblemente algunos conceptos requieran más de un artículo, en especial conforme avance la serie.</description>
+    </item>
+    
+  </channel>
+</rss>

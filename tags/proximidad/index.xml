@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proximidad on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/proximidad/</link>
+    <description>Recent content in Proximidad on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 22 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/proximidad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[15/100] #100DaysOfC0D3 - El vecino más cercano | Nearest neighbor search</title>
+      <link>https://umarquez.c0d3.mx/2019/july/22/15-100-100daysofc0d3/</link>
+      <pubDate>Mon, 22 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/22/15-100-100daysofc0d3/</guid>
+      <description>El vecino más cercano | Nearest neighbor search Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/15-nearest-neighbor-2d
+Supongamos que queremos saber cual es el cajero automático (ATM) más cercano a varias tiendas de maquinaria que visitaremos, pues debemos alquilar un equipo con dinero en efectivo pero no queremos cargar con el por toda la ciudad hasta estar seguros de que el equipo esté disponible, en buenas condiciones y al mejor precio, por lo que una vez que encontremos la opción ideal deberemos disponer del efectivo recorriendo la menor distancia posible.</description>
+    </item>
+    
+  </channel>
+</rss>

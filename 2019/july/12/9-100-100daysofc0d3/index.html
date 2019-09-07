@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/july/11/8-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/2019/july/15/10-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/" />
+<meta property="og:description" content="Ordenamiento con Árbol Binario | Binary Tree Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search
+Ahora que hemos avanzado un poco en la serie podemos hablar de este algoritmo que de alguna manera aprovecha el concepto de listas enlazadas para resolver el problema de ordenamiento.
+Árbol binario De igual forma que las listas enlazadas, se trata de una estructura de datos formada por nodos, pero a diferencias de las listas enlazadas simples, estos nodos pueden hacer referencia a dos nodos hijo o inferiores y ser referidos por uno superior o padre, formando una estructura de árbol con varias ramas.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/9-Binary-Tree-Sort.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/">
+<meta itemprop="description" content="Ordenamiento con Árbol Binario | Binary Tree Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search
+Ahora que hemos avanzado un poco en la serie podemos hablar de este algoritmo que de alguna manera aprovecha el concepto de listas enlazadas para resolver el problema de ordenamiento.
+Árbol binario De igual forma que las listas enlazadas, se trata de una estructura de datos formada por nodos, pero a diferencias de las listas enlazadas simples, estos nodos pueden hacer referencia a dos nodos hijo o inferiores y ser referidos por uno superior o padre, formando una estructura de árbol con varias ramas.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/9-Binary-Tree-Sort.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Ordenamiento con Árbol Binario | Binary Tree Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search
+Ahora que hemos avanzado un poco en la serie podemos hablar de este algoritmo que de alguna manera aprovecha el concepto de listas enlazadas para resolver el problema de ordenamiento.
+Árbol binario De igual forma que las listas enlazadas, se trata de una estructura de datos formada por nodos, pero a diferencias de las listas enlazadas simples, estos nodos pueden hacer referencia a dos nodos hijo o inferiores y ser referidos por uno superior o padre, formando una estructura de árbol con varias ramas.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/9-Binary-Tree-Sort.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/9-Binary-Tree-Sort.png"/>
+
+  <meta name="title" content="[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort",
+    "headline" : "[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort",
+    "description" : "Ordenamiento con Árbol Binario | Binary Tree Sort Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search
+Ahora que hemos avanzado un poco en la serie podemos hablar de este algoritmo que de alguna manera aprovecha el concepto de listas enlazadas para resolver el problema de ordenamiento.
+Árbol binario De igual forma que las listas enlazadas, se trata de una estructura de datos formada por nodos, pero a diferencias de las listas enlazadas simples, estos nodos pueden hacer referencia a dos nodos hijo o inferiores y ser referidos por uno superior o padre, formando una estructura de árbol con varias ramas.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-12 00:00:00 -0500 -0500",
+    "dateModified" : "2019-07-12 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/",
+    "wordCount" : "538",
+    "keywords" : [ "Ordenamiento","Algoritmos","Golang","100daysofc0d3","100daysofcode","Programacion", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[9/100] #100DaysOfC0D3 - Ordenamiento con Árbol Binario | Binary Tree Sort</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-12 itemprop="datePublished">July 12, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://umarquez.c0d3.mx/categories/100daysofc0d3/"> 100DaysOfC0D3 </a>
+                        <a href="https://umarquez.c0d3.mx/categories/programacion/"> Programacion </a>
+                        <a href="https://umarquez.c0d3.mx/categories/golang-go/"> Golang Go </a>
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/9-Binary-Tree-Sort.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="ordenamiento-con-árbol-binario-binary-tree-sort">Ordenamiento con Árbol Binario | Binary Tree Sort</h2>
+
+<p><strong>Repo:</strong> <a href="https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search" rel="nofollow noreferrer" target="_blank">https://github.com/umarquez/100DaysOfC0D3/tree/master/9-binary-tree-search</a></p>
+
+<p>Ahora que hemos avanzado un poco en la serie podemos hablar de este algoritmo que de alguna manera aprovecha el concepto de listas enlazadas para resolver el problema de ordenamiento.</p>
+
+<h2 id="árbol-binario">Árbol binario</h2>
+
+<p>De igual forma que las listas enlazadas, se trata de una estructura de datos formada por nodos, pero a diferencias de las listas enlazadas simples, estos nodos pueden hacer referencia a dos nodos hijo o inferiores y ser referidos por uno superior o padre, formando una estructura de árbol con varias ramas.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/iwae4k_w4RgDTPqgVjpWoQ.png" alt="Nodo" class="lazyload"><figcaption class="image-caption">Nodo</figcaption></figure></p>
+
+<p>En este caso, nosotros utilizaremos una versión de este árbol, llamado: <a href="https://es.wikipedia.org/wiki/%C3%81rbol_binario_de_b%C3%BAsqueda" rel="nofollow noreferrer" target="_blank">Árbol binario de búsqueda</a>, que va almacenando los valores en las ramas del árbol de la siguiente manera:</p>
+
+<ol>
+<li>Compara el valor a almacenar con el primer nodo del árbol, si este es menor al valor del nodo, entonces se evalúa el nodo izquierdo, de lo contrario se evalúa el nodo derecho siguiendo la misma regla hasta no encontrar más nodos que evaluar..</li>
+<li>Si el nodo izquierdo o derecho estuvieran vacíos, esa será la posición final del valor, por lo que crearemos un nuevo nodo en esta ubicación y almacenaremos el valor.</li>
+</ol>
+
+<h2 id="ordenamiento">Ordenamiento</h2>
+
+<p>Una vez que todos los valores se encuentran almacenados en sus respectivas posiciones, procedemos a recuperar los valores de cada nodo haciendo un recorrido <strong>inorden</strong>, el cuál consiste en procesar primero la rama izquierda, luego el valor actual y después la rama derecha de cada nodo.</p>
+
+<p>Para tener esto más claro, vamos a realizar el siguiente ordenamiento:</p>
+
+<h2 id="ejemplo">Ejemplo:</h2>
+
+<p>Vamos a ordenar la siguiente lista de enteros:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/nYqVf0cKEiZYHJAavJLGjg.png" alt="\[\]int{5, 7, 2, 3, 6, 1, 4}" class="lazyload"><figcaption class="image-caption">\[\]int{5, 7, 2, 3, 6, 1, 4}</figcaption></figure></p>
+
+<h3 id="paso-1">Paso 1</h3>
+
+<p>Formamos el primer nodo con el primer valor de la lista 5:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/EiMlobzfHozBFe_70jJ0cQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-2">Paso 2</h3>
+
+<p>Tomamos el siguiente valor 7 y lo comparamos con el primer nodo, al ser mayor lo colocamos en la rama derecha:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/3DW6EfFciweq2EXRr24LXA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-3">Paso 3</h3>
+
+<p>Ahora tomamos el siguiente elemento, lo comparamos con el primer nodo y al ser menor lo colocamos en la rama:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/GK7x_jef9UmsTL1Oo9Zopg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="paso-4"><strong>Paso 4</strong></h2>
+
+<p>Tomamos el siguiente elemento 3, lo comparamos con el primer nodo, al ser menor, tomamos el nodo izquierdo y los comparamos, al ser mayor a este lo colocaremos en la rama derecha de este último nodo:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/xNLhM2x_ZUiP93dadNugNQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="paso-5">Paso 5</h2>
+
+<p>Tomamos el siguiente elemento 6 y lo comparamos con el primero, al ser mayor a este, tomamos la rama derecho y lo comparamos con el primer de esta, siendo menor a este, lo colocamos en la rama izquierda:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/NJcFZiE8XyTcL_JrAOLNwA.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="paso-6">Paso 6</h2>
+
+<p>El siguiente elemento es el menor de la lista, así que su destino final será la rama más izquierda de todo el árbol:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/79s4REi0gurkQllqc7HyUQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="paso-7">Paso 7</h2>
+
+<p>Por último tomamos el siguiente valor y lo comparamos con cada elemento, hasta encontrar su posición final, la secuencia completa es: 4 &lt; 5 = L, 4 &gt; 2 = R, 4 &gt; 3 = R:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/9Utd5kJHgoTffyf7SqHncQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h2 id="paso-8">Paso 8</h2>
+
+<p>Ahora vamos a recorrer el árbol para recuperar los valores en orden, para ello tomamos el primer nodo y lo procesamos de la siguiente forma:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/bsQLqGT5W7-B5NL-JoCQQw.png" alt="Recorrido inorden" class="lazyload"><figcaption class="image-caption">Recorrido inorden</figcaption></figure></p>
+
+<ul>
+<li>Si este cuenta con nodo a la izquierda, lo tomamos y comenzamos el proceso de nuevo.</li>
+<li>Almacenamos su valor y continuamos.</li>
+<li>Si cuenta con nodo derecho, lo tomamos y volvemos a comenzar el proceso.</li>
+<li>Almacenamos su valor y continuamos.</li>
+</ul>
+
+<p>Esto nos dará como resultado:</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/NDgy4v6D4sb4aw79n4BOlw.png" alt="Resultado final" class="lazyload"><figcaption class="image-caption">Resultado final</figcaption></figure></p>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<script src="[https://gist.github.com/umarquez/4be1810f3096aa3950cc05097402c568.js](https://gist.github.com/umarquez/4be1810f3096aa3950cc05097402c568.js "https://gist.github.com/umarquez/4be1810f3096aa3950cc05097402c568.js")"></script>
+
+<p><a href="https://play.golang.org/p/1AE0i96ftt8" title="https://play.golang.org/p/1AE0i96ftt8" rel="nofollow noreferrer" target="_blank">https://play.golang.org/p/1AE0i96ftt8</a></p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/tCmiRQyKC556tlsZ5ptw8A.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/july/12/9-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/ordenamiento/">
+                    #Ordenamiento</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/algoritmos/">
+                    #Algoritmos</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/programacion/">
+                    #Programacion</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/11/8-100-100daysofc0d3/" class="prev" rel="prev" title="[8/100] #100DaysOfC0D3 - Listas enlazadas | Linked List"><i class="iconfont icon-left"></i>&nbsp;[8/100] #100DaysOfC0D3 - Listas enlazadas | Linked List</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/2019/july/15/10-100-100daysofc0d3/" class="next" rel="next" title="[10/100] #100DaysOfC0D3 - Cuenta colores">[10/100] #100DaysOfC0D3 - Cuenta colores&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/hacking/</link>
+    <description>Recent content in Hacking on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Tue, 13 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[28/100] #100DaysOfC0D3 - Escaneo de puertos TCP | TCP port scanning</title>
+      <link>https://umarquez.c0d3.mx/2019/august/13/28-100-100daysofc0d3/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/13/28-100-100daysofc0d3/</guid>
+      <description>Escaneo de puertos TCP | TCP port scanning Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/28-tcp-port-scanning
+ A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities. Un escáner de puertos es una aplicación diseñada para detectar puertos abiertos en un servidor o equipo conectado a la red.</description>
+    </item>
+    
+  </channel>
+</rss>

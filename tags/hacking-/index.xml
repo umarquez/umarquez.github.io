@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/hacking-/</link>
+    <description>Recent content in Hacking  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Fri, 09 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/hacking-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[26/100] #100DaysOfC0D3 - Shell a través de WebSocket | Shell through WebSocket</title>
+      <link>https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/</link>
+      <pubDate>Fri, 09 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/09/26-100-100daysofc0d3/</guid>
+      <description>Shell a través de WebSocket | Shell through WebSocket Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/26-ws-shell
+Volvemos a los temas de seguridad, en esta ocasión vamos a tratar de levantar una shell y conectarla a un WebSocket con el fin de poder administrar un servidor tratando de evadir cualquier firewall que nos impida conectarnos de forma directa al puerto ssh, o como forma alternativa de contar con una consola para realizar tareas automatizadas.
+Por supuesto deberemos proteger el acceso a la consola, pues no queremos que cualquiera que descubra el end-point tenga acceso a ella; para esto vamos a utilizar una técnica llamada web knocking que es una variante del port knocking, la cual consiste en realizar ciertas peticiones que servirán para validar el acceso antes de hacer disponible el servicio al cliente.</description>
+    </item>
+    
+  </channel>
+</rss>

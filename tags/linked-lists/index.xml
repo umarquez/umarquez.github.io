@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linked Lists on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/linked-lists/</link>
+    <description>Recent content in Linked Lists on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 11 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/linked-lists/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[8/100] #100DaysOfC0D3 - Listas enlazadas | Linked List</title>
+      <link>https://umarquez.c0d3.mx/2019/july/11/8-100-100daysofc0d3/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/11/8-100-100daysofc0d3/</guid>
+      <description>Listas enlazadas | Linked List Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/8-linked-list
+Una lista enlazada es una estructura de datos lineal en la que cada elemento de la lista es almacenado en un nodo, estos nodos no se encuentran necesariamente en orden, cada nodo podría esta conectado por lo menos a otro haciendo referencia a la ubicación de este último; esto forma una cadena de elementos (o cinta) que puede ser recorrida en por lo menos un sentido, obteniendo en elemento almacenado en el nodo actual, emulando a la cabeza lectora de una cinta magnética</description>
+    </item>
+    
+  </channel>
+</rss>

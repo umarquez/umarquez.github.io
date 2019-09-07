@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redes on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/redes/</link>
+    <description>Recent content in Redes on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Fri, 26 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/redes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[19/100] #100DaysOfC0D3 - Ping | ICMP Echo</title>
+      <link>https://umarquez.c0d3.mx/2019/july/26/19-100-100daysofc0d3/</link>
+      <pubDate>Fri, 26 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/26/19-100-100daysofc0d3/</guid>
+      <description>Ping | ICMP Echo Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/19-ping
+Hace muchos años, jugando con mIRC y aquellos servidores IRC, se me ocurrió hacerle reversa al protocolo para desarrollar mi propio bot, solo por la curiosidad de saber como funcionaban, pues antes del torrent y el eDonkey este era el #medio de intercambiar archivos preferido por muchos. Así que había cualquier cantidad de canales repletos de servidores XDCC totalmente automatizados que eran capaces de listar archivos, recibir peticiones de envío y ponerlas en cola hasta estar disponibles para enviarte en “privado” el archivo que minutos (o incluso horas) antes habías solicitado.</description>
+    </item>
+    
+  </channel>
+</rss>

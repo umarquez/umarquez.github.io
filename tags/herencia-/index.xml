@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Herencia  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/herencia-/</link>
+    <description>Recent content in Herencia  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Fri, 16 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/herencia-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern</title>
+      <link>https://umarquez.c0d3.mx/2019/august/16/30-100-100daysofc0d3/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/16/30-100-100daysofc0d3/</guid>
+      <description>Herencia &amp;amp; Patrón Composite | Inheritance &amp;amp; Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
+Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la Herencia, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “hija” de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.</description>
+    </item>
+    
+  </channel>
+</rss>

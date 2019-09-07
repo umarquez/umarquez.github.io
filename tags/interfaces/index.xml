@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interfaces on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/interfaces/</link>
+    <description>Recent content in Interfaces on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/interfaces/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[6/100] #100DaysOfC0D3 - Interfaces Golang | Si parece un pato, nada como un pato…</title>
+      <link>https://umarquez.c0d3.mx/2019/july/09/6-100-100daysofc0d3/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/09/6-100-100daysofc0d3/</guid>
+      <description>Interfaces Golang | Si parece un pato, nada como un pato… Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/6-Interfaces
+ Si parece un pato, nada como un pato, y grazna como un pato, entonces probablemente sea un pato. https://es.wikipedia.org/wiki/Test_del_pato
+ Especialmente este tema es uno de los primeros obstáculos con los que nos enfrentamos al empezar a relacionarnos con Go, aunque una vez que lo entendemos y empezamos a explotar su utilidad, las interfaces se convierten en una de las herramientas de uso diario de todo Gopher.</description>
+    </item>
+    
+  </channel>
+</rss>

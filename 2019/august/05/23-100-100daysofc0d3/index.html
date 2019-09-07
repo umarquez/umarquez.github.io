@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r &amp; Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/" />
+  <link rel="next" href="https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/" />
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/" />
+<meta property="og:description" content="Compresión LZ77 | LZ77 Compression Algorithm Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…
+La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.
+En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/23-LZ77.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/">
+<meta itemprop="description" content="Compresión LZ77 | LZ77 Compression Algorithm Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…
+La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.
+En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/23-LZ77.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Compresión LZ77 | LZ77 Compression Algorithm Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…
+La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.
+En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/23-LZ77.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/23-LZ77.png"/>
+
+  <meta name="title" content="[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm",
+    "headline" : "[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm",
+    "description" : "Compresión LZ77 | LZ77 Compression Algorithm Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…
+La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.
+En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-08-05 00:00:00 -0500 -0500",
+    "dateModified" : "2019-08-05 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/",
+    "wordCount" : "954",
+    "keywords" : [ "compresion","Algoritmos ","Golang","100daysofc0d3","100daysofcode","Programacion", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="My Music">Mi Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-08-05 itemprop="datePublished">August 5, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://umarquez.c0d3.mx/categories/100daysofc0d3/"> 100DaysOfC0D3 </a>
+                        <a href="https://umarquez.c0d3.mx/categories/programacion/"> Programacion </a>
+                        <a href="https://umarquez.c0d3.mx/categories/golang-go/"> Golang Go </a>
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="https://umarquez.c0d3.mx/" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/23-LZ77.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="compresión-lz77-lz77-compression-algorithm">Compresión LZ77 | LZ77 Compression Algorithm</h2>
+
+<p>Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…</p>
+
+<p>La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.</p>
+
+<p>En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.</p>
+
+<p>Los dinosaurios recordaremos la calidad de las transmisiones de las estaciones de radio por Internet hace algunos años <strong><em>A.YT.</em></strong> (<em>Antes de <strong>YouTube</strong></em>), o aquellos primeros <em>streammings</em> por <strong><em>RealPlayer</em></strong> que a ratos parecía rompecabezas y uno casi tenía que imaginarse 5 de cada 10 FPS, o el plug-in o reproductor que debíamos instalar para que los archivos <strong><em>MP3-Pro</em></strong> no se escucharan “tan mal”, dentro de lo posible…</p>
+
+<p>Por otro lado, tenemos formatos como <strong><em>TIF</em></strong> que soportan compresión sin pérdida, es decir, que tenemos la seguridad de almacenar una imagen de alta calidad en un espacio menor al que ocupa la información de cada píxel que la compone, siendo posible reconstruirla hasta obtener esta imagen original, o por lo menos una copia fiel de esta. El herramientas como <strong><em>WinZip</em></strong>, <strong><em>WinRar</em></strong> o <strong><em>7Zip</em></strong>, por mencionar algunas, que son capaces de almacenar varios archivos dentro de uno mismo que ocupa menos espacio que la suma del espacio necesario para almacenar cada uno; y que en algunos casos hasta es capaz de seccionar el archivo de salida en archivos más pequeños, pudiendo reconstruir la estructura completa de archivos, directorios y contenidos almacenados originalmente.</p>
+
+<p>En este caso trataremos con un algoritmo sin pérdidas, uno de los primeros que sirvió de influencia para otros más sofisticados.</p>
+
+<blockquote>
+<p>En este algoritmo el codificador analiza el texto como una secuencia de caracteres, mediante una ventana deslizable compuesta por dos partes; un buffer de anticipación que es la opción que está a punto de ser codificada y un buffer de búsqueda <em>(la ventana en sí).</em>
+<a href="https://www.ecured.cu/Lz77#Funcionamiento" rel="nofollow noreferrer" target="_blank">https://www.ecured.cu/Lz77#Funcionamiento</a></p>
+</blockquote>
+
+<h2 id="funcionamiento">Funcionamiento</h2>
+
+<ol>
+<li>El algoritmo recorre el texto de manera progresiva, buscando cada vez coincidencias hacia atrás, pudiendo volver n caracteres definidos por el tamaño de la ventana.</li>
+<li>Si dentro de este rango se llega al inicio del texto o no se encuentran coincidencias lo suficientemente grandes, se almacena el valor del caracter actual y se avanza una posición repitiendo el ciclo.</li>
+<li>Si existiera una coincidencia, se almacena la posición y se evalúan los caracteres subsecuentes de la cadena y de la posición de la primer coincidencia</li>
+<li>Si el tamaño de la coincidencia fuera mayor al tamaño requerido para almacenar un bloque (en este caso <strong><em>5 caracteres</em></strong>), se crea un nuevo bloque y se almacena dentro de el la cantidad de caracteres hacia atrás dela posición actual en donde encontraremos la coincidencia de los primeros caracteres y la cantidad de caracteres que coinciden y deberemos copiar para concatenarlos a la salida y reconstruir el texto.</li>
+<li>Reemplazamos el texto en el buffer de salida por el bloque y nos desplazamos hacia adelante la cantidad de caracteres comprimidos.</li>
+<li>Si hemos llegado al final del texto, habremos concluido el proceso de compresión.</li>
+</ol>
+
+<h2 id="ejemplo-con-dibujitos">Ejemplo con dibujitos…</h2>
+
+<p>Vamos a comprimir el siguiente texto utilizando LZ77, nuestro caracter para marcar el inicio de cada bloque será: | y cada bloque almacenará dos valores de 00 a FF, uno para definir el tamaño del desplazamiento y otro para definir el tamaño de la coincidencia por lo que cada bloque ocupará 5 caracteres de espacio; es importante remarcar que este no es el método más óptimo pues ocuparemos 2 caracteres para representar cada valor pudiendo utilizar solo un byte para cada valor, otra punto en contra es que el indicador de inicio de bloque debería ser un bit a modo de bandera para identificar si los bits siguientes son parte de un bloque o si es información sin comprimir.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/A0ZnqxInIVwGcM1au3P26w.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-1">Paso 1</h3>
+
+<p>llenamos el buffer de salida con los caracteres originales hasta encontrar una coincidencia de tamaño suficiente para ser comprimido que se encuentre dentro de la ventana, que en este caso será de 20 posiciones a modo de ejemplo, aunque podríamos contar con valores del 0x00 al 0xFF una vez encontrada la coincidencia, agregamos el caracter | seguido del valor exadecimal del desplazamiento y el valor exadecimal del tamaño de la coincidencia, esta información le indicará al descompresor desde donde deberá comenzar a copiar caracteres del buffer de salida y la cantidad o longitud de la cadena a copiar.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/rCmcqnAL0jFcOthr4XfpPQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-dos">Paso dos</h3>
+
+<p>Si encontramos una coincidencia pequeña dentro de los primeros caracteres que no supera el tamaño mínimo, deberemos seguir buscando hacia atrás dentro de la ventana hasta encontrar una coincidencia lo suficientemente grande o bien hasta llegar al límite de la ventana o al inicio de la cadena, en cuyo caso escribiremos los caracteres planos.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/WgD68jEpvT5nXAQKBdP4aw.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-3">Paso 3</h3>
+
+<p>Repetimos el ciclo con el resto de los caracteres.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/ikqcCQrCmMD64xHpTyad7Q.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="paso-4">Paso 4</h3>
+
+<p>En este caso, el último bloque coincide con uno previamente escrito, por lo que podríamos comprimirlo, el problema es que tiene el mismo tamaño que ocupa el bloque por lo que ahorraremos tiempo de procesamiento almacenándolo sin comprimir debido a que no nos aporta ninguna ventaja.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/0MKb-PJsEXKOH-HrnEsRgg.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="resultado-final">Resultado final</h3>
+
+<p>Terminaremos con la siguiente cadena como resultado del proceso de compresión, esta información será suficiente para reconstruir el texto original.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/OpSLW9L5RVPX7kWx2wdCew.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<pre><code>Decena, ala**|0906**cent**|0808**eno**|1309**rio, millonario
+</code></pre>
+
+<h2 id="implementación-en-go">Implementación en Go</h2>
+
+<p>Vamos a comprimir un archivo de texto que contiene trabalenguas, cada línea la hemos duplicado para contar con suficientes patrones para comprimir.</p>
+
+<script src="https://gist.github.com/umarquez/05600cc1d9a7a961417c4cd5a7be2ab2.js"></script>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/s36F5-fSAXbqx7y9Zc-FQQ.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/compresion/">
+                    #compresion</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/algoritmos/">
+                    #Algoritmos </a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/programacion/">
+                    #Programacion</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/" class="prev" rel="prev" title="[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal"><i class="iconfont icon-left"></i>&nbsp;[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal</a>
+         
+        
+        <a href="https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/" class="next" rel="next" title="[25/100] #100DaysOfC0D3 - Tramado | Dithering">[25/100] #100DaysOfC0D3 - Tramado | Dithering&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

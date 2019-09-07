@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> Interpolacion  on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/-interpolacion-/</link>
+    <description>Recent content in  Interpolacion  on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/-interpolacion-/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal</title>
+      <link>https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/</guid>
+      <description>Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling
+ La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal
+ En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo [16&amp;frasl;100] antes de continuar.</description>
+    </item>
+    
+  </channel>
+</rss>

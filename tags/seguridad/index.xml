@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seguridad on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/seguridad/</link>
+    <description>Recent content in Seguridad on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 18 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/seguridad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[13/100] #100DaysOfC0D3 - Esteganografía | Steganography</title>
+      <link>https://umarquez.c0d3.mx/2019/july/18/13-100-100daysofc0d3/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/18/13-100-100daysofc0d3/</guid>
+      <description>Esteganografía | Steganography Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/13-steganography
+ Del griego στεγανος steganos, “cubierto” u “oculto”, y γραφος graphos, “escritura”, trata el estudio y aplicación de técnicas que permiten ocultar mensajes u objetos, dentro de otros, llamados portadores, de modo que no se perciba su existencia. https://es.wikipedia.org/wiki/Esteganograf%C3%ADa
+ Esta es una técnica de ocultamiento, que a diferencia de un cifrado, no realiza cambios al mensaje original sino que trata de hacerlo pasar desapercibido haciendo uso de un portador que pueda ser modificado, de tal forma que las diferencias entre el portador vacío y el portador con el mensaje incluido no puedan ser detectadas a simple vista.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cifrado on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/cifrado/</link>
+    <description>Recent content in Cifrado on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 25 Jul 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/cifrado/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[18/100] #100DaysOfC0D3 - TEA | Tiny Encryption Algorithm</title>
+      <link>https://umarquez.c0d3.mx/2019/july/25/18-100-100daysofc0d3/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/july/25/18-100-100daysofc0d3/</guid>
+      <description>TEA | Tiny Encryption Algorithm  Is a block cipher notable for its simplicity of description and implementation, typically a few lines of code. It was designed by David Wheeler and Roger Needham of the Cambridge Computer Laboratory. The cipher is not subject to any patents. Es un algoritmo para el cifrado por bloques notable por su simplicidad de descripción e implementación, generalmente unas pocas líneas de código. Fue diseñado por David Wheeler y Roger Needham del Cambridge Computer Laboratory.</description>
+    </item>
+    
+  </channel>
+</rss>

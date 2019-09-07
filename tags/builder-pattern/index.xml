@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Builder Pattern on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/builder-pattern/</link>
+    <description>Recent content in Builder Pattern on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Mon, 12 Aug 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/builder-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[27/100] #100DaysOfC0D3 - Patrones de diseño: Builder | Builder design pattern</title>
+      <link>https://umarquez.c0d3.mx/2019/august/12/27-100-100daysofc0d3/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/12/27-100-100daysofc0d3/</guid>
+      <description>Patrones de diseño: Builder | Builder design pattern Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/27-builder-pattern
+Se trata de un patrón creacional que nos ayuda a instanciar objetos complejos centralizando y reciclando los pasos para construir dichos objetos en una interfaz común, evitando reescribirlos en cada paquete o función que lo requiera.
+Se compone de dos elementos principales
+ DIRECTOR: Quien se encarga de ejecutar cada proceso de instanciamiento. BUILDER: La interfaz común que encapsula el proceso de creación de cada instancia  Pensemos en una línea de producción capaz de crear diferentes productos, por ejemplo, una máquina para fabricar galletas de diferentes tipos y sabores; podríamos pensar en los pasos generales que se necesitan para fabricar cualquier galleta AnyCookie:</description>
+    </item>
+    
+  </channel>
+</rss>
