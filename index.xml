@@ -209,12 +209,22 @@
     </item>
     
     <item>
-      <title>My Music</title>
+      <title>Música</title>
       <link>https://umarquez.c0d3.mx/my-music/</link>
       <pubDate>Sun, 01 Sep 2019 00:00:00 -0500</pubDate>
       
       <guid>https://umarquez.c0d3.mx/my-music/</guid>
-      <description>&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; allow=&#34;autoplay&#34; src=&#34;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/263048977&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&#34;&gt;&lt;/iframe&gt;
+      <description>
+
+&lt;h2 id=&#34;la-que-hago&#34;&gt;La que hago&lt;/h2&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; allow=&#34;autoplay&#34; src=&#34;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/263048977&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&#34;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;la-que-escucho&#34;&gt;La que escucho&lt;/h2&gt;
+
+&lt;h3 id=&#34;jazz&#34;&gt;Jazz&lt;/h3&gt;
+
+&lt;iframe src=&#34;https://open.spotify.com/embed/playlist/2ZBiNBzMlvTMhtmsjzaX1Z&#34; width=&#34;300&#34; height=&#34;380&#34; frameborder=&#34;0&#34; allowtransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     
