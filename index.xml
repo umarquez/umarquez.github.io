@@ -224,7 +224,7 @@
 
 &lt;h3 id=&#34;jazz&#34;&gt;Jazz&lt;/h3&gt;
 
-&lt;iframe src=&#34;https://open.spotify.com/embed/playlist/2ZBiNBzMlvTMhtmsjzaX1Z&#34; width=&#34;300&#34; height=&#34;380&#34; frameborder=&#34;0&#34; allowtransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://open.spotify.com/embed/playlist/2ZBiNBzMlvTMhtmsjzaX1Z&#34; width=&#34;100%&#34; height=&#34;380&#34; frameborder=&#34;0&#34; allowtransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     
