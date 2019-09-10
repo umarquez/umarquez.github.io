@@ -221,7 +221,7 @@ Es un sistema similar al Base64 solo que no utiliza una tabla de caracteres, en 
 
 <p>Una vez realizada la codificación de cada <em>byte</em>, procedemos a separar el total <em>bytes</em> resultantes en grupos de 60, cada grupo será una línea dentro del archivo final a la que deberemos agragar la cantidad de bytes (decodificados) que contiene:</p>
 
-<p>_(<strong>60</strong> bytes codificados **/ 4__ octetos por bloque) * <strong>3</strong> bytes en cada bloque = <strong>45</strong> bytes del mensaje original_</p>
+<p><em>(<strong>60</strong> bytes codificados / <strong>4</strong></em> octetos por bloque) * <strong><em>3</em></strong> bytes en cada bloque = <strong><em>45</em></strong> bytes del mensaje original_</p>
 
 <p>A esta cantidad sumamos <code>+32</code> y el resultado lo convertimos en el caracter equivalente, si el contenido fuera lo suficientemente grande la mayoría de las líneas tendrá <code>**60 Bytes**</code> codificados (<code>45</code> del mensaje original) excepto la última, que podría tener una cantidad menor.</p>
 
