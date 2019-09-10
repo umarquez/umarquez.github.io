@@ -939,7 +939,7 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/MMdCXK_MBAoLbfoEE0UKNw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;La fórmula será la misma que en el paso anterior: &lt;code&gt;**_valor _**&lt;/code&gt;&lt;code&gt;= (((&lt;/code&gt;&lt;code&gt;**_origen_**&lt;/code&gt;&lt;code&gt;-&lt;/code&gt;&lt;code&gt;**_destino_**&lt;/code&gt;&lt;code&gt;)/&lt;/code&gt;&lt;code&gt;**_escala___&lt;/code&gt;&lt;code&gt;)*&lt;/code&gt;&lt;code&gt;**_posición_**&lt;/code&gt;&lt;code&gt;)+&lt;/code&gt;&lt;code&gt;**_origen_**&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;La fórmula será la misma que en el paso anterior: &lt;code&gt;valor = (((origen - destino) / escala) * posición) + origen&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;resultado&#34;&gt;Resultado&lt;/h3&gt;
 
