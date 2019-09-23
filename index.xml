@@ -6,8 +6,105 @@
     <description>Recent content in Uriel Márquez | @umarquez on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 06 Sep 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 22 Sep 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>100DaysOfC0D3</title>
+      <link>https://umarquez.c0d3.mx/100daysofc0d3/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/100daysofc0d3/</guid>
+      <description>
+
+&lt;h2 id=&#34;temas&#34;&gt;Temas&lt;/h2&gt;
+
+&lt;h3 id=&#34;algoritmos-de-ordenamiento&#34;&gt;Algoritmos de ordenamiento&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/1&#34;&gt;[&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento por inserción | Insert Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/3&#34;&gt;[&lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento por selección | Selection Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/5&#34;&gt;[&lt;sup&gt;5&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento Burbuja | Bubble Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/9&#34;&gt;[&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento con Árbol Binario | Binary Tree Sort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/12&#34;&gt;[&lt;sup&gt;12&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento rápido | Quicksort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/22&#34;&gt;[&lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ordenamiento Gnomo | Gnome Sort&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;algoritmos-de-búsqueda&#34;&gt;Algoritmos de búsqueda&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/4&#34;&gt;[&lt;sup&gt;4&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Búsqueda Binaria | Binary Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/15&#34;&gt;[&lt;sup&gt;15&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — El vecino más cercano | Nearest neighbor search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/21&#34;&gt;[&lt;sup&gt;21&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Búsqueda simple de texto | Simple text search&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;algoritmos-de-codificación&#34;&gt;Algoritmos de codificación&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/2&#34;&gt;[&lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Codificando/Decodificando Base64&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/14&#34;&gt;[&lt;sup&gt;14&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — UUEncode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;algoritmos-de-compresión&#34;&gt;Algoritmos de compresión&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/23&#34;&gt;[&lt;sup&gt;23&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Compresión LZ77 | LZ77 Compression Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;estructuras-de-datos&#34;&gt;Estructuras de datos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/7&#34;&gt;[&lt;sup&gt;7&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Tabla de Hash | Hash Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/8&#34;&gt;[&lt;sup&gt;8&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Listas enlazadas | Linked List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;golang&#34;&gt;Golang&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/6&#34;&gt;[&lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Interfaces Golang | Si parece un pato, nada como un pato…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/17&#34;&gt;[&lt;sup&gt;17&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Endianness | Big-endian &amp;amp; Little-endian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/31&#34;&gt;[&lt;sup&gt;31&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — WebAssembly | WASM &amp;amp; Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;patrones-de-diseño&#34;&gt;Patrones de diseño&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/11&#34;&gt;[&lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Partrón Singleton | Singleton Pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/27&#34;&gt;[&lt;sup&gt;27&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Partrónes de diseño: Builder | Builder design pattern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/30&#34;&gt;[&lt;sup&gt;30&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Herencia &amp;amp; Patrón Composite | Inheritance &amp;amp; Composite Pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;procesamiento-de-imágenes&#34;&gt;Procesamiento de imágenes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/16&#34;&gt;[&lt;sup&gt;16&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escalado de imágenes mediante interpolación de vecinos cercanos | Image scaling applying nearest neighbor interpolation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/24&#34;&gt;[&lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/25&#34;&gt;[&lt;sup&gt;25&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Tramado | Dithering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;proyectos&#34;&gt;Proyectos&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/10&#34;&gt;[&lt;sup&gt;10&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Cuenta colores&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/20&#34;&gt;[&lt;sup&gt;20&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Segundo proyecto: Repintado&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;redes&#34;&gt;Redes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/19&#34;&gt;[&lt;sup&gt;19&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Ping | ICMP Echo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;seguridad&#34;&gt;Seguridad&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/13&#34;&gt;[&lt;sup&gt;13&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Esteganografía | Steganography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/18&#34;&gt;[&lt;sup&gt;18&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — TEA | Tiny Encryption Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/26&#34;&gt;[&lt;sup&gt;26&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Shell a través de WebSocket | Shell through WebSocket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/28&#34;&gt;[&lt;sup&gt;28&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escaneo de puertos TCP | TCP port scanning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Comunidad</title>
@@ -1091,239 +1188,6 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/FtsGiQC4wCTR9tDKNkFG-g.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos observar que esta búsqueda no es muy precisa y que debemos realizar algunas validaciones adicionales para evitar reemplazar falsos positivos como glass o massage pero en general funciona.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[20/100] #100DaysOfC0D3 - Segundo proyecto: Repintado</title>
-      <link>https://umarquez.c0d3.mx/2019/july/29/20-100-100daysofc0d3/</link>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://umarquez.c0d3.mx/2019/july/29/20-100-100daysofc0d3/</guid>
-      <description>
-
-&lt;h2 id=&#34;segundo-proyecto-repintado&#34;&gt;Segundo proyecto: Repintado&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Repo:&lt;/strong&gt; &lt;a href=&#34;https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Vq56kqVHN-27WZAsbtidlQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hemos llegado a la quinta semana y al número 20 de esta serie, en esta ocasión vamos a aprovechar algunas de las funciones del &lt;a href=&#34;https://medium.com/@umarquez_mx/10-100-100daysofc0d3-7187417844ad&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;primer proyecto&lt;/a&gt; y uno que otro tema tratados hasta el momento, el objetivo será realizar una aplicación que nos ayude a modificar la paleta de colores de una imagen, es decir, vamos a sustituir cada píxel de la imagen con el color de la paleta que más cercano o parecido sea.&lt;/p&gt;
-
-&lt;h2 id=&#34;procedimiento&#34;&gt;Procedimiento&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Vamos a obtener una serie de paletas de colores desde el sitio: &lt;a href=&#34;https://lospec.com/palette-list&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://lospec.com/palette-list&lt;/a&gt; en formato .hex, que no es otra cosa que un archivo de texto con un color &lt;strong&gt;RGB&lt;/strong&gt; en formato &lt;em&gt;hexadecimal&lt;/em&gt; en cada línea, o bien, podremos definir nuestra propia paleta utilizando el mismo formato:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/2PmJ4SQqtWil7Tok7yAlYg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;cp_rust-5.hex:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;230000
-712f30
-a54932
-e18866
-f0bb9c
-ffe2c6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Colocaremos los archivos .hex en un mismo directorio con la finalidad de que nuestro programa obtenga todas las paletas disponibles para generar una imagen de salida por cada paleta.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/VaG7py96GyYF1cdPSYkSUg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A continuación deberemos obtener una imagen &lt;strong&gt;JPEG .jpg&lt;/strong&gt; aleatoria u obtener una local, esta imagen será la que procesaremos.&lt;/li&gt;
-&lt;li&gt;Leeremos el contenido de la imagen seleccionada y obtendremos el color de cada píxel que la compone.&lt;/li&gt;
-&lt;li&gt;Buscaremos el color obtenido en la tabla de colores ya procesados, esta es una &lt;a href=&#34;https://medium.com/@umarquez_mx/7-100-100daysofc0d3-6eed6b4ceded&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;tabla hash&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; que utilizaremos para almacenar el resultado de cada color procesado, esto con el objetivo de solo calcular una vez el sustituto de cada variante y así evitar, por ejemplo, que en una foto con el cielo azul, el mismo tono de azul sea calculado varias veces, en vez de esto, se busca el color original en la tabla y si este ya se encuentra en la tabla, solo se recupera el valor del color sustituto y se evita calcularlo cada vez que se encuentre.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/8tOFV44q4gBWT5UB3yPEKw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Si el color aún no se encontrara en la tabla, deberemos compararlo con cada color disponible en la paleta actual hasta encontrar el sustituto correcto; esto lo haremos encontrando al &lt;a href=&#34;https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;vecino más próximo&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; utilizando el teorema de Pitágoras pero aplicado a un espacio en 3 dimensiones. Esto es:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;√((R1 - R2)^2 + (G1 - Gg2)^2 + (B1 - B2)^2)&lt;/strong&gt;
-* Una vez que obtengamos el color sustituto, lo plasmaremos en la imagen resultante en la misma ubicación del píxel evaluado. Esto lo repetiremos hasta haber completado el total de la imagen.
-* La imagen resultante la almacenaremos concatenando el nombre de la paleta utilizada para tener la referencia, una vez hecho esto continuamos con la siguiente paleta.&lt;/p&gt;
-
-&lt;p&gt;De esta forma podremos obtener resultados como los siguientes:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/J6Q17kXU1FHhtOGpSAuOVQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/w39FCfGmrDuq8gl9z3gNwg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Ew7wkHcRDDjE0cwCehIdhA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/j9oP2mmULIxUBrjB1mHnGw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/zpyJnoVK7Dy1slGyhiyJFQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/_yazMU8cQBCqMUIHfZWocw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/E9HLaKEBX14baMr4Lm3lDw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/mYMlplvMAQy6Jt2IjtxuGA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KcTEGALXOXV42SYw3Lnmsg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/gAx1ONq4xF3ALY51Ns3xRw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/rirQsu8CihyYxIk4lPwY1A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/nJZrf_vcjC8BfYN1YXMsKg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/m4YGV3p1bgEtmdXDD4GMSQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/p2r979aYL8m7IxL3auPk3g.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/usnPGA9mt6Uo0cXFmTr-uQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;datos-de-entrada&#34;&gt;Datos de entrada&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;-img Ubicación del archivo de imagen a procesar, si está vacío se tomará una imagen aleatorio de una API, misma que será almacena en el directorio de salida ./out&lt;/li&gt;
-&lt;li&gt;-palettes Directorio desde donde obtendremos los archivos .hex.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;datos-de-salida&#34;&gt;Datos de salida&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Todas las imágenes resultantes serán almacenadas en el mismo directorio de la imagen original.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;implementación-en-go&#34;&gt;Implementación en Go&lt;/h2&gt;
-
-&lt;script src=&#34;https://gist.github.com/umarquez/92c3d310adc73842bc2c6bed6315eca2.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/umwRYjxWdn37IZGJ0c6ioQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Como dato adicional es importante remarcar que en muchos casos los detalles de la imagen se pierden o se refuerzan, dependiendo de la distribución de los colores de la paleta y de la imagen, es decir, si la imagen cuenta con detalles en tonos similares y la paleta no cuenta con la suficiente cantidad de colores dentro del área en que se encuentran los detalles, estos serán sustituidos por un color sólido, el más cercano al área de los tonos originales; en un caso contrario, podríamos contar con una imagen con un degradado o sombras muy matizadas y con una paleta que cuenta con varias opciones de color cercanos a esos tonos, en este caso la imagen remarcará las sombras lo cual hará que parezcan más contrastadas.&lt;/p&gt;
-
-&lt;p&gt;A continuación algunos ejemplos más en donde podemos observarlo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wvf16EMUu-_i5gnccYcsWA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/AueyM-wTKBfZu_Sf9x7TcA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/JBvD3yoGkiX4lCYsiuLSVw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/_AEBH4LacNQn29mr9qT6qA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/v4FmpwGo8gP3hVJpX6FMSQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/QxfU6XOJEbC_fdukE60tOA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/TSY2-2KeZJqt0Axtl_W3Vg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/dVisGO1LGv4cFq9-Z6xVfw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/4NIEoM97KFGIvBFL4XNzjg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/IlwI9N_N1fvyIng3BBo7aQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/-yrVEtWkRbB3xWR41Y2nZg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Vkpt-JML83V0ltKXfKxDow.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/BiuM_6vVqszUJ6qgvjkY1Q.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/vwwFuFReernfDRSYnCNL0w.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/a_3KjNLXUiip0SZmzYGrDA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/kd_DAdyZKfT0uTyy7zGBGA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fiUGMb08cyEsWDvG6yLKfA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/vjaKPp2C7aZ8lJZImBdEeg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/u0ghWnqCOCPtCYbYwq4ezQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/QzTdh3R9m5wGZbvfXhjvHw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/gbqI4h2784wVpq9m6ThiBw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6OkrL3vBfTmYivk4bRr9WQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6KhhCIbR7WsMbLRuEPJ9eQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ZcBx3TPpaYK92uNojmyn9Q.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/UbgqWAyp3ja3bFje0YvjfA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/hOmWq3mcvJxvWEAA1wKg5A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/lUNSGlnI0VQsraovGI8BQA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/TNmhO3m-0l_AVdxor89nYQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/9_OirvxzCVJPfj9dCoAnAw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/90CpOPKReI0pWZxG6Elkrw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/t2YbPL4Vy61r_6RWQ4prrg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0iqnj7Mvp9K2dJd6KVf4eQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/e2YvkMAgwUss8AZRsds-bA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/C3aSsHHXFEkuW4d-ifXhhg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/tO1N2HmUahhFJ3APWl3Paw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/3rF1ikBW_wMErH2HdTfb5A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/1GAavFuORZjILp-YBQ438w.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/tgageDG3grEY-gG1aTG_jg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/9YcSKLGeOjmcZS9w4IZ_xw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/PECnZxBqpW4jPrrDTA_pbw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fKI0LBOzGqOgfMr7VT2w6Q.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0tNFy8oY4MDNlSqYBluqdw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/2jNd4nk9--9pJX6m1FVRXQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Q9ke8bsJtZqSmnWVqShf2w.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Ixx9v3-NCwCeUXISPBxhLA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/RRXlLYhLzzRQpWRSN3KUXw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/UjsRBE8B8r-1bdYwe0LDCw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/52H781cNOi343tHHkIG5bg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/nbRMKGWx0g6VgzROS60wAQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/lrNRTNHLmFzoaoDK_tDKCQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6ukwD_odTjHXoSGCYekHVw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0pRHsqDK4gat_eRjtCyFjA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/A0rtXJuc4hZneqPBxIeVHw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/e6AyuqCPOLr7tBFFMaUFug.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/U04dVb4F9aQbGqbNG40ldg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ZfeHYVjuFjuFIQFIJGsaUw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/GWZw3kuYR7ojXcCV6WBIXg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KCN6LdNmGOK39FSUd9XmSA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/BvrssTE696IN76_JvZ8T_A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/b964934iVFV9kIFWaPb44g.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
