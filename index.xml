@@ -6,8 +6,198 @@
     <description>Recent content in Uriel Márquez | @umarquez on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 06 Sep 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 12:00:00 -0500</lastBuildDate>
     <atom:link href="" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go</title>
+      <link>https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/</link>
+      <pubDate>Mon, 23 Sep 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/</guid>
+      <description>
+
+&lt;h2 id=&#34;webassembly&#34;&gt;WebAssembly&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C++/Rust, enabling deployment on the web for client and server applications.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;WebAssembly (abreviado &lt;strong&gt;Wasm&lt;/strong&gt;) es un formato binario de instrucciones para una&lt;/em&gt;  &lt;a href=&#34;https://en.wikipedia.org/wiki/Stack_machine&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;máquina virtual de tipo stack&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C++/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://webassembly.org/&#34; title=&#34;https://webassembly.org/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;https://webassembly.org/&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Es importante aclarar que &lt;strong&gt;&lt;em&gt;WebAssembly&lt;/em&gt;&lt;/strong&gt; no busca sustituir a &lt;strong&gt;&lt;em&gt;JS&lt;/em&gt;&lt;/strong&gt;, es más bien cercano a la evolución de tecnologías como los controles &lt;strong&gt;&lt;em&gt;ActiveX&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;ActionScript&lt;/em&gt;&lt;/strong&gt; o &lt;strong&gt;&lt;em&gt;Java Applets&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;En esta ocasión vamos a explorar esta tecnología utilizando &lt;strong&gt;&lt;em&gt;Golang&lt;/em&gt;&lt;/strong&gt; como lenguaje de alto nivel para desarrollar nuestras aplicaciones, aprenderemos a compilar y empaquetar nuestros programas para que puedan ser distribuidos por medio de un servidor web y jugaremos un poco con el &lt;em&gt;DOM&lt;/em&gt; para conocer la forma en que &lt;strong&gt;&lt;em&gt;WASM&lt;/em&gt;&lt;/strong&gt; interactúa con él bajo este contexto.&lt;/p&gt;
+
+&lt;h2 id=&#34;ventajas-y-desventajas&#34;&gt;Ventajas y desventajas&lt;/h2&gt;
+
+&lt;p&gt;Es importante mencionar que en este momento de la historia hacer &lt;strong&gt;&lt;em&gt;WASM&lt;/em&gt;&lt;/strong&gt; con &lt;strong&gt;&lt;em&gt;Golang&lt;/em&gt;&lt;/strong&gt; no es la manera más óptima de desarrollar aplicaciones, esto debido al overhead que se genera por integrar el runtime nativo de &lt;strong&gt;&lt;em&gt;Go&lt;/em&gt;&lt;/strong&gt; a cada aplicación; por otro lado, la experiencia de programar este tipo de aplicaciones en este lenguajes es muy fluida debido a que programando de manera habitual con solo tener en cuenta algunas consideraciones es posible generar programas &lt;strong&gt;&lt;em&gt;WASM&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;requerimientos-previos&#34;&gt;Requerimientos previos&lt;/h2&gt;
+
+&lt;h3 id=&#34;cross-compiling&#34;&gt;Cross-compiling&lt;/h3&gt;
+
+&lt;p&gt;Para lograr compilar nuestro código y generar un archivo &lt;code&gt;*.wasm&lt;/code&gt; será necesario ejecutar el &lt;em&gt;cross-compiling&lt;/em&gt; desde un sistema operativo &lt;strong&gt;&lt;em&gt;Linux&lt;/em&gt;&lt;/strong&gt; o compatible ya que desde &lt;strong&gt;&lt;em&gt;Windows&lt;/em&gt;&lt;/strong&gt; los archivos resultantes no podrán ser ejecutados.&lt;/p&gt;
+
+&lt;p&gt;El comando para compilar el proyecto del directorio actual a WASM &lt;em&gt;(&lt;/em&gt;&lt;code&gt;app.wasm&lt;/code&gt;&lt;em&gt;)&lt;/em&gt; sería el siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;GOOS=js GOARCH=wasm go build -o app.wasm .  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;workaround-para-windows-10&#34;&gt;Workaround  para Windows 10&lt;/h4&gt;
+
+&lt;p&gt;Podemos aprovechar una característica de este sistema operativo para compilar nuestras aplicaciones, se trata de &lt;strong&gt;&lt;em&gt;WSL&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;(Windows Subsystem for Linux)&lt;/em&gt; que nos permite instalar un sistema operativo &lt;strong&gt;&lt;em&gt;Linux&lt;/em&gt;&lt;/strong&gt; adicional y que puede ser ejecutado de forma simultanea.&lt;br /&gt;
+En el siguiente enlace podremos encontrar una guía que nos ayudará a habilitar y configurar esta característica además de instalar el sistema operativo que elijamos, en mi caso tengo instalado &lt;strong&gt;Ubuntu 18.04&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-win10&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Windows Subsystem for Linux Installation Guide for Windows 10&lt;/a&gt; (&lt;em&gt;ingles&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ubuntu-windows-10-WLS.png&#34; alt=&#34;Ubuntu WSL&#34; title=&#34;Ubuntu WSL&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez hayamos instalado el sistema operativo adicional será necesario instalar y configurar &lt;a href=&#34;https://golang.org/dl/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;Go v1.11&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;(o superior)&lt;/em&gt;&lt;/a&gt; &lt;em&gt;dentro de este.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/WLS-Ubuntu-Go-1.13.png&#34; alt=&#34;lsb&#34; title=&#34;lsb_release -a &amp;amp;&amp;amp; go version&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya con esto instalado y configurado, podremos ejecutar comandos directamente en la consola de windows que serán ejecutados dentro del &lt;strong&gt;&lt;em&gt;WSL&lt;/em&gt;&lt;/strong&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wsl pwd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wsl-pwd.png&#34; alt=&#34;wsl pwd&#34; title=&#34;wsl pwd&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, para compilar nuestra aplicación será necesario realizar un paso adicional, esto debido a que ejecutando comandos de esta manera no implica que las variables establecidas en los archivos &lt;code&gt;~/.profile&lt;/code&gt; y &lt;code&gt;/etc/profile&lt;/code&gt; sean procesadas, esto lo podemos probar ejecutando el comando &lt;code&gt;go version&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wsl-go-version.png&#34; alt=&#34;wsl go version&#34; title=&#34;wsl go version&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como podemos ver, el comando no está disponible, para solucionarlo deberemos cargar de manera manual el perfil (o perfiles) necesarios, en este caso la variable &lt;code&gt;PATH&lt;/code&gt; con la ruta de &lt;strong&gt;&lt;em&gt;Go&lt;/em&gt;&lt;/strong&gt; se encuentra definida dentro del archivo &lt;code&gt;/etc/profile&lt;/code&gt;, por lo que podemos crear un script de la siguiente forma para ejecutar ambos pasos:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+source /etc/profile
+go version
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wsl-source-profile-go-version-1.png&#34; alt=&#34;wsl &amp;lt;script&amp;gt;.sh&#34; title=&#34;wsl &amp;lt;script&amp;gt;.sh&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Probemos nuestro &lt;em&gt;script&lt;/em&gt; compilando un &lt;code&gt;!Hola Mundo!&lt;/code&gt; simple, para ello modificaremos la línea &lt;code&gt;4&lt;/code&gt; de la siguiente manera:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
+
+source /etc/profile
+GOOS=js GOARCH=wasm go build -o app.wasm .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;El código que utilizaremos para nuestro &lt;code&gt;!Hola Mundo!&lt;/code&gt; será el siguiente:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+	fmt.Println(&amp;quot;!Hola Mundo!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ejecutando &lt;em&gt;script&lt;/em&gt; obtendremos el archivo &lt;strong&gt;WASM&lt;/strong&gt; que, como podemos observar en la imagen, tiene un tamaño similar a un ejecutable &amp;ldquo;&lt;em&gt;nativo&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/app.wasm-out.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;carga-y-ejecución-con-html&#34;&gt;Carga y ejecución con HTML&lt;/h3&gt;
+
+&lt;p&gt;Aparte de contar con nuestra aplicación compilada &lt;code&gt;*.wasm&lt;/code&gt;, debemos incluir dentro de nuestro proyecto el código HTML/JS que se encargará de cargar y ejecutar nuestro programa; para ello utilizaremos los archivos incluidos dentro de nuestra instalación de Go, en el direcotio: &lt;code&gt;$GOROOT/misc/wasm&lt;/code&gt;, podremos ejecutar la siguiente secuencia de comandos si nos encontramos en un entorno &lt;strong&gt;&lt;em&gt;Linux&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;cp &amp;quot;$(go env GOROOT)/misc/wasm/wasm_exec.html&amp;quot; .
+cp &amp;quot;$(go env GOROOT)/misc/wasm/wasm_exec.js&amp;quot; .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;O podemos descargarlos directamente del repositorio oficial:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/golang/go/tree/release-branch.go1.13/misc/wasm&#34; title=&#34;https://github.com/golang/go/tree/release-branch.go1.13/misc/wasm&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/golang/go/tree/release-branch.go1.13/misc/wasm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;servidor-web&#34;&gt;Servidor web&lt;/h3&gt;
+
+&lt;p&gt;Para lograr ejecutar el archivo &lt;code&gt;*.wasm&lt;/code&gt;, este debe ser servido con el tipo &lt;a href=&#34;https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;MIME&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; &lt;code&gt;application/wasm&lt;/code&gt; por lo que deberemos recurrir a un servidor web o servicio de hospedaje que cumpla con estas características; para lograr ejecutar nuestro archivo de manera local podemos crear un &lt;em&gt;webserver&lt;/em&gt;, también en &lt;strong&gt;&lt;em&gt;Go&lt;/em&gt;&lt;/strong&gt;, usando el siguiente código:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;package main
+
+import (
+	&amp;quot;log&amp;quot;
+	&amp;quot;net/http&amp;quot;
+)
+
+func main() {
+	http.Handle(&amp;quot;/&amp;quot;, http.FileServer(http.Dir(&amp;quot;./www&amp;quot;)))
+	err := http.ListenAndServe(&amp;quot;:8080&amp;quot;, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Con este código serviremos el contenido del directorio &lt;code&gt;./www&lt;/code&gt;, así que deberemos crearlo y colocar dentro los archivos &lt;code&gt;HTML/JS/WASM&lt;/code&gt;, también sería buena idea renombrar el archivo &lt;code&gt;.html&lt;/code&gt; para que sea servido como página principal así que el nuevo nombre de este será &lt;code&gt;index.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finalmente, ejecutamos nuestro servidor, abrimos el sitio &lt;code&gt;localhost:8080&lt;/code&gt; en nuestro navegador y comprobamos su funcionamiento.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wasm-localhost-hola-mundo.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez que la aplicación ha cargado se activará el botón &lt;code&gt;Run&lt;/code&gt;, al presionarlo se ejecutará nuestro código y se mostrará el texto &lt;code&gt;!Hola Mundo!&lt;/code&gt; en la consola.&lt;/p&gt;
+
+&lt;h2 id=&#34;jugando-con-el-dom&#34;&gt;Jugando con el DOM&lt;/h2&gt;
+
+&lt;p&gt;Comencemos con algo relativamente sencillo, vamos a crear una aplicación que genere texturas como la siguiente, alternando los caracteres &lt;code&gt;/&lt;/code&gt; y  &lt;code&gt;\&lt;/code&gt; de manera aleatoria:&lt;/p&gt;
+
+&lt;h3 id=&#34;slashes&#34;&gt;Slashes&lt;/h3&gt;
+
+
+&lt;div id=&#34;wasm_slashes&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://umarquez.c0d3.mx/js/wasm_exec.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+	if (!WebAssembly.instantiateStreaming) { 
+		WebAssembly.instantiateStreaming = async (resp, importObject) =&gt; {
+			const source = await (await resp).arrayBuffer();
+			return await WebAssembly.instantiate(source, importObject);
+		};
+	}
+
+	const go = new Go();
+	let mod, inst;
+	WebAssembly.instantiateStreaming(fetch(&#34;/uploads/slashes.wasm&#34;), go.importObject).then((result) =&gt; {
+		mod = result.module;
+		inst = result.instance;
+		
+		run()
+	}).catch((err) =&gt; {
+		console.error(err);
+	});
+
+	async function run() {
+		console.clear();
+		await go.run(inst);
+		inst = await WebAssembly.instantiate(mod, go.importObject); 
+	}
+&lt;/script&gt;
+
+&lt;p&gt;Para conseguir generar texturas similares:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Deberemos dividir el espacio disponible en 4 cuadrantes.&lt;/li&gt;
+&lt;li&gt;Generaremos un valor aleatorio que determine el caracter a imprimir.&lt;/li&gt;
+&lt;li&gt;Colocaremos el caracter seleccionado en la posición correspondiente dentro del primer cuadrante y su equivalente en los cuadrantes restantes.&lt;/li&gt;
+&lt;li&gt;Repetimos esta secuencia hasta haber colocado todos los caracteres.&lt;/li&gt;
+&lt;li&gt;Imprimimos el texto resultante dentro del espacio seleccionado.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/seq.gif&#34; alt=&#34;&#34; title=&#34;Generando un nuevo patrón&#34; /&gt;&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/umarquez/0241147c3fc2f45d6aba3b7e521ebfdd.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;palabras-finales&#34;&gt;Palabras finales&lt;/h2&gt;
+
+&lt;p&gt;Hemos desarrollado nuestro primer programa WASM usando Go, en el proceso conocimos la forma de copilar estas aplicaciones y cargarlas en nuestra página, además de como podemos interactuar con el DOM desde ella.&lt;/p&gt;
+
+&lt;p&gt;En próximos artículos hablaremos más acerca de esta tecnología y la aprovecharemos para explicar otros conceptos.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Comunidad</title>
@@ -1091,239 +1281,6 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/FtsGiQC4wCTR9tDKNkFG-g.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos observar que esta búsqueda no es muy precisa y que debemos realizar algunas validaciones adicionales para evitar reemplazar falsos positivos como glass o massage pero en general funciona.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[20/100] #100DaysOfC0D3 - Segundo proyecto: Repintado</title>
-      <link>https://umarquez.c0d3.mx/2019/july/29/20-100-100daysofc0d3/</link>
-      <pubDate>Mon, 29 Jul 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://umarquez.c0d3.mx/2019/july/29/20-100-100daysofc0d3/</guid>
-      <description>
-
-&lt;h2 id=&#34;segundo-proyecto-repintado&#34;&gt;Segundo proyecto: Repintado&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Repo:&lt;/strong&gt; &lt;a href=&#34;https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/umarquez/100DaysOfC0D3/tree/master/20-repaint&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Vq56kqVHN-27WZAsbtidlQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hemos llegado a la quinta semana y al número 20 de esta serie, en esta ocasión vamos a aprovechar algunas de las funciones del &lt;a href=&#34;https://medium.com/@umarquez_mx/10-100-100daysofc0d3-7187417844ad&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;primer proyecto&lt;/a&gt; y uno que otro tema tratados hasta el momento, el objetivo será realizar una aplicación que nos ayude a modificar la paleta de colores de una imagen, es decir, vamos a sustituir cada píxel de la imagen con el color de la paleta que más cercano o parecido sea.&lt;/p&gt;
-
-&lt;h2 id=&#34;procedimiento&#34;&gt;Procedimiento&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Vamos a obtener una serie de paletas de colores desde el sitio: &lt;a href=&#34;https://lospec.com/palette-list&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://lospec.com/palette-list&lt;/a&gt; en formato .hex, que no es otra cosa que un archivo de texto con un color &lt;strong&gt;RGB&lt;/strong&gt; en formato &lt;em&gt;hexadecimal&lt;/em&gt; en cada línea, o bien, podremos definir nuestra propia paleta utilizando el mismo formato:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/2PmJ4SQqtWil7Tok7yAlYg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;cp_rust-5.hex:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;230000
-712f30
-a54932
-e18866
-f0bb9c
-ffe2c6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Colocaremos los archivos .hex en un mismo directorio con la finalidad de que nuestro programa obtenga todas las paletas disponibles para generar una imagen de salida por cada paleta.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/VaG7py96GyYF1cdPSYkSUg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A continuación deberemos obtener una imagen &lt;strong&gt;JPEG .jpg&lt;/strong&gt; aleatoria u obtener una local, esta imagen será la que procesaremos.&lt;/li&gt;
-&lt;li&gt;Leeremos el contenido de la imagen seleccionada y obtendremos el color de cada píxel que la compone.&lt;/li&gt;
-&lt;li&gt;Buscaremos el color obtenido en la tabla de colores ya procesados, esta es una &lt;a href=&#34;https://medium.com/@umarquez_mx/7-100-100daysofc0d3-6eed6b4ceded&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;tabla hash&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; que utilizaremos para almacenar el resultado de cada color procesado, esto con el objetivo de solo calcular una vez el sustituto de cada variante y así evitar, por ejemplo, que en una foto con el cielo azul, el mismo tono de azul sea calculado varias veces, en vez de esto, se busca el color original en la tabla y si este ya se encuentra en la tabla, solo se recupera el valor del color sustituto y se evita calcularlo cada vez que se encuentre.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/8tOFV44q4gBWT5UB3yPEKw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Si el color aún no se encontrara en la tabla, deberemos compararlo con cada color disponible en la paleta actual hasta encontrar el sustituto correcto; esto lo haremos encontrando al &lt;a href=&#34;https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;vecino más próximo&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; utilizando el teorema de Pitágoras pero aplicado a un espacio en 3 dimensiones. Esto es:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;√((R1 - R2)^2 + (G1 - Gg2)^2 + (B1 - B2)^2)&lt;/strong&gt;
-* Una vez que obtengamos el color sustituto, lo plasmaremos en la imagen resultante en la misma ubicación del píxel evaluado. Esto lo repetiremos hasta haber completado el total de la imagen.
-* La imagen resultante la almacenaremos concatenando el nombre de la paleta utilizada para tener la referencia, una vez hecho esto continuamos con la siguiente paleta.&lt;/p&gt;
-
-&lt;p&gt;De esta forma podremos obtener resultados como los siguientes:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/J6Q17kXU1FHhtOGpSAuOVQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/w39FCfGmrDuq8gl9z3gNwg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Ew7wkHcRDDjE0cwCehIdhA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/j9oP2mmULIxUBrjB1mHnGw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/zpyJnoVK7Dy1slGyhiyJFQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/_yazMU8cQBCqMUIHfZWocw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/E9HLaKEBX14baMr4Lm3lDw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/mYMlplvMAQy6Jt2IjtxuGA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KcTEGALXOXV42SYw3Lnmsg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/gAx1ONq4xF3ALY51Ns3xRw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/rirQsu8CihyYxIk4lPwY1A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/nJZrf_vcjC8BfYN1YXMsKg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/m4YGV3p1bgEtmdXDD4GMSQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/p2r979aYL8m7IxL3auPk3g.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/usnPGA9mt6Uo0cXFmTr-uQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;datos-de-entrada&#34;&gt;Datos de entrada&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;-img Ubicación del archivo de imagen a procesar, si está vacío se tomará una imagen aleatorio de una API, misma que será almacena en el directorio de salida ./out&lt;/li&gt;
-&lt;li&gt;-palettes Directorio desde donde obtendremos los archivos .hex.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;datos-de-salida&#34;&gt;Datos de salida&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Todas las imágenes resultantes serán almacenadas en el mismo directorio de la imagen original.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;implementación-en-go&#34;&gt;Implementación en Go&lt;/h2&gt;
-
-&lt;script src=&#34;https://gist.github.com/umarquez/92c3d310adc73842bc2c6bed6315eca2.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/umwRYjxWdn37IZGJ0c6ioQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Como dato adicional es importante remarcar que en muchos casos los detalles de la imagen se pierden o se refuerzan, dependiendo de la distribución de los colores de la paleta y de la imagen, es decir, si la imagen cuenta con detalles en tonos similares y la paleta no cuenta con la suficiente cantidad de colores dentro del área en que se encuentran los detalles, estos serán sustituidos por un color sólido, el más cercano al área de los tonos originales; en un caso contrario, podríamos contar con una imagen con un degradado o sombras muy matizadas y con una paleta que cuenta con varias opciones de color cercanos a esos tonos, en este caso la imagen remarcará las sombras lo cual hará que parezcan más contrastadas.&lt;/p&gt;
-
-&lt;p&gt;A continuación algunos ejemplos más en donde podemos observarlo.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wvf16EMUu-_i5gnccYcsWA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/AueyM-wTKBfZu_Sf9x7TcA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/JBvD3yoGkiX4lCYsiuLSVw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/_AEBH4LacNQn29mr9qT6qA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/v4FmpwGo8gP3hVJpX6FMSQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/QxfU6XOJEbC_fdukE60tOA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/TSY2-2KeZJqt0Axtl_W3Vg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/dVisGO1LGv4cFq9-Z6xVfw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/4NIEoM97KFGIvBFL4XNzjg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/IlwI9N_N1fvyIng3BBo7aQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/-yrVEtWkRbB3xWR41Y2nZg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Vkpt-JML83V0ltKXfKxDow.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/BiuM_6vVqszUJ6qgvjkY1Q.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/vwwFuFReernfDRSYnCNL0w.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/a_3KjNLXUiip0SZmzYGrDA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/kd_DAdyZKfT0uTyy7zGBGA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fiUGMb08cyEsWDvG6yLKfA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/vjaKPp2C7aZ8lJZImBdEeg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/u0ghWnqCOCPtCYbYwq4ezQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/QzTdh3R9m5wGZbvfXhjvHw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/gbqI4h2784wVpq9m6ThiBw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6OkrL3vBfTmYivk4bRr9WQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6KhhCIbR7WsMbLRuEPJ9eQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ZcBx3TPpaYK92uNojmyn9Q.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/UbgqWAyp3ja3bFje0YvjfA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/hOmWq3mcvJxvWEAA1wKg5A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/lUNSGlnI0VQsraovGI8BQA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/TNmhO3m-0l_AVdxor89nYQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/9_OirvxzCVJPfj9dCoAnAw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/90CpOPKReI0pWZxG6Elkrw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/t2YbPL4Vy61r_6RWQ4prrg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0iqnj7Mvp9K2dJd6KVf4eQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/e2YvkMAgwUss8AZRsds-bA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/C3aSsHHXFEkuW4d-ifXhhg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/tO1N2HmUahhFJ3APWl3Paw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/3rF1ikBW_wMErH2HdTfb5A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/1GAavFuORZjILp-YBQ438w.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/tgageDG3grEY-gG1aTG_jg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/9YcSKLGeOjmcZS9w4IZ_xw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/PECnZxBqpW4jPrrDTA_pbw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fKI0LBOzGqOgfMr7VT2w6Q.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0tNFy8oY4MDNlSqYBluqdw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/2jNd4nk9--9pJX6m1FVRXQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Q9ke8bsJtZqSmnWVqShf2w.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Ixx9v3-NCwCeUXISPBxhLA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/RRXlLYhLzzRQpWRSN3KUXw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/UjsRBE8B8r-1bdYwe0LDCw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/52H781cNOi343tHHkIG5bg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/nbRMKGWx0g6VgzROS60wAQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/lrNRTNHLmFzoaoDK_tDKCQ.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6ukwD_odTjHXoSGCYekHVw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0pRHsqDK4gat_eRjtCyFjA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/A0rtXJuc4hZneqPBxIeVHw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/e6AyuqCPOLr7tBFFMaUFug.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/U04dVb4F9aQbGqbNG40ldg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ZfeHYVjuFjuFIQFIJGsaUw.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/GWZw3kuYR7ojXcCV6WBIXg.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KCN6LdNmGOK39FSUd9XmSA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/BvrssTE696IN76_JvZ8T_A.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/b964934iVFV9kIFWaPb44g.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

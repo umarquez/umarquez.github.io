@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r and Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/september/06/estrenando-umarquez-c0d3-mx/" />
+  
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/" />
+<meta property="og:description" content="WebAssembly  WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C&#43;&#43;/Rust, enabling deployment on the web for client and server applications.
+WebAssembly (abreviado Wasm) es un formato binario de instrucciones para una máquina virtual de tipo stack. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C&#43;&#43;/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/31-WASM.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/">
+<meta itemprop="description" content="WebAssembly  WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C&#43;&#43;/Rust, enabling deployment on the web for client and server applications.
+WebAssembly (abreviado Wasm) es un formato binario de instrucciones para una máquina virtual de tipo stack. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C&#43;&#43;/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/31-WASM.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="WebAssembly  WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C&#43;&#43;/Rust, enabling deployment on the web for client and server applications.
+WebAssembly (abreviado Wasm) es un formato binario de instrucciones para una máquina virtual de tipo stack. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C&#43;&#43;/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/31-WASM.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/31-WASM.png"/>
+
+  <meta name="title" content="[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go",
+    "headline" : "[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go",
+    "description" : "WebAssembly  WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C&#43;&#43;/Rust, enabling deployment on the web for client and server applications.
+WebAssembly (abreviado Wasm) es un formato binario de instrucciones para una máquina virtual de tipo stack. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C&#43;&#43;/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-09-23 12:00:00 -0500 -0500",
+    "dateModified" : "2019-09-23 12:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/",
+    "wordCount" : "1046",
+    "keywords" : [ "WebAssembly","WASM","100daysofcode","100daysofc0d3","Golang", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+  <body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="Música">Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="Música">Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-09-23 itemprop="datePublished">September 23, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://umarquez.c0d3.mx/categories/programacion/"> Programacion </a>
+                        <a href="https://umarquez.c0d3.mx/categories/-100daysofc0d3/">  100DaysOfC0D3 </a>
+                        <a href="https://umarquez.c0d3.mx/categories/golang-go/"> Golang Go </a>
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/31-WASM.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="webassembly">WebAssembly</h2>
+
+<blockquote>
+<p><strong>WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C++/Rust, enabling deployment on the web for client and server applications.</strong></p>
+
+<p><em>WebAssembly (abreviado <strong>Wasm</strong>) es un formato binario de instrucciones para una</em>  <a href="https://en.wikipedia.org/wiki/Stack_machine" rel="nofollow noreferrer" target="_blank"><em>máquina virtual de tipo stack</em></a><em>. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C++/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.</em></p>
+
+<p><a href="https://webassembly.org/" title="https://webassembly.org/" rel="nofollow noreferrer" target="_blank"><strong>https://webassembly.org/</strong></a></p>
+</blockquote>
+
+<p>Es importante aclarar que <strong><em>WebAssembly</em></strong> no busca sustituir a <strong><em>JS</em></strong>, es más bien cercano a la evolución de tecnologías como los controles <strong><em>ActiveX</em></strong>, <strong><em>ActionScript</em></strong> o <strong><em>Java Applets</em></strong>.</p>
+
+<p>En esta ocasión vamos a explorar esta tecnología utilizando <strong><em>Golang</em></strong> como lenguaje de alto nivel para desarrollar nuestras aplicaciones, aprenderemos a compilar y empaquetar nuestros programas para que puedan ser distribuidos por medio de un servidor web y jugaremos un poco con el <em>DOM</em> para conocer la forma en que <strong><em>WASM</em></strong> interactúa con él bajo este contexto.</p>
+
+<h2 id="ventajas-y-desventajas">Ventajas y desventajas</h2>
+
+<p>Es importante mencionar que en este momento de la historia hacer <strong><em>WASM</em></strong> con <strong><em>Golang</em></strong> no es la manera más óptima de desarrollar aplicaciones, esto debido al overhead que se genera por integrar el runtime nativo de <strong><em>Go</em></strong> a cada aplicación; por otro lado, la experiencia de programar este tipo de aplicaciones en este lenguajes es muy fluida debido a que programando de manera habitual con solo tener en cuenta algunas consideraciones es posible generar programas <strong><em>WASM</em></strong>.</p>
+
+<h2 id="requerimientos-previos">Requerimientos previos</h2>
+
+<h3 id="cross-compiling">Cross-compiling</h3>
+
+<p>Para lograr compilar nuestro código y generar un archivo <code>*.wasm</code> será necesario ejecutar el <em>cross-compiling</em> desde un sistema operativo <strong><em>Linux</em></strong> o compatible ya que desde <strong><em>Windows</em></strong> los archivos resultantes no podrán ser ejecutados.</p>
+
+<p>El comando para compilar el proyecto del directorio actual a WASM <em>(</em><code>app.wasm</code><em>)</em> sería el siguiente:</p>
+
+<pre><code class="language-bash">GOOS=js GOARCH=wasm go build -o app.wasm .  
+</code></pre>
+
+<h4 id="workaround-para-windows-10">Workaround  para Windows 10</h4>
+
+<p>Podemos aprovechar una característica de este sistema operativo para compilar nuestras aplicaciones, se trata de <strong><em>WSL</em></strong> <em>(Windows Subsystem for Linux)</em> que nos permite instalar un sistema operativo <strong><em>Linux</em></strong> adicional y que puede ser ejecutado de forma simultanea.<br />
+En el siguiente enlace podremos encontrar una guía que nos ayudará a habilitar y configurar esta característica además de instalar el sistema operativo que elijamos, en mi caso tengo instalado <strong>Ubuntu 18.04</strong>:</p>
+
+<p><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" rel="nofollow noreferrer" target="_blank">Windows Subsystem for Linux Installation Guide for Windows 10</a> (<em>ingles</em>)</p>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/ubuntu-windows-10-WLS.png" data-sizes="auto" alt="Ubuntu WSL" title="Ubuntu WSL" class="lazyload"><figcaption class="image-caption">Ubuntu WSL</figcaption></figure></p>
+
+<p>Una vez hayamos instalado el sistema operativo adicional será necesario instalar y configurar <a href="https://golang.org/dl/" rel="nofollow noreferrer" target="_blank"><strong><em>Go v1.11</em></strong> <em>(o superior)</em></a> <em>dentro de este.</em></p>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/WLS-Ubuntu-Go-1.13.png" data-sizes="auto" alt="lsb" title="lsb_release -a &amp;&amp; go version" class="lazyload"><figcaption class="image-caption">lsb</figcaption></figure></p>
+
+<p>Ya con esto instalado y configurado, podremos ejecutar comandos directamente en la consola de windows que serán ejecutados dentro del <strong><em>WSL</em></strong> de la siguiente manera:</p>
+
+<pre><code class="language-bash">wsl pwd
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/wsl-pwd.png" data-sizes="auto" alt="wsl pwd" title="wsl pwd" class="lazyload"><figcaption class="image-caption">wsl pwd</figcaption></figure></p>
+
+<p>Ahora bien, para compilar nuestra aplicación será necesario realizar un paso adicional, esto debido a que ejecutando comandos de esta manera no implica que las variables establecidas en los archivos <code>~/.profile</code> y <code>/etc/profile</code> sean procesadas, esto lo podemos probar ejecutando el comando <code>go version</code>:</p>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/wsl-go-version.png" data-sizes="auto" alt="wsl go version" title="wsl go version" class="lazyload"><figcaption class="image-caption">wsl go version</figcaption></figure></p>
+
+<p>Como podemos ver, el comando no está disponible, para solucionarlo deberemos cargar de manera manual el perfil (o perfiles) necesarios, en este caso la variable <code>PATH</code> con la ruta de <strong><em>Go</em></strong> se encuentra definida dentro del archivo <code>/etc/profile</code>, por lo que podemos crear un script de la siguiente forma para ejecutar ambos pasos:</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+source /etc/profile
+go version
+</code></pre>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/wsl-source-profile-go-version-1.png" data-sizes="auto" alt="wsl &lt;script&gt;.sh" title="wsl &lt;script&gt;.sh" class="lazyload"><figcaption class="image-caption">wsl &lt;script&gt;.sh</figcaption></figure></p>
+
+<p>Probemos nuestro <em>script</em> compilando un <code>!Hola Mundo!</code> simple, para ello modificaremos la línea <code>4</code> de la siguiente manera:</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+source /etc/profile
+GOOS=js GOARCH=wasm go build -o app.wasm .
+</code></pre>
+
+<p>El código que utilizaremos para nuestro <code>!Hola Mundo!</code> será el siguiente:</p>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+	fmt.Println(&quot;!Hola Mundo!&quot;)
+}
+</code></pre>
+
+<p>Ejecutando <em>script</em> obtendremos el archivo <strong>WASM</strong> que, como podemos observar en la imagen, tiene un tamaño similar a un ejecutable &ldquo;<em>nativo</em>&rdquo;.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/app.wasm-out.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<h3 id="carga-y-ejecución-con-html">Carga y ejecución con HTML</h3>
+
+<p>Aparte de contar con nuestra aplicación compilada <code>*.wasm</code>, debemos incluir dentro de nuestro proyecto el código HTML/JS que se encargará de cargar y ejecutar nuestro programa; para ello utilizaremos los archivos incluidos dentro de nuestra instalación de Go, en el direcotio: <code>$GOROOT/misc/wasm</code>, podremos ejecutar la siguiente secuencia de comandos si nos encontramos en un entorno <strong><em>Linux</em></strong>:</p>
+
+<pre><code class="language-shell">cp &quot;$(go env GOROOT)/misc/wasm/wasm_exec.html&quot; .
+cp &quot;$(go env GOROOT)/misc/wasm/wasm_exec.js&quot; .
+</code></pre>
+
+<p>O podemos descargarlos directamente del repositorio oficial:<br />
+<a href="https://github.com/golang/go/tree/release-branch.go1.13/misc/wasm" title="https://github.com/golang/go/tree/release-branch.go1.13/misc/wasm" rel="nofollow noreferrer" target="_blank">https://github.com/golang/go/tree/release-branch.go1.13/misc/wasm</a></p>
+
+<h3 id="servidor-web">Servidor web</h3>
+
+<p>Para lograr ejecutar el archivo <code>*.wasm</code>, este debe ser servido con el tipo <a href="https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions" rel="nofollow noreferrer" target="_blank"><strong><em>MIME</em></strong></a> <code>application/wasm</code> por lo que deberemos recurrir a un servidor web o servicio de hospedaje que cumpla con estas características; para lograr ejecutar nuestro archivo de manera local podemos crear un <em>webserver</em>, también en <strong><em>Go</em></strong>, usando el siguiente código:</p>
+
+<pre><code class="language-Go">package main
+
+import (
+	&quot;log&quot;
+	&quot;net/http&quot;
+)
+
+func main() {
+	http.Handle(&quot;/&quot;, http.FileServer(http.Dir(&quot;./www&quot;)))
+	err := http.ListenAndServe(&quot;:8080&quot;, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+</code></pre>
+
+<p>Con este código serviremos el contenido del directorio <code>./www</code>, así que deberemos crearlo y colocar dentro los archivos <code>HTML/JS/WASM</code>, también sería buena idea renombrar el archivo <code>.html</code> para que sea servido como página principal así que el nuevo nombre de este será <code>index.html</code>.</p>
+
+<p>Finalmente, ejecutamos nuestro servidor, abrimos el sitio <code>localhost:8080</code> en nuestro navegador y comprobamos su funcionamiento.</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="/uploads/wasm-localhost-hola-mundo.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<p>Una vez que la aplicación ha cargado se activará el botón <code>Run</code>, al presionarlo se ejecutará nuestro código y se mostrará el texto <code>!Hola Mundo!</code> en la consola.</p>
+
+<h2 id="jugando-con-el-dom">Jugando con el DOM</h2>
+
+<p>Comencemos con algo relativamente sencillo, vamos a crear una aplicación que genere texturas como la siguiente, alternando los caracteres <code>/</code> y  <code>\</code> de manera aleatoria:</p>
+
+<h3 id="slashes">Slashes</h3>
+
+
+<div id="wasm_slashes"></div>
+<script src="/js/wasm_exec.js"></script>
+<script>
+	if (!WebAssembly.instantiateStreaming) { 
+		WebAssembly.instantiateStreaming = async (resp, importObject) => {
+			const source = await (await resp).arrayBuffer();
+			return await WebAssembly.instantiate(source, importObject);
+		};
+	}
+
+	const go = new Go();
+	let mod, inst;
+	WebAssembly.instantiateStreaming(fetch("/uploads/slashes.wasm"), go.importObject).then((result) => {
+		mod = result.module;
+		inst = result.instance;
+		
+		run()
+	}).catch((err) => {
+		console.error(err);
+	});
+
+	async function run() {
+		console.clear();
+		await go.run(inst);
+		inst = await WebAssembly.instantiate(mod, go.importObject); 
+	}
+</script>
+
+<p>Para conseguir generar texturas similares:</p>
+
+<ol>
+<li>Deberemos dividir el espacio disponible en 4 cuadrantes.</li>
+<li>Generaremos un valor aleatorio que determine el caracter a imprimir.</li>
+<li>Colocaremos el caracter seleccionado en la posición correspondiente dentro del primer cuadrante y su equivalente en los cuadrantes restantes.</li>
+<li>Repetimos esta secuencia hasta haber colocado todos los caracteres.</li>
+<li>Imprimimos el texto resultante dentro del espacio seleccionado.</li>
+</ol>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/seq.gif" data-sizes="auto" alt="" title="Generando un nuevo patrón" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<script src="https://gist.github.com/umarquez/0241147c3fc2f45d6aba3b7e521ebfdd.js"></script>
+
+<h2 id="palabras-finales">Palabras finales</h2>
+
+<p>Hemos desarrollado nuestro primer programa WASM usando Go, en el proceso conocimos la forma de copilar estas aplicaciones y cargarlas en nuestra página, además de como podemos interactuar con el DOM desde ella.</p>
+
+<p>En próximos artículos hablaremos más acerca de esta tecnología y la aprovecharemos para explicar otros conceptos.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/webassembly/">
+                    #WebAssembly</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/wasm/">
+                    #WASM</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/september/06/estrenando-umarquez-c0d3-mx/" class="prev" rel="prev" title="Estrenando umarquez.c0d3.mx"><i class="iconfont icon-left"></i>&nbsp;Estrenando umarquez.c0d3.mx</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+                     <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "umarquez" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-106596153-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+     </div>
+  </body>
+</html>

@@ -41,7 +41,7 @@
     <item>
       <title>100daysofcode</title>
       <link>https://umarquez.c0d3.mx/tags/100daysofcode/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 23 Sep 2019 12:00:00 -0500</pubDate>
       
       <guid>https://umarquez.c0d3.mx/tags/100daysofcode/</guid>
       <description></description>
@@ -158,7 +158,7 @@
     <item>
       <title>Golang</title>
       <link>https://umarquez.c0d3.mx/tags/golang/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 23 Sep 2019 12:00:00 -0500</pubDate>
       
       <guid>https://umarquez.c0d3.mx/tags/golang/</guid>
       <description></description>
@@ -359,6 +359,24 @@
       <pubDate>Wed, 07 Aug 2019 00:00:00 -0500</pubDate>
       
       <guid>https://umarquez.c0d3.mx/tags/tramado/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WASM</title>
+      <link>https://umarquez.c0d3.mx/tags/wasm/</link>
+      <pubDate>Mon, 23 Sep 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/tags/wasm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WebAssembly</title>
+      <link>https://umarquez.c0d3.mx/tags/webassembly/</link>
+      <pubDate>Mon, 23 Sep 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/tags/webassembly/</guid>
       <description></description>
     </item>
     

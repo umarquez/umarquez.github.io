@@ -6,10 +6,20 @@
     <description>Recent content in 100daysofcode on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 16 Aug 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 12:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://umarquez.c0d3.mx/tags/100daysofcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go</title>
+      <link>https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/</link>
+      <pubDate>Mon, 23 Sep 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/september/23/31-100-100daysofc0d3/</guid>
+      <description>WebAssembly  WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C++/Rust, enabling deployment on the web for client and server applications.
+WebAssembly (abreviado Wasm) es un formato binario de instrucciones para una máquina virtual de tipo stack. Wasm está diseñado como objetivo portable para la compilación de lenguajes de alto nivel como C/C++/Rust, haciendo posible la implementación web de aplicaciones cliente y servidor.</description>
+    </item>
     
     <item>
       <title>[30/100] #100DaysOfC0D3 - Herencia &amp; Patrón Composite | Inheritance &amp; Composite Pattern</title>
