@@ -151,7 +151,9 @@ func main() {
 &lt;h3 id=&#34;slashes&#34;&gt;Slashes&lt;/h3&gt;
 
 
+
 &lt;div id=&#34;wasm_slashes&#34;&gt;&lt;/div&gt;
+
 &lt;script src=&#34;https://umarquez.c0d3.mx/js/wasm_exec.js&#34;&gt;&lt;/script&gt;
 &lt;script&gt;
 	if (!WebAssembly.instantiateStreaming) { 
