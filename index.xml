@@ -17,61 +17,6 @@
       <guid>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</guid>
       <description>
 
-&lt;p&gt;Implementación del algoritmo &lt;a href=&#34;https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Conway’s Game Of Life&lt;/a&gt; con emojis.&lt;/p&gt;
-
-
-
-&lt;div style=&#34;width:100%; overflow: auto;&#34;&gt;
-&lt;div id=&#34;wasm-container&#34; style=&#34;font-size:10px; width: max-content; font-family: Monospace; line-height: 13px;&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script src=&#34;https://umarquez.c0d3.mx/js/wasm_exec.js&#34;&gt;&lt;/script&gt;
-&lt;script&gt;
-	if (!WebAssembly.instantiateStreaming) { 
-		WebAssembly.instantiateStreaming = async (resp, importObject) =&gt; {
-			const source = await (await resp).arrayBuffer();
-			return await WebAssembly.instantiate(source, importObject);
-		};
-	}
-
-	const go = new Go();
-	let mod, inst;
-	WebAssembly.instantiateStreaming(fetch(&#34;/uploads/emoji-gol.wasm&#34;), go.importObject).then((result) =&gt; {
-		mod = result.module;
-		inst = result.instance;
-		
-		run()
-	}).catch((err) =&gt; {
-		console.error(err);
-	});
-
-	async function run() {
-		console.clear();
-		await go.run(inst);
-		inst = await WebAssembly.instantiate(mod, go.importObject); 
-	}
-&lt;/script&gt;
-
-&lt;h2 id=&#34;tecnologías&#34;&gt;Tecnologías:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Golang&lt;/li&gt;
-&lt;li&gt;WASM&lt;/li&gt;
-&lt;li&gt;HTML&lt;/li&gt;
-&lt;li&gt;JS&lt;/li&gt;
-&lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Emojis Game Of Life</title>
-      <link>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</link>
-      <pubDate>Thu, 03 Oct 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</guid>
-      <description>
-
 &lt;p&gt;Implementación del algoritmo &lt;a href=&#34;https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Conway&amp;rsquo;s Game Of Life&lt;/a&gt; con emojis.&lt;/p&gt;
 
 
@@ -1280,6 +1225,109 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 &lt;script src=&#34;https://gist.github.com/umarquez/05600cc1d9a7a961417c4cd5a7be2ab2.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/s36F5-fSAXbqx7y9Zc-FQQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[24/100] #100DaysOfC0D3 - Escalado de imágenes mediante interpolación bilineal</title>
+      <link>https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/</guid>
+      <description>
+
+&lt;h2 id=&#34;escalado-de-imágenes-mediante-interpolación-bilineal-image-scaling-applying-bilinear-interpolation&#34;&gt;Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Repo:&lt;/strong&gt; &lt;a href=&#34;https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, &lt;strong&gt;&lt;em&gt;x&lt;/em&gt;&lt;/strong&gt; e &lt;strong&gt;&lt;em&gt;y&lt;/em&gt;&lt;/strong&gt;) en una malla regular de dos dimensiones.
+&lt;a href=&#34;https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo &lt;a href=&#34;https://medium.com/@umarquez_mx/16-100-100daysofc0d3-eef81cd44afb&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;[&lt;sup&gt;16&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;]&lt;/strong&gt;&lt;/a&gt; antes de continuar.&lt;/p&gt;
+
+&lt;p&gt;Nuevamente tomaremos como referencia los píxeles originales que colocaremos en el píxel superior izquierdo de cada bloque de píxeles nuevos, esto hará que contemos con una matriz de &lt;code&gt;n x n&lt;/code&gt; en la que habremos distribuido la información original de manera uniforme.&lt;/p&gt;
+
+&lt;p&gt;Lo primero que deberemos hacer será interpolar linealmente de manera vertical cada píxel de la imagen hasta el siguiente píxel disponible dentro de la misma columna, con esto generaremos columnas que recorren toda la imagen nueva, a continuación solo bastará con interpolar de manera horizontal cada fila de píxeles vacíos, a modo de conectar una columna con otra.&lt;/p&gt;
+
+&lt;p&gt;Vamos a aplicar estos pasos en un ejemplo.&lt;/p&gt;
+
+&lt;h2 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h2&gt;
+
+&lt;p&gt;Vamos a escalar &lt;strong&gt;3:1&lt;/strong&gt; los siguientes píxeles utilizando interpolación bilineal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Liy-475ZHzFB8-muYLEONg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;paso-1&#34;&gt;Paso 1&lt;/h3&gt;
+
+&lt;p&gt;Generamos la nueva matriz y colocamos los valores originales en la nueva ubicación&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/lxOkJq4aMefTX4uF4ABOXg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;paso-2&#34;&gt;Paso 2&lt;/h3&gt;
+
+&lt;p&gt;A continuación deberemos conectar cada columna, interpolando entre los valores disponibles:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KYIUz6NLEPPlI1Q4wuvU3A.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A continuación se muestra el procedimiento a detalle para cada par de valores&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KecTYmu1-OGHTCyFcDq2uA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hemos decidido rellenar las últimas filas duplicando el último valor disponible debido a la falta de información.&lt;/p&gt;
+
+&lt;h3 id=&#34;paso-3&#34;&gt;Paso 3&lt;/h3&gt;
+
+&lt;p&gt;Una vez que contamos con las primeras columnas, procedemos a generar los valores para cada fila:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/MMdCXK_MBAoLbfoEE0UKNw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La fórmula será la misma que en el paso anterior: &lt;code&gt;valor = (((origen - destino) / escala) * posición) + origen&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;resultado&#34;&gt;Resultado&lt;/h3&gt;
+
+&lt;p&gt;Una vez que realicemos todos los cálculos terminaremos con los siguientes valores aproximados:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/cyYJZqxom6AYDwrFoEXbIA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;notas&#34;&gt;Notas&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Debemos mencionar que todos los valores son redondeados debido a que los colores de cada píxel solo aceptan colores con valores enteros positivos.&lt;/li&gt;
+&lt;li&gt;Deberemos definir un método para rellenar las orillas, en este caso se decidió duplicar los últimos valores.&lt;/li&gt;
+&lt;li&gt;Este método generará una especie de desenfoque que se intensifica entre mayor sea la proporción y es producto de la distorsión que genera la interpolación lineal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;implementación-en-go&#34;&gt;Implementación en Go&lt;/h2&gt;
+
+&lt;p&gt;Utilizaremos la interpolación por vecinos cercanos y la interpolación lineal para generar dos imágenes escaladas a partir de una imagen aleatoria de menor tamaño, de esta forma podremos comparar los resultados de que genera cada método.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/umarquez/17d41c028b459b70765ace3f88156691.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ix36a8UZPV5e7IvpmGwNew.jpeg&#34; alt=&#34;original&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/bOWszUcHHZsdFPv9RMW0cw.png&#34; alt=&#34;bilineal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/sVzQDfmlgUQOgeU78fDuaw.png&#34; alt=&#34;vecino cercano&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/01qpJEdG3Ar1EDtzmuti3g.jpeg&#34; alt=&#34;original&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/O-ZOCbXSCx93XfTIRc3pUg.png&#34; alt=&#34;bilineal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/c9kc3-bmLuOFytIfc-w47w.png&#34; alt=&#34;vecino cercano&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/sKUtmbDe_EggfcEesK74-g.jpeg&#34; alt=&#34;original&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fofJ-nImOMdy98Xh2BbAbg.png&#34; alt=&#34;bilineal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/aao5AbwzpYJNP96mOG7hsg.png&#34; alt=&#34;vecino cercano&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/qZLibqOTcylwRsFRJD8urQ.jpeg&#34; alt=&#34;original&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Vmoz-MrV1IafrlM57yXiDw.png&#34; alt=&#34;bilineal&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/i6p9VBaKJnbs4BzcPYZG5A.png&#34; alt=&#34;vecino cercano&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
