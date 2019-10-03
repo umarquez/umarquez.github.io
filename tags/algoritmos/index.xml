@@ -22,6 +22,17 @@ Autómatas Celulares  Un autómata celular (A.C.) es un modelo matemático para 
     </item>
     
     <item>
+      <title>[25/100] #100DaysOfC0D3 - Tramado | Dithering</title>
+      <link>https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/</guid>
+      <description>Tramado | Dithering Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering
+ El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles. https://es.wikipedia.org/wiki/Tramado
+ Si, este es un capítulo más de “Jugando con píxeles”; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado [20&amp;frasl;100] Segundo proyecto: Repintado, pero antes, vamos a tratar de explicar en qué consiste el tramado.</description>
+    </item>
+    
+    <item>
       <title>[15/100] #100DaysOfC0D3 - El vecino más cercano | Nearest neighbor search</title>
       <link>https://umarquez.c0d3.mx/2019/july/22/15-100-100daysofc0d3/</link>
       <pubDate>Mon, 22 Jul 2019 00:00:00 -0500</pubDate>
