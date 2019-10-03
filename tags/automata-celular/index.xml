@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automata Celular on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/tags/automata-celular/</link>
+    <description>Recent content in Automata Celular on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Tue, 01 Oct 2019 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/tags/automata-celular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[32/100] #100DaysOfC0D3 - Autómatas Celulares y el Juego de la Vida de John Conway</title>
+      <link>https://umarquez.c0d3.mx/2019/october/01/32-100-100daysofc0d3-conways-game-of-life/</link>
+      <pubDate>Tue, 01 Oct 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/october/01/32-100-100daysofc0d3-conways-game-of-life/</guid>
+      <description>Continuamos hablando de algoritmos, en esta ocasión exploraremos los Autómatas Celulares de la mano del &amp;ldquo;Juego de la Vida&amp;rdquo; de John Conway (Conway&amp;rsquo;s Game Of Life), vamos a implementar este algoritmo utilizando WASM y HTML para poder visualizarlo.
+Autómatas Celulares  Un autómata celular (A.C.) es un modelo matemático para un sistema dinámico que evoluciona en pasos discretos. Es adecuado para modelar sistemas naturales que puedan ser descritos como una colección masiva de objetos simples que interactúen localmente unos con otros.</description>
+    </item>
+    
+  </channel>
+</rss>
