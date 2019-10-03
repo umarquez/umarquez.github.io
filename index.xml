@@ -81,7 +81,7 @@
 
 &lt;p&gt;Un autómata celular es esencialmente una regla de evolución temporal sobre un conjunto discreto, es decir, dado un punto de este conjunto, presentamos una regla que le asocia otro punto del conjunto.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.revistaciencias.unam.mx/en/172-revistas/revista-ciencias-24/1572-una-introducci%C3%B3n-a-aut%C3%B3matas-celulares.html&#34; title=&#34;https://www.revistaciencias.unam.mx/en/172-revistas/revista-ciencias-24/1572-una-introducci%C3%B3n-a-aut%C3%B3matas-celulares.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.revistaciencias.unam.mx/en/172-revistas/revista-ciencias-&lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1572&lt;/sub&gt;-una-introducci%C3%B3n-a-aut%C3%B3matas-celulares.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.revistaciencias.unam.mx/en/172-revistas/revista-ciencias-24/1572-una-introducci%C3%B3n-a-aut%C3%B3matas-celulares.html&#34; title=&#34;https://www.revistaciencias.unam.mx/en/172-revistas/revista-ciencias-24/1572-una-introducci%C3%B3n-a-aut%C3%B3matas-celulares.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;www.revistaciencias.unam.mx/&amp;hellip;&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Es decir, un autómata celular es un conjunto de valores distribuidos dentro de un espacio (celdas en una rejilla) en donde el estado siguiente de cada elemento &lt;em&gt;(célula)&lt;/em&gt; está determinado por el estado actual del mismo y de los vecinos que lo afectan; la manera en que el estado de cada elemento afecta a sus vecinos está determinado por una serie de reglas que se aplican de manera uniforme a todo el conjunto cada vez. Esto quiere decir que, a partir de un estado inicial y aplicando las mismas reglas a cada elemento de manera individual podremos determinar el siguiente estado de todo el conjunto y de cada elemento en particular; si este procedimiento lo repetimos de manera constante tendremos un sistema que evoluciona a través del tiempo de forma más compleja, comparado con el comportamiento de una sola célula.&lt;/p&gt;
@@ -244,7 +244,7 @@ Siguiente&lt;/br&gt;Generación&lt;/button&gt;
 
 &lt;p&gt;La aplicación se encuentra funcionando en el siguiente link, pero la animación muestra algunas generaciones de muestra.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/&#34; title=&#34;https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/&#34; title=&#34;https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;/experimentos/emojis-game-of-life/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/emoji-gol.gif&#34; alt=&#34;Emojis Game Of Life&#34; title=&#34;Emojis Game Of Life&#34; /&gt;&lt;/p&gt;
 
