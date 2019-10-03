@@ -36,7 +36,7 @@
 
 	const go = new Go();
 	let mod, inst;
-	WebAssembly.instantiateStreaming(fetch(&#34;/uploads/emojis-gol.wasm&#34;), go.importObject).then((result) =&gt; {
+	WebAssembly.instantiateStreaming(fetch(&#34;/uploads/emoji-gol.wasm&#34;), go.importObject).then((result) =&gt; {
 		mod = result.module;
 		inst = result.instance;
 		
