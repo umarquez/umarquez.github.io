@@ -20,11 +20,7 @@
 &lt;p&gt;Implementación del algoritmo &lt;a href=&#34;https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Conway’s Game Of Life&lt;/a&gt; con emojis.&lt;/p&gt;
 
 
-
-&lt;div style=&#34;width:100%; overflow: auto;&#34;&gt;
-&lt;div id=&#34;wasm-container&#34; style=&#34;font-size:10px; width: max-content; font-family: Monospace; line-height: 13px;&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
+ &lt;div style=&#34;width:100%; overflow: auto;&#34;&gt; &lt;div id=&#34;wasm-container&#34; style=&#34;font-size:10px; width: max-content; font-family: Monospace; line-height: 13px; margin: auto;&#34;&gt;&lt;/div&gt; &lt;/div&gt; 
 &lt;script src=&#34;https://umarquez.c0d3.mx/js/wasm_exec.js&#34;&gt;&lt;/script&gt;
 &lt;script&gt;
 	if (!WebAssembly.instantiateStreaming) { 
