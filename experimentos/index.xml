@@ -17,7 +17,7 @@
       <pubDate>Thu, 03 Oct 2019 00:00:00 -0500</pubDate>
       
       <guid>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</guid>
-      <description>Implementación del algoritmo Conway&amp;rsquo;s Game Of Life con emojis.
+      <description>Implementación del algoritmo Conway’s Game Of Life con emojis.
     if (!WebAssembly.instantiateStreaming) { WebAssembly.instantiateStreaming = async (resp, importObject) = { const source = await (await resp).arrayBuffer(); return await WebAssembly.instantiate(source, importObject); }; } const go = new Go(); let mod, inst; WebAssembly.instantiateStreaming(fetch(&#34;/uploads/emoji-gol.wasm&#34;), go.importObject).then((result) = { mod = result.module; inst = result.instance; run() }).catch((err) = { console.error(err); }); async function run() { console.clear(); await go.run(inst); inst = await WebAssembly.</description>
     </item>
     
