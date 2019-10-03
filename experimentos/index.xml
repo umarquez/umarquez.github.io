@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experimentos on Uriel Márquez | @umarquez</title>
+    <link>https://umarquez.c0d3.mx/experimentos/</link>
+    <description>Recent content in Experimentos on Uriel Márquez | @umarquez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://umarquez.c0d3.mx/experimentos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emojis Game Of Life</title>
+      <link>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</guid>
+      <description>Implementación del algoritmo Conway&amp;rsquo;s Game Of Life con emojis.
+    if (!WebAssembly.instantiateStreaming) { WebAssembly.instantiateStreaming = async (resp, importObject) = { const source = await (await resp).arrayBuffer(); return await WebAssembly.instantiate(source, importObject); }; } const go = new Go(); let mod, inst; WebAssembly.instantiateStreaming(fetch(&#34;/uploads/emoji-gol.wasm&#34;), go.importObject).then((result) = { mod = result.module; inst = result.instance; run() }).catch((err) = { console.error(err); }); async function run() { console.clear(); await go.run(inst); inst = await WebAssembly.</description>
+    </item>
+    
+  </channel>
+</rss>

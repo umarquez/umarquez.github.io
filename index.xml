@@ -6,8 +6,63 @@
     <description>Recent content in Uriel Márquez | @umarquez on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Mon, 23 Sep 2019 12:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Emojis Game Of Life</title>
+      <link>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</guid>
+      <description>
+
+&lt;p&gt;Implementación del algoritmo &lt;a href=&#34;https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Conway&amp;rsquo;s Game Of Life&lt;/a&gt; con emojis.&lt;/p&gt;
+
+
+
+&lt;div style=&#34;width:100%; overflow: auto;&#34;&gt;
+&lt;div id=&#34;wasm-container&#34; style=&#34;font-size:10px; width: max-content; font-family: Monospace; line-height: 13px;&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&#34;https://umarquez.c0d3.mx/js/wasm_exec.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+	if (!WebAssembly.instantiateStreaming) { 
+		WebAssembly.instantiateStreaming = async (resp, importObject) =&gt; {
+			const source = await (await resp).arrayBuffer();
+			return await WebAssembly.instantiate(source, importObject);
+		};
+	}
+
+	const go = new Go();
+	let mod, inst;
+	WebAssembly.instantiateStreaming(fetch(&#34;/uploads/emoji-gol.wasm&#34;), go.importObject).then((result) =&gt; {
+		mod = result.module;
+		inst = result.instance;
+		
+		run()
+	}).catch((err) =&gt; {
+		console.error(err);
+	});
+
+	async function run() {
+		console.clear();
+		await go.run(inst);
+		inst = await WebAssembly.instantiate(mod, go.importObject); 
+	}
+&lt;/script&gt;
+
+&lt;h2 id=&#34;tecnologías&#34;&gt;Tecnologías:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Golang&lt;/li&gt;
+&lt;li&gt;WASM&lt;/li&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;li&gt;JS&lt;/li&gt;
+&lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>[31/100] #100DaysOfC0D3 - WebAssembly | WASM &amp; Go</title>
@@ -1273,58 +1328,6 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Vmoz-MrV1IafrlM57yXiDw.png&#34; alt=&#34;bilineal&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/i6p9VBaKJnbs4BzcPYZG5A.png&#34; alt=&#34;vecino cercano&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[22/100] #100DaysOfC0D3 - Ordenamiento Gnomo | Gnome Sort</title>
-      <link>https://umarquez.c0d3.mx/2019/august/01/22-100-100daysofc0d3/</link>
-      <pubDate>Thu, 01 Aug 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://umarquez.c0d3.mx/2019/august/01/22-100-100daysofc0d3/</guid>
-      <description>
-
-&lt;h2 id=&#34;ordenamiento-gnomo-gnome-sort&#34;&gt;Ordenamiento Gnomo | Gnome Sort&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Repo:&lt;/strong&gt; &lt;a href=&#34;https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/umarquez/100DaysOfC0D3/tree/master/22-gnome-sort&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Esta técnica consiste en recorrer la lista de elementos comparando cada uno con el valor que lo precede, si el anterior es mayor se intercambian y continuamos comparando a partir de la posición pasada.&lt;/p&gt;
-
-&lt;p&gt;En resumen, es una especie de ordenamiento burbuja que, una vez que encuentra un valor desordenado, vuelve sobre la lista hasta encontrar su ubicación para nuevamente volver a recorrerla hacia adelante, en forma de &lt;em&gt;zig-zag&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h2&gt;
-
-&lt;p&gt;Debemos ordenar los siguientes elemento:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fgZD9J87xo7lFdmeM3IYxQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;primer-paso&#34;&gt;Primer paso&lt;/h3&gt;
-
-&lt;p&gt;Comparamos el primer par de valores y los intercambiamos si se encontraran en desorden.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/jQVIppkNsYipNp3YPKxIKA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-dos&#34;&gt;Paso dos&lt;/h3&gt;
-
-&lt;p&gt;Debido a que ha habido un intercambio debemos volver una posición, si esta no tuviera predecesor, avanzamos una; seguimos comparando hasta encontrar un nuevo valor fuera de lugar.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/SgGZBdzRrsI2AUOXXuVKlA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-3&#34;&gt;Paso 3&lt;/h3&gt;
-
-&lt;p&gt;Repetimos el ciclo por cada valor fuera de lugar encontrado.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/vQQOPxwnuRh_rM2hXUpXsA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sabremos que la lista ha sido ordenada una vez que lleguemos el último elemento y este no requiera ser intercambiado.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/gM1YTsko9ptibFylN714zA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;implementación-en-go&#34;&gt;Implementación en Go&lt;/h2&gt;
-
-&lt;script src=&#34;https://gist.github.com/umarquez/c0f8ae640df532d723d1f5d74b546a81.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/aO_EchBRwb1ijqj1sPg7zA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

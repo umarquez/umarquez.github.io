@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r and Musician">
+  
+  
+  
+  
+  <link rel="canonical" href="https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Emojis Game Of Life | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="Emojis Game Of Life | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/" />
+<meta property="og:description" content="Implementación del algoritmo Conway&amp;amp;rsquo;s Game Of Life con emojis.
+    if (!WebAssembly.instantiateStreaming) { WebAssembly.instantiateStreaming = async (resp, importObject) = { const source = await (await resp).arrayBuffer(); return await WebAssembly.instantiate(source, importObject); }; } const go = new Go(); let mod, inst; WebAssembly.instantiateStreaming(fetch(&amp;#34;/uploads/emoji-gol.wasm&amp;#34;), go.importObject).then((result) = { mod = result.module; inst = result.instance; run() }).catch((err) = { console.error(err); }); async function run() { console.clear(); await go.run(inst); inst = await WebAssembly.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/umarquez_boxed.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="Emojis Game Of Life | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/">
+<meta itemprop="description" content="Implementación del algoritmo Conway&amp;amp;rsquo;s Game Of Life con emojis.
+    if (!WebAssembly.instantiateStreaming) { WebAssembly.instantiateStreaming = async (resp, importObject) = { const source = await (await resp).arrayBuffer(); return await WebAssembly.instantiate(source, importObject); }; } const go = new Go(); let mod, inst; WebAssembly.instantiateStreaming(fetch(&amp;#34;/uploads/emoji-gol.wasm&amp;#34;), go.importObject).then((result) = { mod = result.module; inst = result.instance; run() }).catch((err) = { console.error(err); }); async function run() { console.clear(); await go.run(inst); inst = await WebAssembly.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/umarquez_boxed.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emojis Game Of Life | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Implementación del algoritmo Conway&amp;amp;rsquo;s Game Of Life con emojis.
+    if (!WebAssembly.instantiateStreaming) { WebAssembly.instantiateStreaming = async (resp, importObject) = { const source = await (await resp).arrayBuffer(); return await WebAssembly.instantiate(source, importObject); }; } const go = new Go(); let mod, inst; WebAssembly.instantiateStreaming(fetch(&amp;#34;/uploads/emoji-gol.wasm&amp;#34;), go.importObject).then((result) = { mod = result.module; inst = result.instance; run() }).catch((err) = { console.error(err); }); async function run() { console.clear(); await go.run(inst); inst = await WebAssembly.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/umarquez_boxed.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/umarquez_boxed.png"/>
+
+  <meta name="title" content="Emojis Game Of Life | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "experimentos",
+    "name" : "Emojis Game Of Life",
+    "headline" : "Emojis Game Of Life",
+    "description" : "Implementación del algoritmo Conway&amp;amp;rsquo;s Game Of Life con emojis.
+    if (!WebAssembly.instantiateStreaming) { WebAssembly.instantiateStreaming = async (resp, importObject) = { const source = await (await resp).arrayBuffer(); return await WebAssembly.instantiate(source, importObject); }; } const go = new Go(); let mod, inst; WebAssembly.instantiateStreaming(fetch(&amp;#34;/uploads/emoji-gol.wasm&amp;#34;), go.importObject).then((result) = { mod = result.module; inst = result.instance; run() }).catch((err) = { console.error(err); }); async function run() { console.clear(); await go.run(inst); inst = await WebAssembly.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-03 00:00:00 -0500 -0500",
+    "dateModified" : "2019-10-03 00:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/",
+    "wordCount" : "74",
+    "keywords" : [  "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+
+<body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="Música">Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="Música">Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+        </div>
+    </div>
+</nav>
+        <main class="main">
+            <div class="container">
+                
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Emojis Game Of Life</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-10-03 itemprop="datePublished">October 3, 2019</time>
+                </span>
+                in
+                
+        </div>
+        <div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>Implementación del algoritmo <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" rel="nofollow noreferrer" target="_blank">Conway&rsquo;s Game Of Life</a> con emojis.</p>
+
+
+
+<div style="width:100%; overflow: auto;">
+<div id="wasm-container" style="font-size:10px; width: max-content; font-family: Monospace; line-height: 13px;"></div>
+</div>
+
+<script src="/js/wasm_exec.js"></script>
+<script>
+	if (!WebAssembly.instantiateStreaming) { 
+		WebAssembly.instantiateStreaming = async (resp, importObject) => {
+			const source = await (await resp).arrayBuffer();
+			return await WebAssembly.instantiate(source, importObject);
+		};
+	}
+
+	const go = new Go();
+	let mod, inst;
+	WebAssembly.instantiateStreaming(fetch("/uploads/emoji-gol.wasm"), go.importObject).then((result) => {
+		mod = result.module;
+		inst = result.instance;
+		
+		run()
+	}).catch((err) => {
+		console.error(err);
+	});
+
+	async function run() {
+		console.clear();
+		await go.run(inst);
+		inst = await WebAssembly.instantiate(mod, go.importObject); 
+	}
+</script>
+
+<h2 id="tecnologías">Tecnologías:</h2>
+
+<ul>
+<li>Golang</li>
+<li>WASM</li>
+<li>HTML</li>
+<li>JS</li>
+<li>CSS</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/>https://umarquez.c0d3.mx/experimentos/emojis-game-of-life/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+                     <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "umarquez" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                 
+          
+    </div>
+</article>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+  
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+    </div>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106596153-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106596153-2');
+    </script>
+</body>
+
+</html>
