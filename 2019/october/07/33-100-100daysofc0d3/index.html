@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="@umarquez">
+  <meta name="description" content="Uriel Márquez - C0D3r and Musician">
+  
+  
+  <link rel="prev" href="https://umarquez.c0d3.mx/2019/october/01/32-100-100daysofc0d3-conways-game-of-life/" />
+  
+  <link rel="canonical" href="https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           [33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1 | Uriel Márquez | @umarquez
+       
+  </title>
+
+  
+<meta property="og:title" content="[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1 | Uriel Márquez | @umarquez" />
+<meta property="og:url" content="https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/" />
+<meta property="og:description" content="Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.
+https://es.wikipedia.org/wiki/Web_scraping
+ Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.">
+<meta property="og:image" content="https://umarquez.c0d3.mx/uploads/33-web-scraping.png"/>
+<meta property="og:type" content="article" />
+<meta property="fb:app_id" content="799432727195684" />
+
+
+<meta itemprop="name" content="[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1 | Uriel Márquez | @umarquez">
+<html itemscope itemtype="https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/">
+<meta itemprop="description" content="Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.
+https://es.wikipedia.org/wiki/Web_scraping
+ Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.">
+<meta itemprop="image" content="https://umarquez.c0d3.mx/uploads/33-web-scraping.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1 | Uriel Márquez | @umarquez">
+<meta name="twitter:description" content="Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.
+https://es.wikipedia.org/wiki/Web_scraping
+ Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.">
+<meta name="twitter:image" content="https://umarquez.c0d3.mx/uploads/33-web-scraping.png">
+<meta name="twitter:site" content="@C0D3MX">
+<meta name="twitter:creator" content="@umarquez">
+<meta property="twitter:image" content="https://umarquez.c0d3.mx/uploads/33-web-scraping.png"/>
+
+  <meta name="title" content="[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1 | Uriel Márquez | @umarquez">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.min.css">
+  <link rel="stylesheet" href="/css/main.min.css" media="all">
+
+
+
+  
+  
+
+  
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https://umarquez.c0d3.mx"
+    },
+    "articleSection" : "posts",
+    "name" : "[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1",
+    "headline" : "[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1",
+    "description" : "Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.
+https://es.wikipedia.org/wiki/Web_scraping
+ Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.",
+    "inLanguage" : "es-mx",
+    "author" : "@umarquez",
+    "creator" : "@umarquez",
+    "publisher": "@umarquez",
+    "accountablePerson" : "@umarquez",
+    "copyrightHolder" : "@umarquez",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-10-07 12:00:00 -0500 -0500",
+    "dateModified" : "2019-10-07 12:00:00 -0500 -0500",
+    "url" : "https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/",
+    "wordCount" : "1546",
+    "keywords" : [ "Web Scraping","100daysofcode","100daysofc0d3","Golang", "Uriel Márquez | @umarquez"]
+}
+</script>
+
+</head>
+
+  
+             
+  
+
+
+
+<body class="">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=799432727195684&autoLogAppEvents=1"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="Música">Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+                <a class="menu-item" href="/experimentos/" title="Experimentos">Experimentos</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-twitter"></i></a>&nbsp;<a href="https://umarquez.c0d3.mx">Uriel Márquez | @umarquez</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/comunidad/" title="Comunidad">Comunidad</a>
+                
+                <a class="menu-item" href="/bio/" title="Profile">Profile</a>
+                
+                <a class="menu-item" href="/my-music/" title="Música">Música</a>
+                
+                <a class="menu-item" href="/posts" title="">Blog</a>
+                
+                <a class="menu-item" href="/experimentos/" title="Experimentos">Experimentos</a>
+                
+        </div>
+    </div>
+</nav>
+        <main class="main">
+            <div class="container">
+                
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://umarquez.c0d3.mx" rel="author">@umarquez</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-10-07 itemprop="datePublished">October 7, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://umarquez.c0d3.mx/categories/programacion/"> Programacion </a>
+                        <a href="https://umarquez.c0d3.mx/categories/-100daysofc0d3/">  100DaysOfC0D3 </a>
+                        <a href="https://umarquez.c0d3.mx/categories/golang-go/"> Golang Go </a>
+                        
+                </span>
+        </div>
+        <div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        <img src="https://umarquez.c0d3.mx/uploads/33-web-scraping.png" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<blockquote>
+<p>Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la <strong>World Wide Web</strong> ya sea utilizando el protocolo <strong><em>HTTP</em></strong> manualmente, o incrustando un navegador en una aplicación.</p>
+
+<p><a href="https://es.wikipedia.org/wiki/Web_scraping" title="https://es.wikipedia.org/wiki/Web_scraping" rel="nofollow noreferrer" target="_blank">https://es.wikipedia.org/wiki/Web_scraping</a></p>
+</blockquote>
+
+<p>Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.</p>
+
+<p>En este caso, vamos a obtener una lista de películas notables que se estrenaron desde hace 100 años hasta hoy en día, según <a href="https://en.wikipedia.org" rel="nofollow noreferrer" target="_blank">Wikipedia (en)</a>.</p>
+
+<p>Pero antes de comenzar a derrochar código debemos entender algunas cosas importantes:</p>
+
+<ul>
+<li>Vamos a utilizar solo la librería estándar de <strong><em>Go</em></strong> para realizar esta tarea, esto es debido a que vamos a construir nuestra propia aplicación de cero, para entender como funciona cada componente y lo que sucede internamente cuando navegamos un sitio web.</li>
+<li>Existen muchas formas de lograr el mismo objetivo, unas más efectivas que otras bajo ciertas condiciones, nuestro objetivo no es crear una herramienta que compita con las soluciones más sofisticadas de minería de datos, sino plantear una opción más a la que se puede recurrir.</li>
+<li>Algunas formas de minería de datos y <strong><em>web scraping</em></strong> pueden ser ilegales debido a la manera en que se extrae la información o el uso que se le de a esta, además de que constantemente se implementan soluciones que evitan la navegación automática de sitios web (como el uso de captcha y otros retos), debemos ser cuidadosos con este tipo de prácticas.</li>
+<li>Si realizamos muchas peticiones similares desde uno o varios orígenes es probable que el servicio piense que se trata de un ataque y hará lo necesario para tratar de evitarlo, a nadie le gusta que le roben información y menos que a causa de esto se provoque un <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack" title="Ataque de Denegación de Servicio" rel="nofollow noreferrer" target="_blank">_DoS _</a>a sus servidores.</li>
+</ul>
+
+<h2 id="primeros-pasos">Primeros pasos</h2>
+
+<p>Para comenzar, debemos conocer a grandes rasgos lo que sucede cuando un usuario ingresa a un sitio web con ayuda de su navegador:</p>
+
+<ul>
+<li>El usuario ingresa la <em>URL</em> del sitio en el navegador.</li>
+<li>El navegador prepara una petición <em>GET</em> a ese nombre de dominio o IP, solicitando la ruta de la página deseada.</li>
+<li>El servidor recibe la petición y genera la respuesta con los datos correspondientes (si se trata de un error o si es una ruta válida) y los envía como respuesta al cliente.</li>
+<li>El navegador recibe y evalúa la respuesta, y de ser necesario muestra el resultado en la ventana de este.</li>
+<li>En caso necesario generará las peticiones restantes para descargar el contenido como imágenes, videos, scripts, y otros recursos que conformen la página.</li>
+<li>En algunos casos, se establecerán conexiones o cargas adicionales de información conforme se navegue el sitio o sucedan eventos que modifiquen el contenido de este.</li>
+</ul>
+
+<p>Entendido esto, debemos generar un código que establezca una conexión <em>HTTP</em> con el sitio web que queremos explorar y descargue el código <code>HTML</code> que lo conforma:</p>
+
+<pre><code class="language-Go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;io/ioutil&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+)
+
+// loadPage hace una petición get a una URL y devuelve su contenido com un
+// []byte que será `nil` si ocurre un error.
+func loadPage(url string) (content []byte, err error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf(&quot;error obteniendo URL [%v]: %v&quot;, url, err)
+	}
+
+	content, err = ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, fmt.Errorf(&quot;error leyendo el contendio de [%v]: %v&quot;, url, err)
+	}
+
+	return
+}
+
+func main() {
+	rootUrl := &quot;https://en.wikipedia.org/wiki/1990_in_film&quot;
+	content, err := loadPage(rootUrl)
+	if err != nil {
+		log.Printf(&quot;ERROR - %v\n&quot;, err)
+		os.Exit(1)
+	}
+
+	fmt.Printf(&quot;%s\n&quot;, content)
+}
+</code></pre>
+
+<h2 id="limpiando-el-texto-obtenido">Limpiando el texto obtenido</h2>
+
+<p>Dentro del código <code>HTML</code> resultante, deberemos:</p>
+
+<ol>
+<li>buscar por la etiqueta <code>&lt;h2&gt;</code> que indica el inicio de los estrenos relevantes y limpiar el código anterior a este.</li>
+<li>Buscar el siguiente subtítulo (<code>&lt;h2&gt;</code>) y eliminar el código restante a partir de este.</li>
+<li>Dentro del texto restante, deberemos detectar todos los elementos de la lista que contengan la etiqueta <code>&lt;i&gt;</code> que indicaría el título de una película.</li>
+<li>Deberemos detectar si un título contiene  un enlace, en cuyo caso extraeremos y almacenaremos como parte del objeto resultante.</li>
+</ol>
+
+<h3 id="buscando-h2">Buscando <code>&lt;h2&gt;</code></h3>
+
+<p>Vamos a buscar las palabras <code>notable</code> y <code>release</code> que se encuentren dentro de una etiqueta <code>&lt;h2&gt;</code> con ayuda de expresiones regulares:</p>
+
+<p><code>&lt;h2&gt;.*notable.*released.*&lt;\/h2&gt;</code> - <a href="https://regex101.com/r/KMnmO8/1" rel="nofollow noreferrer" target="_blank">https://regex101.com/r/KMnmO8/1</a></p>
+
+<p>No esperamos encontrar más de un resultado, por lo que cualquier otro valor lo consideraremos una anomalía.</p>
+
+<p>Conservando el contenido a partir del cierre de la etiqueta <code>&lt;h2&gt;</code> detectada, realizaremos una búsqueda de la siguiente etiqueta <code>&lt;h2&gt;</code>, utilizando la expresión siguiente, y eliminaremos el texto a partir de esta.</p>
+
+<p><code>&lt;h2&gt;.*&lt;\/h2&gt;</code></p>
+
+<h3 id="elementos-de-la-lista">Elementos de la lista</h3>
+
+<p>Ahora vamos a buscar el inicio de cada <code>&lt;li&gt;</code> que contenga una etiqueta <code>&lt;i&gt;</code> enseguida:</p>
+
+<p><code>&lt;li&gt;&lt;i&gt;.*&lt;\/i&gt;</code> - <a href="https://regex101.com/r/Pg9Jbe/1" rel="nofollow noreferrer" target="_blank">https://regex101.com/r/Pg9Jbe/1</a></p>
+
+<p>Buscamos una etiqueta <code>&lt;a&gt;</code> al inicio de la etiqueta <code>&lt;i&gt;</code> de cada resultado, esto nos indicará que se trata de un enlace a la página de la película:</p>
+
+<p><code>&lt;i&gt;&lt;a href=\&quot;\S*\&quot;</code></p>
+
+<p>Si este fuera el caso, necesitaremos limpiar la url: <code>&lt;i&gt;&lt;a href=\&quot;</code> y el último caracter <code>\&quot;</code> para almacenar el resto.</p>
+
+<p>Ahora deberemos extraer el título de la película limpiando el inicio del elemento de la lista, incluso si este contara con un enlace:</p>
+
+<p><code>&lt;li&gt;&lt;i&gt;(&lt;a.*\&quot;&gt;)*</code></p>
+
+<p>De igual manera con el resto del contenido, con la siguiente expresión nos aseguramos de eliminar el resto del contenido:</p>
+
+<p><code>(&lt;\/*(a|i).*)</code></p>
+
+<p>Considerando algunas de las siguientes posibilidades:</p>
+
+<ul>
+<li>Se trata de un texto simple encerrado entre <code>&lt;i&gt;&lt;/i&gt;</code></li>
+<li>Se trata de un texto seguido de un enlace <code>&lt;i&gt;... &lt;a</code></li>
+<li>Se trata del texto de un enlace <code>&lt;a href=&quot;&quot;&gt;... &lt;/a&gt;</code></li>
+</ul>
+
+<h3 id="todo-en-una-función">Todo en una función:</h3>
+
+<pre><code class="language-golang">func findReleases(text string, year int) (movies []Movie, err error) {
+	// Dividimos el texto por el subtítulo que contenga los términos `notable` y
+	// `release` para limpiar la parte superior
+	startPattern := `(?mi)&lt;h2&gt;.*notable.*released.*&lt;\/h2&gt;`
+	resStrings := regexp.MustCompile(startPattern).Split(text, -1)
+
+	// En caso de no encontrar coincidencias o encontrar más de 1
+	if len(resStrings) &lt;= 1 {
+		return nil, nil
+	} else if len(resStrings) != 2 {
+		return nil, errors.New(&quot;Unexpected result&quot;)
+	}
+
+	// Ahora eliminamos el sobrante, dividiendolo por el siguiente subtítulo
+	endPattern := `(?mi)&lt;h2&gt;.*&lt;\/h2&gt;`
+	resStrings = regexp.MustCompile(endPattern).Split(resStrings[1], -1)
+
+	// Enseguida localizamos los elementos de la lista y el texto contenido,
+	// correspondiente a cada título
+	moviesList := resStrings[0]
+	//fmt.Printf(&quot;%v\n&quot;, moviesList)
+	itemPattern := `(?mi)&lt;li&gt;&lt;i&gt;.*&lt;/i&gt;`
+	resStrings = regexp.MustCompile(itemPattern).FindAllString(moviesList, -1)
+
+	// Vamos a limpiar cada elemento
+	for _, item := range resStrings {
+		// Comenzaremos detectando si se trata de un enlace
+		movie := Movie{}
+		hrefPattern := `(?mi)&lt;i&gt;&lt;a href=\&quot;\S*\&quot;`
+		hrefRx := regexp.MustCompile(hrefPattern)
+
+		// Si se trata de un enlace, entonces obtenemos el destino y los
+		// almacenamos como parte de la película
+		if hrefRx.MatchString(item) {
+			// Esto nos ayuda a limpiar el inicio de la url
+			hrefVal := hrefRx.FindAllString(item, 1)[0]
+			hrefPattern := `(?mi)&lt;i&gt;&lt;a href=\&quot;`
+			replRx := regexp.MustCompile(hrefPattern)
+			hrefVal = replRx.ReplaceAllString(hrefVal, &quot;&quot;)
+			// Y esto, el final
+			hrefVal = hrefVal[:len(hrefVal)-1]
+
+			// almacenamos el valor
+			movie.Link = hrefVal
+		}
+
+		// Ahora obtenemos el nombre de la película
+		replPattA := `(?mi)&lt;li&gt;&lt;i&gt;(&lt;a.*\&quot;&gt;)*`
+		replRx := regexp.MustCompile(replPattA)
+		strName := replRx.ReplaceAllString(item, &quot;&quot;)
+
+		replPattB := `(?mi)(&lt;\/*(a|i).*)`
+		replRx = regexp.MustCompile(replPattB)
+		strName = replRx.ReplaceAllString(strName, &quot;&quot;)
+
+		// Y lo almacenamos
+		movie.Title = strName
+
+		movie.Year = year
+
+		// agregamos la película al resultado
+		movies = append(movies, movie)
+	}
+
+	return
+}
+</code></pre>
+
+<blockquote>
+<p><strong>Nota:</strong> Podemos probar y jugar con expresiones regulares en este sitio que cuenta con muchas herramientas:</p>
+
+<p><a href="https://regex101.com/" title="https://regex101.com/" rel="nofollow noreferrer" target="_blank">https://regex101.com/</a></p>
+</blockquote>
+
+<h2 id="almacenando-los-datos">Almacenando los datos</h2>
+
+<p>Finalmente decidimos almacenar los datos obtenidos en archivos locales en formato <code>JSON</code> agrupados por año, con el fin de consultarlos más adelante y evitar visitar el sitio nuevamente cada vez que se requiera hacer una consulta.</p>
+
+<pre><code class="language-Golang">f, err := os.OpenFile(filePath, os.O_CREATE+os.O_WRONLY, os.ModePerm)
+if err != nil {
+	log.Printf(&quot;ERROR - error openning file for write, %v\n&quot;, err)
+	continue
+}
+
+jsonEnc := json.NewEncoder(f)
+jsonEnc.SetIndent(&quot;&quot;, &quot;  &quot;)
+err = jsonEnc.Encode(movies)
+if err != nil {
+	log.Printf(&quot;ERROR - error encoding results, %v\n&quot;, err)
+	continue
+}
+
+err = f.Sync()
+if err != nil {
+	log.Printf(&quot;ERROR - error while sync file, %v\n&quot;, err)
+	continue
+}
+
+log.Print(&quot;\t - closing file\n&quot;)
+err = f.Close()
+if err != nil {
+	log.Printf(&quot;ERROR - error closing file, %v\n&quot;, err)
+	continue
+}
+</code></pre>
+
+<h2 id="programa-completo">Programa completo</h2>
+
+<script src="https://gist.github.com/umarquez/dea7fd0023277f470986248784c1f356.js"></script>
+
+<h3 id="salida">Salida</h3>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/out-scraping.png" data-sizes="auto" alt="Salida parcial" title="Salida parcial" class="lazyload"><figcaption class="image-caption">Salida parcial</figcaption></figure></p>
+
+<h3 id="datos-recuperados">Datos recuperados</h3>
+
+<p><figure><img src="/images/ring.svg" data-src="/uploads/partial-json.png" data-sizes="auto" alt="1960.json" title="1960.json" class="lazyload"><figcaption class="image-caption">1960.json</figcaption></figure></p>
+
+<h2 id="algunas-conclusiones">Algunas conclusiones</h2>
+
+<h3 id="calidad-de-los-datos">Calidad de los datos</h3>
+
+<p>Se observaron algunos títulos con errores de formato que alteran su valor; en este caso se trata de errores al momento de la captura por lo que no teneos muchas opciones más que detectarlos y tratarlos de manera específica hasta satisfacer todos los casos, o tratar de obtener el valor correcto desde la <em>URL</em> particular de cada película, si se contara con esta.</p>
+
+<h3 id="velocidad-de-minado">Velocidad de minado</h3>
+
+<p>Debido a que se trata de un minado secuencial no podemos procesar más de una <em>URL</em> a la vez,  esto limita la velocidad de obtención de datos pero también reduce las conexiones y sesiones activas en el servidor.</p>
+
+<h2 id="palabras-finales">Palabras finales</h2>
+
+<p>Hemos realizado un <em>scraping</em> sencillo que no ha implicado situaciones más complejas como autenticación o técnicas de evasión; esto nos ayuda a entender el proceso básico de consulta de una <em>URL</em> y la manera en que podemos aprovechar las expresiones regulares para detectar y extraer la información requerida.</p>
+
+<p>No me quiero despedir si recordarte que contamos con un servidor en Discord al que puedes unirte para platicar de estos temas accediendo a la sección <a href="/comunidad"><strong>comunidad</strong></a> o dando click en el <a href="/comunidad">enlace</a>; de igual forma me gustaría saber tu opinión y sugerencias, déjame un comentario más abajo o en cualquiera de mis redes.</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>@umarquez </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/>https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                Este documento está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons Attribution-Noncommercial 4.0 International License.</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/web-scraping/">
+                    #Web Scraping</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofcode/">
+                    #100daysofcode</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/100daysofc0d3/">
+                    #100daysofc0d3</a></span>
+            
+            <span class="tag"><a href="https://umarquez.c0d3.mx/tags/golang/">
+                    #Golang</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://umarquez.c0d3.mx">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://umarquez.c0d3.mx/2019/october/01/32-100-100daysofc0d3-conways-game-of-life/" class="prev" rel="prev" title="[32/100] #100DaysOfC0D3 - Autómatas Celulares y el Juego de la Vida de John Conway"><i class="iconfont icon-left"></i>&nbsp;[32/100] #100DaysOfC0D3 - Autómatas Celulares y el Juego de la Vida de John Conway</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+                     <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "umarquez" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                 
+          
+    </div>
+</article>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://umarquez.c0d3.mx">@umarquez</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+  
+  
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1746354538935372');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1746354538935372&ev=PageView&noscript=1"
+/></noscript>
+
+
+    </div>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106596153-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106596153-2');
+    </script>
+</body>
+
+</html>

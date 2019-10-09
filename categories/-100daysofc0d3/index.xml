@@ -6,10 +6,21 @@
     <description>Recent content in  100DaysOfC0D3 on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Tue, 01 Oct 2019 12:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 12:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://umarquez.c0d3.mx/categories/-100daysofc0d3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1</title>
+      <link>https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/</link>
+      <pubDate>Mon, 07 Oct 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/</guid>
+      <description>Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.
+https://es.wikipedia.org/wiki/Web_scraping
+ Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.</description>
+    </item>
     
     <item>
       <title>[32/100] #100DaysOfC0D3 - Autómatas Celulares y el Juego de la Vida de John Conway</title>

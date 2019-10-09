@@ -6,8 +6,277 @@
     <description>Recent content in Uriel Márquez | @umarquez on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 12:00:00 -0500</lastBuildDate>
     <atom:link href="" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1</title>
+      <link>https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/</link>
+      <pubDate>Mon, 07 Oct 2019 12:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/october/07/33-100-100daysofc0d3/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la &lt;strong&gt;World Wide Web&lt;/strong&gt; ya sea utilizando el protocolo &lt;strong&gt;&lt;em&gt;HTTP&lt;/em&gt;&lt;/strong&gt; manualmente, o incrustando un navegador en una aplicación.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Web_scraping&#34; title=&#34;https://es.wikipedia.org/wiki/Web_scraping&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://es.wikipedia.org/wiki/Web_scraping&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nuestro objetivo será crear una aplicación capaz de detectar y minar información de un sitio web con el fin de conformar una base de datos de la que podamos extraer y analizar información para nuestro beneficio.&lt;/p&gt;
+
+&lt;p&gt;En este caso, vamos a obtener una lista de películas notables que se estrenaron desde hace 100 años hasta hoy en día, según &lt;a href=&#34;https://en.wikipedia.org&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Wikipedia (en)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero antes de comenzar a derrochar código debemos entender algunas cosas importantes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vamos a utilizar solo la librería estándar de &lt;strong&gt;&lt;em&gt;Go&lt;/em&gt;&lt;/strong&gt; para realizar esta tarea, esto es debido a que vamos a construir nuestra propia aplicación de cero, para entender como funciona cada componente y lo que sucede internamente cuando navegamos un sitio web.&lt;/li&gt;
+&lt;li&gt;Existen muchas formas de lograr el mismo objetivo, unas más efectivas que otras bajo ciertas condiciones, nuestro objetivo no es crear una herramienta que compita con las soluciones más sofisticadas de minería de datos, sino plantear una opción más a la que se puede recurrir.&lt;/li&gt;
+&lt;li&gt;Algunas formas de minería de datos y &lt;strong&gt;&lt;em&gt;web scraping&lt;/em&gt;&lt;/strong&gt; pueden ser ilegales debido a la manera en que se extrae la información o el uso que se le de a esta, además de que constantemente se implementan soluciones que evitan la navegación automática de sitios web (como el uso de captcha y otros retos), debemos ser cuidadosos con este tipo de prácticas.&lt;/li&gt;
+&lt;li&gt;Si realizamos muchas peticiones similares desde uno o varios orígenes es probable que el servicio piense que se trata de un ataque y hará lo necesario para tratar de evitarlo, a nadie le gusta que le roben información y menos que a causa de esto se provoque un &lt;a href=&#34;https://en.wikipedia.org/wiki/Denial-of-service_attack&#34; title=&#34;Ataque de Denegación de Servicio&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;_DoS _&lt;/a&gt;a sus servidores.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;primeros-pasos&#34;&gt;Primeros pasos&lt;/h2&gt;
+
+&lt;p&gt;Para comenzar, debemos conocer a grandes rasgos lo que sucede cuando un usuario ingresa a un sitio web con ayuda de su navegador:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El usuario ingresa la &lt;em&gt;URL&lt;/em&gt; del sitio en el navegador.&lt;/li&gt;
+&lt;li&gt;El navegador prepara una petición &lt;em&gt;GET&lt;/em&gt; a ese nombre de dominio o IP, solicitando la ruta de la página deseada.&lt;/li&gt;
+&lt;li&gt;El servidor recibe la petición y genera la respuesta con los datos correspondientes (si se trata de un error o si es una ruta válida) y los envía como respuesta al cliente.&lt;/li&gt;
+&lt;li&gt;El navegador recibe y evalúa la respuesta, y de ser necesario muestra el resultado en la ventana de este.&lt;/li&gt;
+&lt;li&gt;En caso necesario generará las peticiones restantes para descargar el contenido como imágenes, videos, scripts, y otros recursos que conformen la página.&lt;/li&gt;
+&lt;li&gt;En algunos casos, se establecerán conexiones o cargas adicionales de información conforme se navegue el sitio o sucedan eventos que modifiquen el contenido de este.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Entendido esto, debemos generar un código que establezca una conexión &lt;em&gt;HTTP&lt;/em&gt; con el sitio web que queremos explorar y descargue el código &lt;code&gt;HTML&lt;/code&gt; que lo conforma:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Go&#34;&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;io/ioutil&amp;quot;
+	&amp;quot;log&amp;quot;
+	&amp;quot;net/http&amp;quot;
+	&amp;quot;os&amp;quot;
+)
+
+// loadPage hace una petición get a una URL y devuelve su contenido com un
+// []byte que será `nil` si ocurre un error.
+func loadPage(url string) (content []byte, err error) {
+	res, err := http.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf(&amp;quot;error obteniendo URL [%v]: %v&amp;quot;, url, err)
+	}
+
+	content, err = ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, fmt.Errorf(&amp;quot;error leyendo el contendio de [%v]: %v&amp;quot;, url, err)
+	}
+
+	return
+}
+
+func main() {
+	rootUrl := &amp;quot;https://en.wikipedia.org/wiki/1990_in_film&amp;quot;
+	content, err := loadPage(rootUrl)
+	if err != nil {
+		log.Printf(&amp;quot;ERROR - %v\n&amp;quot;, err)
+		os.Exit(1)
+	}
+
+	fmt.Printf(&amp;quot;%s\n&amp;quot;, content)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;limpiando-el-texto-obtenido&#34;&gt;Limpiando el texto obtenido&lt;/h2&gt;
+
+&lt;p&gt;Dentro del código &lt;code&gt;HTML&lt;/code&gt; resultante, deberemos:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;buscar por la etiqueta &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; que indica el inicio de los estrenos relevantes y limpiar el código anterior a este.&lt;/li&gt;
+&lt;li&gt;Buscar el siguiente subtítulo (&lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;) y eliminar el código restante a partir de este.&lt;/li&gt;
+&lt;li&gt;Dentro del texto restante, deberemos detectar todos los elementos de la lista que contengan la etiqueta &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; que indicaría el título de una película.&lt;/li&gt;
+&lt;li&gt;Deberemos detectar si un título contiene  un enlace, en cuyo caso extraeremos y almacenaremos como parte del objeto resultante.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;buscando-h2&#34;&gt;Buscando &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Vamos a buscar las palabras &lt;code&gt;notable&lt;/code&gt; y &lt;code&gt;release&lt;/code&gt; que se encuentren dentro de una etiqueta &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; con ayuda de expresiones regulares:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;h2&amp;gt;.*notable.*released.*&amp;lt;\/h2&amp;gt;&lt;/code&gt; - &lt;a href=&#34;https://regex101.com/r/KMnmO8/1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://regex101.com/r/KMnmO8/1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No esperamos encontrar más de un resultado, por lo que cualquier otro valor lo consideraremos una anomalía.&lt;/p&gt;
+
+&lt;p&gt;Conservando el contenido a partir del cierre de la etiqueta &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; detectada, realizaremos una búsqueda de la siguiente etiqueta &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;, utilizando la expresión siguiente, y eliminaremos el texto a partir de esta.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;h2&amp;gt;.*&amp;lt;\/h2&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;elementos-de-la-lista&#34;&gt;Elementos de la lista&lt;/h3&gt;
+
+&lt;p&gt;Ahora vamos a buscar el inicio de cada &lt;code&gt;&amp;lt;li&amp;gt;&lt;/code&gt; que contenga una etiqueta &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; enseguida:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;li&amp;gt;&amp;lt;i&amp;gt;.*&amp;lt;\/i&amp;gt;&lt;/code&gt; - &lt;a href=&#34;https://regex101.com/r/Pg9Jbe/1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://regex101.com/r/Pg9Jbe/1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Buscamos una etiqueta &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; al inicio de la etiqueta &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; de cada resultado, esto nos indicará que se trata de un enlace a la página de la película:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;i&amp;gt;&amp;lt;a href=\&amp;quot;\S*\&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Si este fuera el caso, necesitaremos limpiar la url: &lt;code&gt;&amp;lt;i&amp;gt;&amp;lt;a href=\&amp;quot;&lt;/code&gt; y el último caracter &lt;code&gt;\&amp;quot;&lt;/code&gt; para almacenar el resto.&lt;/p&gt;
+
+&lt;p&gt;Ahora deberemos extraer el título de la película limpiando el inicio del elemento de la lista, incluso si este contara con un enlace:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;li&amp;gt;&amp;lt;i&amp;gt;(&amp;lt;a.*\&amp;quot;&amp;gt;)*&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;De igual manera con el resto del contenido, con la siguiente expresión nos aseguramos de eliminar el resto del contenido:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;(&amp;lt;\/*(a|i).*)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Considerando algunas de las siguientes posibilidades:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Se trata de un texto simple encerrado entre &lt;code&gt;&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Se trata de un texto seguido de un enlace &lt;code&gt;&amp;lt;i&amp;gt;... &amp;lt;a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Se trata del texto de un enlace &lt;code&gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;... &amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;todo-en-una-función&#34;&gt;Todo en una función:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;func findReleases(text string, year int) (movies []Movie, err error) {
+	// Dividimos el texto por el subtítulo que contenga los términos `notable` y
+	// `release` para limpiar la parte superior
+	startPattern := `(?mi)&amp;lt;h2&amp;gt;.*notable.*released.*&amp;lt;\/h2&amp;gt;`
+	resStrings := regexp.MustCompile(startPattern).Split(text, -1)
+
+	// En caso de no encontrar coincidencias o encontrar más de 1
+	if len(resStrings) &amp;lt;= 1 {
+		return nil, nil
+	} else if len(resStrings) != 2 {
+		return nil, errors.New(&amp;quot;Unexpected result&amp;quot;)
+	}
+
+	// Ahora eliminamos el sobrante, dividiendolo por el siguiente subtítulo
+	endPattern := `(?mi)&amp;lt;h2&amp;gt;.*&amp;lt;\/h2&amp;gt;`
+	resStrings = regexp.MustCompile(endPattern).Split(resStrings[1], -1)
+
+	// Enseguida localizamos los elementos de la lista y el texto contenido,
+	// correspondiente a cada título
+	moviesList := resStrings[0]
+	//fmt.Printf(&amp;quot;%v\n&amp;quot;, moviesList)
+	itemPattern := `(?mi)&amp;lt;li&amp;gt;&amp;lt;i&amp;gt;.*&amp;lt;/i&amp;gt;`
+	resStrings = regexp.MustCompile(itemPattern).FindAllString(moviesList, -1)
+
+	// Vamos a limpiar cada elemento
+	for _, item := range resStrings {
+		// Comenzaremos detectando si se trata de un enlace
+		movie := Movie{}
+		hrefPattern := `(?mi)&amp;lt;i&amp;gt;&amp;lt;a href=\&amp;quot;\S*\&amp;quot;`
+		hrefRx := regexp.MustCompile(hrefPattern)
+
+		// Si se trata de un enlace, entonces obtenemos el destino y los
+		// almacenamos como parte de la película
+		if hrefRx.MatchString(item) {
+			// Esto nos ayuda a limpiar el inicio de la url
+			hrefVal := hrefRx.FindAllString(item, 1)[0]
+			hrefPattern := `(?mi)&amp;lt;i&amp;gt;&amp;lt;a href=\&amp;quot;`
+			replRx := regexp.MustCompile(hrefPattern)
+			hrefVal = replRx.ReplaceAllString(hrefVal, &amp;quot;&amp;quot;)
+			// Y esto, el final
+			hrefVal = hrefVal[:len(hrefVal)-1]
+
+			// almacenamos el valor
+			movie.Link = hrefVal
+		}
+
+		// Ahora obtenemos el nombre de la película
+		replPattA := `(?mi)&amp;lt;li&amp;gt;&amp;lt;i&amp;gt;(&amp;lt;a.*\&amp;quot;&amp;gt;)*`
+		replRx := regexp.MustCompile(replPattA)
+		strName := replRx.ReplaceAllString(item, &amp;quot;&amp;quot;)
+
+		replPattB := `(?mi)(&amp;lt;\/*(a|i).*)`
+		replRx = regexp.MustCompile(replPattB)
+		strName = replRx.ReplaceAllString(strName, &amp;quot;&amp;quot;)
+
+		// Y lo almacenamos
+		movie.Title = strName
+
+		movie.Year = year
+
+		// agregamos la película al resultado
+		movies = append(movies, movie)
+	}
+
+	return
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Podemos probar y jugar con expresiones regulares en este sitio que cuenta con muchas herramientas:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://regex101.com/&#34; title=&#34;https://regex101.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://regex101.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;almacenando-los-datos&#34;&gt;Almacenando los datos&lt;/h2&gt;
+
+&lt;p&gt;Finalmente decidimos almacenar los datos obtenidos en archivos locales en formato &lt;code&gt;JSON&lt;/code&gt; agrupados por año, con el fin de consultarlos más adelante y evitar visitar el sitio nuevamente cada vez que se requiera hacer una consulta.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Golang&#34;&gt;f, err := os.OpenFile(filePath, os.O_CREATE+os.O_WRONLY, os.ModePerm)
+if err != nil {
+	log.Printf(&amp;quot;ERROR - error openning file for write, %v\n&amp;quot;, err)
+	continue
+}
+
+jsonEnc := json.NewEncoder(f)
+jsonEnc.SetIndent(&amp;quot;&amp;quot;, &amp;quot;  &amp;quot;)
+err = jsonEnc.Encode(movies)
+if err != nil {
+	log.Printf(&amp;quot;ERROR - error encoding results, %v\n&amp;quot;, err)
+	continue
+}
+
+err = f.Sync()
+if err != nil {
+	log.Printf(&amp;quot;ERROR - error while sync file, %v\n&amp;quot;, err)
+	continue
+}
+
+log.Print(&amp;quot;\t - closing file\n&amp;quot;)
+err = f.Close()
+if err != nil {
+	log.Printf(&amp;quot;ERROR - error closing file, %v\n&amp;quot;, err)
+	continue
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;programa-completo&#34;&gt;Programa completo&lt;/h2&gt;
+
+&lt;script src=&#34;https://gist.github.com/umarquez/dea7fd0023277f470986248784c1f356.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;salida&#34;&gt;Salida&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/out-scraping.png&#34; alt=&#34;Salida parcial&#34; title=&#34;Salida parcial&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;datos-recuperados&#34;&gt;Datos recuperados&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/partial-json.png&#34; alt=&#34;1960.json&#34; title=&#34;1960.json&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;algunas-conclusiones&#34;&gt;Algunas conclusiones&lt;/h2&gt;
+
+&lt;h3 id=&#34;calidad-de-los-datos&#34;&gt;Calidad de los datos&lt;/h3&gt;
+
+&lt;p&gt;Se observaron algunos títulos con errores de formato que alteran su valor; en este caso se trata de errores al momento de la captura por lo que no teneos muchas opciones más que detectarlos y tratarlos de manera específica hasta satisfacer todos los casos, o tratar de obtener el valor correcto desde la &lt;em&gt;URL&lt;/em&gt; particular de cada película, si se contara con esta.&lt;/p&gt;
+
+&lt;h3 id=&#34;velocidad-de-minado&#34;&gt;Velocidad de minado&lt;/h3&gt;
+
+&lt;p&gt;Debido a que se trata de un minado secuencial no podemos procesar más de una &lt;em&gt;URL&lt;/em&gt; a la vez,  esto limita la velocidad de obtención de datos pero también reduce las conexiones y sesiones activas en el servidor.&lt;/p&gt;
+
+&lt;h2 id=&#34;palabras-finales&#34;&gt;Palabras finales&lt;/h2&gt;
+
+&lt;p&gt;Hemos realizado un &lt;em&gt;scraping&lt;/em&gt; sencillo que no ha implicado situaciones más complejas como autenticación o técnicas de evasión; esto nos ayuda a entender el proceso básico de consulta de una &lt;em&gt;URL&lt;/em&gt; y la manera en que podemos aprovechar las expresiones regulares para detectar y extraer la información requerida.&lt;/p&gt;
+
+&lt;p&gt;No me quiero despedir si recordarte que contamos con un servidor en Discord al que puedes unirte para platicar de estos temas accediendo a la sección &lt;a href=&#34;https://umarquez.c0d3.mx/comunidad&#34;&gt;&lt;strong&gt;comunidad&lt;/strong&gt;&lt;/a&gt; o dando click en el &lt;a href=&#34;https://umarquez.c0d3.mx/comunidad&#34;&gt;enlace&lt;/a&gt;; de igual forma me gustaría saber tu opinión y sugerencias, déjame un comentario más abajo o en cualquiera de mis redes.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Emojis Game Of Life</title>
@@ -515,6 +784,12 @@ func main() {
 &lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/31&#34;&gt;[&lt;sup&gt;31&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — WebAssembly | WASM &amp;amp; Go&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&#34;autómatas-celulares&#34;&gt;Autómatas Celulares&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/32&#34;&gt;[&lt;sup&gt;32&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — El Juego de la Vida de John Conway | Conway&amp;rsquo;s Game of Life &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;patrones-de-diseño&#34;&gt;Patrones de diseño&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -551,6 +826,12 @@ func main() {
 &lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/18&#34;&gt;[&lt;sup&gt;18&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — TEA | Tiny Encryption Algorithm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/26&#34;&gt;[&lt;sup&gt;26&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Shell a través de WebSocket | Shell through WebSocket&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/28&#34;&gt;[&lt;sup&gt;28&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Escaneo de puertos TCP | TCP port scanning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;web-scraping&#34;&gt;Web Scraping&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umarquez.c0d3.mx/100DaysOfC0D3/33&#34;&gt;[&lt;sup&gt;33&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;] — Golang &amp;amp; Web Scraping para principiantes | Parte 1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -1340,93 +1621,6 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/WLgkK0cPSVDA0TzFztA3QQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/YUBXukXx35cJ1REqBGB3Vg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[23/100] #100DaysOfC0D3 - Compresión LZ77 | LZ77 Compression Algorithm</title>
-      <link>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</link>
-      <pubDate>Mon, 05 Aug 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://umarquez.c0d3.mx/2019/august/05/23-100-100daysofc0d3/</guid>
-      <description>
-
-&lt;h2 id=&#34;compresión-lz77-lz77-compression-algorithm&#34;&gt;Compresión LZ77 | LZ77 Compression Algorithm&lt;/h2&gt;
-
-&lt;p&gt;Después de muchos intentos y fracasos, y dos días de trabajo; vamos a jugar a la compresión…&lt;/p&gt;
-
-&lt;p&gt;La compresión es un método que nos ayuda a reducir el tamaño que requiere almacenar cierta información, haciendo uso de diferentes técnicas que pueden, o no, degradar la información procesada; permitiendo recuperar los datos suficientes para que esta sea funcional para nosotros.&lt;/p&gt;
-
-&lt;p&gt;En el caso de las imágenes, el audio o el video, por ejemplo, no es necesario recuperar el 100% de la información para entender el contenido de esta; de la misma manera que una línea telefónica degrada el sonido para que este sea manejable y requiera menor tiempo de transmisión y ancho de banda, pudiendo incrementar la capacidad de servicio.&lt;/p&gt;
-
-&lt;p&gt;Los dinosaurios recordaremos la calidad de las transmisiones de las estaciones de radio por Internet hace algunos años &lt;strong&gt;&lt;em&gt;A.YT.&lt;/em&gt;&lt;/strong&gt; (&lt;em&gt;Antes de &lt;strong&gt;YouTube&lt;/strong&gt;&lt;/em&gt;), o aquellos primeros &lt;em&gt;streammings&lt;/em&gt; por &lt;strong&gt;&lt;em&gt;RealPlayer&lt;/em&gt;&lt;/strong&gt; que a ratos parecía rompecabezas y uno casi tenía que imaginarse 5 de cada 10 FPS, o el plug-in o reproductor que debíamos instalar para que los archivos &lt;strong&gt;&lt;em&gt;MP3-Pro&lt;/em&gt;&lt;/strong&gt; no se escucharan “tan mal”, dentro de lo posible…&lt;/p&gt;
-
-&lt;p&gt;Por otro lado, tenemos formatos como &lt;strong&gt;&lt;em&gt;TIF&lt;/em&gt;&lt;/strong&gt; que soportan compresión sin pérdida, es decir, que tenemos la seguridad de almacenar una imagen de alta calidad en un espacio menor al que ocupa la información de cada píxel que la compone, siendo posible reconstruirla hasta obtener esta imagen original, o por lo menos una copia fiel de esta. El herramientas como &lt;strong&gt;&lt;em&gt;WinZip&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;WinRar&lt;/em&gt;&lt;/strong&gt; o &lt;strong&gt;&lt;em&gt;7Zip&lt;/em&gt;&lt;/strong&gt;, por mencionar algunas, que son capaces de almacenar varios archivos dentro de uno mismo que ocupa menos espacio que la suma del espacio necesario para almacenar cada uno; y que en algunos casos hasta es capaz de seccionar el archivo de salida en archivos más pequeños, pudiendo reconstruir la estructura completa de archivos, directorios y contenidos almacenados originalmente.&lt;/p&gt;
-
-&lt;p&gt;En este caso trataremos con un algoritmo sin pérdidas, uno de los primeros que sirvió de influencia para otros más sofisticados.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;En este algoritmo el codificador analiza el texto como una secuencia de caracteres, mediante una ventana deslizable compuesta por dos partes; un buffer de anticipación que es la opción que está a punto de ser codificada y un buffer de búsqueda &lt;em&gt;(la ventana en sí).&lt;/em&gt;
-&lt;a href=&#34;https://www.ecured.cu/Lz77#Funcionamiento&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.ecured.cu/Lz77#Funcionamiento&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;funcionamiento&#34;&gt;Funcionamiento&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;El algoritmo recorre el texto de manera progresiva, buscando cada vez coincidencias hacia atrás, pudiendo volver n caracteres definidos por el tamaño de la ventana.&lt;/li&gt;
-&lt;li&gt;Si dentro de este rango se llega al inicio del texto o no se encuentran coincidencias lo suficientemente grandes, se almacena el valor del caracter actual y se avanza una posición repitiendo el ciclo.&lt;/li&gt;
-&lt;li&gt;Si existiera una coincidencia, se almacena la posición y se evalúan los caracteres subsecuentes de la cadena y de la posición de la primer coincidencia&lt;/li&gt;
-&lt;li&gt;Si el tamaño de la coincidencia fuera mayor al tamaño requerido para almacenar un bloque (en este caso &lt;strong&gt;&lt;em&gt;5 caracteres&lt;/em&gt;&lt;/strong&gt;), se crea un nuevo bloque y se almacena dentro de el la cantidad de caracteres hacia atrás dela posición actual en donde encontraremos la coincidencia de los primeros caracteres y la cantidad de caracteres que coinciden y deberemos copiar para concatenarlos a la salida y reconstruir el texto.&lt;/li&gt;
-&lt;li&gt;Reemplazamos el texto en el buffer de salida por el bloque y nos desplazamos hacia adelante la cantidad de caracteres comprimidos.&lt;/li&gt;
-&lt;li&gt;Si hemos llegado al final del texto, habremos concluido el proceso de compresión.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;ejemplo-con-dibujitos&#34;&gt;Ejemplo con dibujitos…&lt;/h2&gt;
-
-&lt;p&gt;Vamos a comprimir el siguiente texto utilizando LZ77, nuestro caracter para marcar el inicio de cada bloque será: | y cada bloque almacenará dos valores de 00 a FF, uno para definir el tamaño del desplazamiento y otro para definir el tamaño de la coincidencia por lo que cada bloque ocupará 5 caracteres de espacio; es importante remarcar que este no es el método más óptimo pues ocuparemos 2 caracteres para representar cada valor pudiendo utilizar solo un byte para cada valor, otra punto en contra es que el indicador de inicio de bloque debería ser un bit a modo de bandera para identificar si los bits siguientes son parte de un bloque o si es información sin comprimir.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/A0ZnqxInIVwGcM1au3P26w.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-1&#34;&gt;Paso 1&lt;/h3&gt;
-
-&lt;p&gt;llenamos el buffer de salida con los caracteres originales hasta encontrar una coincidencia de tamaño suficiente para ser comprimido que se encuentre dentro de la ventana, que en este caso será de 20 posiciones a modo de ejemplo, aunque podríamos contar con valores del 0x00 al 0xFF una vez encontrada la coincidencia, agregamos el caracter | seguido del valor exadecimal del desplazamiento y el valor exadecimal del tamaño de la coincidencia, esta información le indicará al descompresor desde donde deberá comenzar a copiar caracteres del buffer de salida y la cantidad o longitud de la cadena a copiar.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/rCmcqnAL0jFcOthr4XfpPQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-dos&#34;&gt;Paso dos&lt;/h3&gt;
-
-&lt;p&gt;Si encontramos una coincidencia pequeña dentro de los primeros caracteres que no supera el tamaño mínimo, deberemos seguir buscando hacia atrás dentro de la ventana hasta encontrar una coincidencia lo suficientemente grande o bien hasta llegar al límite de la ventana o al inicio de la cadena, en cuyo caso escribiremos los caracteres planos.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/WgD68jEpvT5nXAQKBdP4aw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-3&#34;&gt;Paso 3&lt;/h3&gt;
-
-&lt;p&gt;Repetimos el ciclo con el resto de los caracteres.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ikqcCQrCmMD64xHpTyad7Q.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-4&#34;&gt;Paso 4&lt;/h3&gt;
-
-&lt;p&gt;En este caso, el último bloque coincide con uno previamente escrito, por lo que podríamos comprimirlo, el problema es que tiene el mismo tamaño que ocupa el bloque por lo que ahorraremos tiempo de procesamiento almacenándolo sin comprimir debido a que no nos aporta ninguna ventaja.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0MKb-PJsEXKOH-HrnEsRgg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;resultado-final&#34;&gt;Resultado final&lt;/h3&gt;
-
-&lt;p&gt;Terminaremos con la siguiente cadena como resultado del proceso de compresión, esta información será suficiente para reconstruir el texto original.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/OpSLW9L5RVPX7kWx2wdCew.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Decena, ala**|0906**cent**|0808**eno**|1309**rio, millonario
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;implementación-en-go&#34;&gt;Implementación en Go&lt;/h2&gt;
-
-&lt;p&gt;Vamos a comprimir un archivo de texto que contiene trabalenguas, cada línea la hemos duplicado para contar con suficientes patrones para comprimir.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/umarquez/05600cc1d9a7a961417c4cd5a7be2ab2.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/s36F5-fSAXbqx7y9Zc-FQQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
