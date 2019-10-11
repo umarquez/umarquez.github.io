@@ -6,8 +6,60 @@
     <description>Recent content in Uriel Márquez | @umarquez on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Mon, 07 Oct 2019 12:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 00:00:00 -0500</lastBuildDate>
     <atom:link href="" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[34/100] #100DaysOfC0D3 - Patrón Método Fábrica | Factory Method Pattern</title>
+      <link>https://umarquez.c0d3.mx/2019/october/08/34-100-100daysofc0d3/</link>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://umarquez.c0d3.mx/2019/october/08/34-100-100daysofc0d3/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Factory_method_pattern&#34; title=&#34;https://en.wikipedia.org/wiki/Factory_method_pattern&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Factory_method_pattern&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;En la programación basada en clases, el patrón &lt;strong&gt;Método Fábrica&lt;/strong&gt; es de tipo creacional y se caracteriza por el uso de métodos para lidiar con la creación de objetos sin tener la necesidad de especificar la clase de este.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Veamos un caso práctico y tratemos de explicar este patrón en el camino.&lt;/p&gt;
+
+&lt;p&gt;Imaginemos que estamos trabajando en el desarrollo de un sistema para el que se nos ha encargado, como parte de los requerimientos, que este cuente con la posibilidad de utilizar diferentes motores de base de datos y que posteriormente se puedan integrar otros motores de manera sencilla. Esto podría deberse a que se pretende que nuestro sistema sea compatible con las principales soluciones del mercado, sin la necesidad de depender de una marca o proveedor específico, dándole la posibilidad al cliente de utilizar la infraestructura actual para usar nuestra solución, además, podríamos contar con una versión &lt;em&gt;standalone&lt;/em&gt; que pueda trabajar con archivos de datos locales sin la necesidad de instalar un motor específico que nos demande recursos adicionales, o bien, contar con una versión &lt;em&gt;cloud&lt;/em&gt; que pueda implementarse utilizando los motores propios de los proveedores.&lt;/p&gt;
+
+&lt;p&gt;Para lograr este objetivo, podríamos implementar este patrón en la capa de datos con el fin de contar con un método que nos ayude a generar instancias de diferentes tipos que satisfagan una interfaz común, misma que definirá los métodos por medio de los que interactuaremos con los diferentes motores de datos sin la necesidad de conocer su tipo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/factory-method.png&#34; alt=&#34;Factory Method&#34; title=&#34;Factory Method&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;De esta manera, el método &lt;code&gt;Factory()&lt;/code&gt; sería responsable de inicializar el tipo requerido de manera particular, retornando la instancia &amp;ldquo;mínima necesaria&amp;rdquo; para interactuar con los datos.&lt;/p&gt;
+
+&lt;iframe height=&#34;600px&#34; width=&#34;100%&#34; src=&#34;https://repl.it/@umarquez/Factory-Method-DBs-Example?lite=true&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; allowtransparency=&#34;true&#34; allowfullscreen=&#34;true&#34; sandbox=&#34;allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals&#34;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;ejemplo-adicional&#34;&gt;Ejemplo adicional&lt;/h2&gt;
+
+&lt;p&gt;Supongamos que queremos agregar la posibilidad de importar/exportar datos de nuestra aplicación hacia diferentes archivos, esto podría ser con el fin de contar con un método para generar respaldos de una &lt;strong&gt;DB&lt;/strong&gt; o bien, para obtener y salvar configuraciones de nuestra app, por ejemplo.&lt;/p&gt;
+
+&lt;p&gt;En este caso daremos soporte a los formatos: &lt;em&gt;JSON&lt;/em&gt;, &lt;em&gt;TOML&lt;/em&gt;, &lt;em&gt;YAML&lt;/em&gt; y &lt;em&gt;XML&lt;/em&gt;.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/umarquez/c5e544347b470cc31d8f4e6f1cf9da14.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;salida&#34;&gt;Salida&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/out.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;palabras-finales&#34;&gt;Palabras finales&lt;/h2&gt;
+
+&lt;p&gt;La implementación de patrones como este no solo nos ayudan a mantener organizado de forma lógica nuestro código, además nos permite realizar modificaciones posteriores de manera práctica sin la necesidad de analizar tanto código y siguiendo la misma estructura; esto nos lo agradecerán otros programadores con los que colaboremos.&lt;/p&gt;
+
+&lt;p&gt;Nuevamente quiero invitarlos a platicar de estos temas en nuestro servidor en &lt;strong&gt;&lt;em&gt;Discord&lt;/em&gt;&lt;/strong&gt; al que pueden acceder desde la sección &lt;a href=&#34;https://umarquez.c0d3.mx/comunidad&#34;&gt;&lt;strong&gt;comunidad&lt;/strong&gt; &lt;/a&gt;o dando click en el &lt;a href=&#34;https://umarquez.c0d3.mx/comunidad&#34;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Me gustaría conocer tu opinión, déjame un comentario más abajo o en cualquiera de mis redes sociales, de igual forma si te gustaría sugerir un tema o tienes alguna sugerencia.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/umarquez&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;@umarquez&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>[33/100] #100DaysOfC0D3 - Golang &amp; Web Scraping para principiantes | Parte 1</title>
@@ -1388,239 +1440,6 @@ Un escáner de puertos es una aplicación diseñada para detectar puertos abiert
 &lt;li&gt;Tanto los lokens como la manera de manejarlos podría mejorar haciendo uso de &lt;strong&gt;JWT&lt;/strong&gt; y enviando el ID como parte de este, por ejemplo.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;NUNCA&lt;/strong&gt; deberemos colocar las contraseñas en texto plano o incluirlas como parte del código, esto solo es un ejemplo por lo que no debería implementarse en producción de esta forma.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[25/100] #100DaysOfC0D3 - Tramado | Dithering</title>
-      <link>https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/</link>
-      <pubDate>Wed, 07 Aug 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://umarquez.c0d3.mx/2019/august/07/25-100-100daysofc0d3/</guid>
-      <description>
-
-&lt;h2 id=&#34;tramado-dithering&#34;&gt;Tramado | Dithering&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Repo:&lt;/strong&gt; &lt;a href=&#34;https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/umarquez/100DaysOfC0D3/tree/master/25-dithering&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;El tramado es una técnica usada en computación gráfica para crear la ilusión de profundidad de color en imágenes con una paleta de colores limitada (reducción de color). En una imagen tramada, los colores no disponibles en la paleta se aproximan por una difusión de píxeles de color dentro de la gama de colores disponibles.
-&lt;a href=&#34;https://es.wikipedia.org/wiki/Tramado&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://es.wikipedia.org/wiki/Tramado&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Si, este es un capítulo más de &lt;strong&gt;“Jugando con píxeles”&lt;/strong&gt;; en esta ocasión vamos a agregar esta funcionalidad al proyecto pasado &lt;a href=&#34;https://medium.com/@umarquez_mx/20-100-100daysofc0d3-344d3b0cfc8f&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;[&lt;sup&gt;20&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt;]&lt;/strong&gt; &lt;em&gt;Segundo proyecto: Repintado&lt;/em&gt;&lt;/a&gt;, pero antes, vamos a tratar de explicar en qué consiste el tramado.&lt;/p&gt;
-
-&lt;p&gt;Como ya explicamos en capítulos pasados, hacemos uso del &lt;strong&gt;&lt;em&gt;Teorema de Pitágoras&lt;/em&gt;&lt;/strong&gt; para calcular el &lt;a href=&#34;https://medium.com/@umarquez_mx/15-100-100daysofc0d3-237b97faa4c7&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;vecino más cercano&lt;/a&gt; a un punto dentro de un &lt;a href=&#34;https://es.wikipedia.org/wiki/Espacio_eucl%C3%ADdeo&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;espacio euclideano&lt;/a&gt; definido, la hipotenusa resultante representa la distancia entre el punto inicial y el punto a evaluar; en el caso de la sustitución de colores, esta distancia representa además el error existente entre ambos colores; es decir, que tanto dista uno de otro.&lt;/p&gt;
-
-&lt;p&gt;El tramado aprovecha este error para propagarlo a los píxeles cercanos no procesados, de tal forma que conforme se avanza sobre la imagen los píxeles vecinos van acumulando parte del error de los píxeles pasados, y cuando este es procesado, se calcula el sustituto basado en el color original más el error acumulado, pudiendo compensar de cierta manera la falta de colores, para representar un degradado, por ejemplo.&lt;/p&gt;
-
-&lt;p&gt;Uno de los métodos más comunes es el &lt;a href=&#34;https://es.wikipedia.org/wiki/Algoritmo_de_Floyd-Steinberg&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;algoritmo &lt;strong&gt;Floyd-Steinberg&lt;/strong&gt;&lt;/a&gt;, que divide el error en 16 partes iguales, mismas que reparte de la siguiente manera (asumiendo que recorremos la imagen de izquierda a derecha y de arriba a abajo):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/NCeCz-IkhLQP4iRbqXz9BA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Con este método, una paleta blanco y negro por ejemplo, será capaz de representar de una mejor manera los tonos degradados de una imagen.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KJefR3KxjOOOOflzNcP4CA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/vABSat0iFVWFQ-B-Iue8dw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/00U54Z53qR4FigdpIH--hA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/t2bnGjI13euYwZGY8AdVSw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/MhD7AtbNULFlekDPh7PxfQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ztJPmxSYWq1biQvL8WfrHQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/iXdjz5vvPz1JsTYF4-yMSA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/V1m3bjiPJOLvET4wFpOs3w.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/257uga406mSNmfJ3kbdhsA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vamos a describir este método más a detalle con un ejemplo, como de costumbre.&lt;/p&gt;
-
-&lt;h2 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h2&gt;
-
-&lt;p&gt;Vamos a convertir los siguientes píxeles de una imagen en escala de grises, cada componente (R, G y B) de cada color comparten el mismo valor (&lt;code&gt;0xAAAAAA&lt;/code&gt;), por lo que solo vamos a utilizar dos dígitos exadecimales para representar cada tono (&lt;code&gt;0xAA&lt;/code&gt;); también contaremos con una paleta de tres colores para realizar la sustitución, los colores de esta paleta serán: &lt;code&gt;0x00&lt;/code&gt;, &lt;code&gt;0x80&lt;/code&gt; y &lt;code&gt;0xFF&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;La matriz de pixeles a procesar será la siguiente:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/9JeDbvK-IiJo3WenXR8DUw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-1&#34;&gt;Paso 1&lt;/h3&gt;
-
-&lt;p&gt;Comenzamos con el pixel &lt;code&gt;00-A&lt;/code&gt;, calculamos cuál es el color más cercano de la paleta y la diferencia de estos dos la dividimos entre 16.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/mw_DH4Rt2ehMgR6yJ3AsIA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-2&#34;&gt;Paso 2&lt;/h3&gt;
-
-&lt;p&gt;Distribuimos el error sumando las partes correspondientes a los píxeles cercanos, si estos no estuvieran dentro de la imagen, se deberán omitir.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/5qE3GoDxhT8y1Yep_Jnxfw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Obtendremos el siguiente resultado:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/KN9l9wYPTS5RMOfmrKXq1Q.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;paso-3&#34;&gt;Paso 3&lt;/h3&gt;
-
-&lt;p&gt;Repetimos el mismo procedimiento con el píxel de la derecha &lt;code&gt;00-B&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/pi7wCPNMYhPkspD1N2qy-w.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Y de la misma forma con cada píxel de la fila&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/uZ1mRJzIf-zSBqae7fKBJw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;pasos-siguientes&#34;&gt;Pasos siguientes&lt;/h3&gt;
-
-&lt;p&gt;Deberemos repetir el mismo procedimiento en cada píxel de la imagen, como alternativa podría alternarse la dirección de las filas, invirtiendo el sentido del filtro para distribuir el error y conseguir de una distribución más uniforme.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/VIeJCbVQ0942ESdlR3qCCA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;resultado-final&#34;&gt;Resultado final&lt;/h3&gt;
-
-&lt;p&gt;Una vez concluido el proceso obtendremos los siguientes valores.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/HGHZxfxev6gMdKRf0y8BiA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;otros-filtros&#34;&gt;Otros filtros&lt;/h2&gt;
-
-&lt;p&gt;Además de esta forma de distribuir el error existen otro filtros que son capaces de producir resultados similares, algunos de ellos son:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Jarvis, Judice, &amp;amp; Ninke&lt;/li&gt;
-&lt;li&gt;Stucki&lt;/li&gt;
-&lt;li&gt;Atkinson&lt;/li&gt;
-&lt;li&gt;Burkes&lt;/li&gt;
-&lt;li&gt;Sierra&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;implementación-en-go&#34;&gt;Implementación en Go&lt;/h2&gt;
-
-&lt;p&gt;En esta ocasión, revisamos el artículo &lt;a href=&#34;http://www.tannerhelland.com/4660/dithering-eleven-algorithms-source-code/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Image Dithering: Eleven Algorithms and Source Code&lt;/a&gt; de &lt;a href=&#34;http://www.tannerhelland.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;&lt;em&gt;Tanner Helland&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; para implementar algunos filtros y comparar los resultados utilizando diferentes paletas de color.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/umarquez/3447ec090547e6506d8b7fc3df5d75a6.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/6qrirtuBRWv3VENCDSljgw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/N7gWNWVim1TSfv6kT0oPqA.jpeg&#34; alt=&#34;Original&#34; /&gt;&lt;em&gt;Original&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/w-83F8RyiF9kUkW4M6bPAw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/azeUrP4kiMJgzJR_2_PS7Q.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/K1ToxON61-a_VQDoCSb-tA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ZgVkYbX1flAKMmAFd8WLHA.png&#34; alt=&#34;Sin tramado&#34; /&gt;&lt;em&gt;Sin tramado&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/zxKWGaT3v1Ub3VL3_q_0lQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/FljcQ2m-MCcWqMVi9eAVIQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/wxdT2HcEDG6c5hl9nQ9NdQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/V2O4XbJLN3rydLf5IZ8FIw.png&#34; alt=&#34;Floyd-Steinberg&#34; /&gt;&lt;em&gt;Floyd-Steinberg&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/RCwSys_O0sf6_YTAESjliw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/nD47rVRWcjl87QZLakQ6Og.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/OAaxwyD02XdfUKdQVLig0Q.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/e3zaCcsqUQH8f_MF9PQTqA.png&#34; alt=&#34;Jarvis, Judice &amp;amp; Ninke&#34; /&gt;&lt;em&gt;Jarvis, Judice &amp;amp; Ninke&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/eBmixlmJZN33c9joUpcr0A.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/tWHK1T1Ga2zQ-s_N8bMufw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/rM8AexH0qkXmb_MyHwXmeQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/kRlOwCtpm4Zsj8K8jPduaw.png&#34; alt=&#34;Stucki&#34; /&gt;&lt;em&gt;Stucki&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ATn-teMCG4evSQPR5D9Izg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0BawZ8uyRqGSQp7-W-JyHw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/pyMVuJjzX5jaUXdNgp3C7A.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/CJl4ogNMtn1tz7FRSfxGLQ.png&#34; alt=&#34;Atkinson&#34; /&gt;&lt;em&gt;Atkinson&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/T1dOt3C-SsufYamfpN-hJg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ImTCDlC0-2Q0pcdfyKMMxQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/CcpETNZBLYCpxb9mXCXxlA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/53j2hWnUePevn7RFy-dXEw.png&#34; alt=&#34;Burkes&#34; /&gt;&lt;em&gt;Burkes&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/O2AqccB4ltHCUFE2E-ZdhA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Q3icP0gXGijwQCnUuPEgsA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0iM0HWCxXWmXTfCzOZyhtw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/L_vLKm02TlvI4ftcd-2atg.png&#34; alt=&#34;Sierra&#34; /&gt;&lt;em&gt;Sierra&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/l4iG9I8kiCDE8z8ewz_rHA.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/-33X9BSmTzQVUFT4e1u6jg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/fu5KpA8wYetPi-BkF4Pc2g.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/8wi0GkmZ4ChO0mRn3aDR5Q.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/XPLNTPZeHvS7RLlfBzPu5A.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/bSsgC9SJS2fNw5ugODB6UQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/qydL1pN6Hq0JsQpNqHy3wg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/sEtorxLZ0K0a3Wp0IMTaNQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/BQUsgiUuTCWaUeS4V7Vm-g.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/idFKd4V2PkofJRQ_oLl-9A.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/Z4RrYx73lKCOSUxju8--2w.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/dV8DwlRWSVGFU6vbXk1hww.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/py4AQ264sd-mFPgk-NALrg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/tNZnkkCi0RuAlT79R6oeCA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/WiOlRjtlPqaFvWvP9LxHSQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ndQVKAitbH1nMWaLEMQdQw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/zx423Nmbiy5Bnike03fzIg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/5rgkFQ7NiueI1-p3hVd55g.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/PN888FwRHmlM__-UFU1KPg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/0x0pnORvXDj4CJkU-XlyMA.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/ZQxIeouDeVLcBvREq9HfnQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/q9U9MgqamfL-j83iTZLpUQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/yhWGr8SAqAqHP5CO8M7z6w.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/uPMhefMLyIT0DdvjV0DkYw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/W4uCmGsGsw0LXM90MvnuMQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/oGjIXqr9DuiJyac1DGw9Cg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/dUSUcVnGfh_MCSy2j5L_5Q.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/WLgkK0cPSVDA0TzFztA3QQ.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://umarquez.c0d3.mx/uploads/YUBXukXx35cJ1REqBGB3Vg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
