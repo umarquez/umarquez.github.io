@@ -18,7 +18,7 @@
       
       <guid>https://umarquez.c0d3.mx/2019/august/05/24-100-100daysofc0d3/</guid>
       <description>Escalado de imágenes mediante interpolación bilineal | Image scaling applying bilinear interpolation Repo: https://github.com/umarquez/100DaysOfC0D3/tree/master/24-bilinear-interpolation-scaling
- La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_bilineal
+ La interpolación bilineal es una extensión de la interpolación lineal para interpolar funciones de dos variables (por ejemplo, x e y) en una malla regular de dos dimensiones. Wikipedia
  En esta ocasión utilizaremos esta técnica para generar la información faltante en los píxeles vacíos cuando escalamos una imagen; la ocasión anterior hablamos de interpolación por vecinos cercanos, así que si no has leído la primera parte de este tema o quieres tener un poco más de información te recomiendo leer el capítulo [16&amp;frasl;100] antes de continuar.</description>
     </item>
     
