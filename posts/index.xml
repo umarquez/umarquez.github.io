@@ -6,17 +6,17 @@
     <description>Recent content in Posts on Uriel Márquez | @umarquez</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Tue, 08 Oct 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 22:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://umarquez.c0d3.mx/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[34/100] #100DaysOfC0D3 - Patrón Método Fábrica | Factory Method Pattern</title>
-      <link>https://umarquez.c0d3.mx/2019/october/08/34-100-100daysofc0d3/</link>
-      <pubDate>Tue, 08 Oct 2019 00:00:00 -0500</pubDate>
+      <link>https://umarquez.c0d3.mx/2019/october/10/34-100-100daysofc0d3/</link>
+      <pubDate>Thu, 10 Oct 2019 22:00:00 -0500</pubDate>
       
-      <guid>https://umarquez.c0d3.mx/2019/october/08/34-100-100daysofc0d3/</guid>
+      <guid>https://umarquez.c0d3.mx/2019/october/10/34-100-100daysofc0d3/</guid>
       <description>In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created
 https://en.wikipedia.org/wiki/Factory_method_pattern
 En la programación basada en clases, el patrón Método Fábrica es de tipo creacional y se caracteriza por el uso de métodos para lidiar con la creación de objetos sin tener la necesidad de especificar la clase de este.</description>
