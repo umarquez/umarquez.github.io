@@ -60,7 +60,7 @@ Han sucedido varias cosas en estás últimas semanas que me gustaría contarte, 
       <pubDate>Fri, 16 Aug 2019 00:00:00 -0500</pubDate>
       
       <guid>https://umarquez.c0d3.mx/2019/august/16/30-100-100daysofc0d3/</guid>
-      <description>Herencia &amp;amp; Patrón Composite | Inheritance &amp;amp; Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
+      <description>Herencia y Patrón Composite | Inheritance and Composite Pattern Si GO (Golang) es un lenguaje Orientado a Objetos, ¿por qué no existe la herencia como la conocemos en otros lenguajes?
 Go, a diferencia de estos lenguajes, no la necesita pues la filosofía de este opta por la composición de estructuras a partir de otras estructuras en lugar de una relación jerárquica descendente; en el caso de la Herencia, una nueva clase puede extender las funcionalidades de otra e incluso, en algunos lenguajes, de varias super-clases, siendo esta nueva clase “hija” de las super-clases que hereda y por tanto pudiendo ser considerada del mismo tipo de dato que cualquiera de ellas.</description>
     </item>
     
