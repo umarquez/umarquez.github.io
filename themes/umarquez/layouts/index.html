@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        {{ range (where .Site.Pages "Section" "apps") }}
+            {{- if ne .IsSection true -}}
+            <div class="col col-md-3"></div>
+            {{- end -}}
+        {{ end}}
+    </div>
+    {{/*  {{ .Content }}  */}}
+</div>
+{{ end }}

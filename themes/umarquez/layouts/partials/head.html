@@ -1,0 +1,6 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Main Style CSS -->
+{{ $style := resources.Get "scss/bootstrap.scss" | toCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ absURL $style.Permalink }}">
