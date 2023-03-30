@@ -6,13 +6,13 @@ let gainNode = audioContext.createGain();
 gainNode.connect(audioContext.destination);
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
   let totalKeys = 36;
-  let keyWidth = 45;
-  let keyHeight = 250;
+  let keyWidth = 70;
+  let keyHeight = keyWidth*5;
   let octaveWidth = 7 * keyWidth;
   let startX = (displayWidth-(octaveWidth*3))/2;
-  let startY = (768 - keyHeight) / 2;
+  let startY = (windowHeight - keyHeight) / 2;
   
   let correction = 0;
 
@@ -70,8 +70,8 @@ function setup() {
         midiValue,
         keyX + keyWidth / 2 - keyWidth * 0.3,
         keyY,
-        keyWidth * 0.6,
-        keyHeight * 0.75,
+        keyWidth * 0.5,
+        keyHeight * 0.65,
         0
       );
       blackKeys.push(newKey);
